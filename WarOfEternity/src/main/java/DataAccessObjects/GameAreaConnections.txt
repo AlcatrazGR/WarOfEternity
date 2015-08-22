@@ -1,0 +1,159 @@
+Plains Of Hope		@	Daramish			@	north
+Plains Of Hope		@	Belverus Lake		@	north-east
+Plains Of Hope		@	Dead Wing Passage		@	west
+Daramish			@	Plains Of Hope		@	south
+Daramish			@	Belverus Lake		@	east
+Belverus Lake		@	Daramish			@	west
+Belverus Lake		@	Plains Of Hope		@	south-west
+Belverus Lake		@	Baramish Ruins		@	south-east
+Baramish Ruins		@	Belverus Lake		@	north-west
+Baramish Ruins		@	Nimrod Beach		@	east
+Baramish Ruins		@	Anglor Bay			@	south
+Nimrod Beach		@	Baramish Ruins		@	west
+Nimrod Beach		@	Anglor Bay			@	south-west
+Nimrod Beach		@	Angabur Village		@	north-east
+Anglor Bay			@	Baramish Ruins		@	north
+Anglor Bay			@	Nimrod Beach		@	north-east
+Dead Wing Passage		@	Elysium Mine's Entrance	@	north	
+Dead Wing Passage		@	Quag Mire Swamp		@	west
+Dead Wing Passage		@	Delta Rivers		@	south-east
+Dead Wing Passage		@	Plains Of Hope		@	east
+Angabur Village		@	Nimrod Beach		@	south-west
+Angabur Village		@	Angabur Cemetery		@	west
+Angabur Cemetery		@	Angabur Village		@	east
+Angabur Cemetery		@	Angabur Tombs		@	north
+Angabur Tombs		@	Oldash Maze		@	north-east	
+Angabur Tombs		@	Forest of Sorrows		@	north-west
+Angabur Tombs		@	Angabur Cemetery		@	south
+Forest of Sorrows		@	Angabur Tombs		@	south-east
+Oldash Maze		@	Angabur Tombs		@	south-west
+Oldash Maze		@	Shamans Reatreat		@	north-west
+Oldash Maze		@	Azol' Eldar Jungle		@	north
+Oldash Maze		@	Belkat Docks		@	north-east
+Shamans Reatreat		@	Oldash Maze		@	south-east
+Shamans Reatreat		@	Azol' Eldar Jungle		@	north-east
+Shamans Reatreat		@	Azol' Angar Jungle		@	north
+Shamans Reatreat		@	Masson Tunnels		@	north-west
+Azol' Eldar Jungle		@	Oldash Maze		@	south
+Azol' Eldar Jungle		@	Shamans Reatreat		@	south-west
+Azol' Eldar Jungle		@	Azol' Angar Jungle		@	north-west
+Azol' Eldar Jungle		@	Lake Of Enala		@	north
+Azol' Angar Jungle		@	Masson Tunnels		@	west
+Azol' Angar Jungle		@	Shamans Reatreat		@	south
+Azol' Angar Jungle		@	Azol' Eldar Jungle		@	south-east
+Azol' Angar Jungle		@	Lake Of Enala		@	north-east
+Masson Tunnels		@	Azol' Angar Jungle		@	east
+Masson Tunnels		@	Shamans Reatreat		@	south-east
+Masson Tunnels		@	Smelter of Al' Hateck		@	south
+Smelter of Al' Hateck		@	Masson Tunnels		@	north
+Lilen Coast		@	Belkat Docks		@	south-west
+Lilen Coast		@	Lake Of Enala		@	north-west
+Lake Of Enala		@	Azol' Angar Jungle		@	south-west
+Lake Of Enala		@	Azol' Eldar Jungle		@	south
+Lake Of Enala		@	Lilen Coast		@	south-east
+Lake Of Enala		@	Passage To Ash'vor		@	east
+Passage To Ash'vor		@	Lake Of Enala		@	west
+Passage To Ash'vor		@	Ash'vor			@	north-east
+Ash'vor			@	Passage To Ash'vor		@	south-west
+Oravor Coast Road		@	Oravor West Coast		@	north	
+Oravor Coast Road		@	Oravor East Coast		@	south
+Delta Rivers		@	Dead Wing Passage		@	north-west
+Delta Rivers		@	Aldor Ascend		@	west
+Aldor Ascend		@	Delta Rivers		@	east	
+Aldor Ascend		@	Aldor Summit		@	west
+Aldor Summit		@	Aldor Ascend		@	east
+Aldor Summit		@	Fortress Of The Mists		@	south-west
+Fortress Of The Mists		@	Aldor Summit		@	north-east
+Fortress Of The Mists		@	Aldor Reign Castle		@	west
+Aldor Reign Castle		@	Fortress Of The Mists		@	east
+Aldor Reign Castle		@	Dead Mire Swamp		@	north-east
+Dead Mire Swamp		@	Aldor Reign Castle		@	south-west
+Dead Mire Swamp		@	Suloild'sh Road's		@	west
+Dead Mire Swamp		@	Drash Mire Swamp		@	north
+Dead Mire Swamp		@	Quag Mire Swamp		@	east
+Suloild'sh Road's		@	Worach Watch Tower		@	north-west
+Suloild'sh Road's		@	Drash Mire Swamp		@	north-east
+Suloild'sh Road's		@	Dead Mire Swamp		@	east	
+Drash Mire Swamp		@	Plain's Of Estild		@	north-west	
+Drash Mire Swamp		@	Suloild'sh Road's		@	south-west
+Drash Mire Swamp		@	Dead Mire Swamp		@	south
+Drash Mire Swamp		@	Quag Mire Swamp		@	south-east
+Quag Mire Swamp		@	Drash Mire Swamp		@	north-west
+Quag Mire Swamp		@	Dead Mire Swamp		@	west
+Quag Mire Swamp		@	Elysium Mine's Entrance	@	east
+Quag Mire Swamp		@	Dead Wing Passage		@	south-east
+Elysium Mine's Entrance	@	Quag Mire Swamp		@	west
+Elysium Mine's Entrance	@	Dead Wing Passage		@	south
+Elysium Mine's Entrance	@	Elysium Mine		@	north
+Elysium Mine		@	Elysium Mine's Entrance	@	south
+Plain's Of Estild		@	Drash Mire Swamp		@	south-east
+Plain's Of Estild		@	Tan'leri City		@	north-east
+Tan'leri City		@	Plain's Of Estild		@	south-east
+Tan'leri City		@	Del'raku Oasis		@	west
+Tan'leri City		@	Orm'ray Roads		@	north
+Worach Watch Tower		@	Suloild'sh Road's		@	south-east
+Worach Watch Tower		@	Quekalsul	Har Ruins		@	north
+Worach Watch Tower		@	Del'raku Oasis		@	north-east
+Quekalsul	Har Ruins		@	Worach Watch Tower		@	south
+Quekalsul	Har Ruins		@	Del'raku Oasis		@	east
+Del'raku Oasis		@	Worach Watch Tower		@	south-west
+Del'raku Oasis		@	Quekalsul	Har Ruins		@	west
+Del'raku Oasis		@	Akrabor Ruins		@	north
+Del'raku Oasis		@	Tan'leri City		@	east
+Akrabor Ruins		@	Del'raku Oasis		@	south
+Akrabor Ruins		@	Akrabor Domain		@	north-west
+Akrabor Ruins		@	Aleeim Desert		@	north-east
+Akrabor Ruins		@	Orm'ray Roads		@	east
+Akrabor Domain		@	Akrabor Ruins		@	south-east
+Akrabor Domain		@	Akrabor Catacombs		@	north-east
+Akrabor Catacombs		@	Akrabor Domain		@	south-west
+Akrabor Catacombs		@	Riorm Water Caves		@	north-west
+Akrabor Catacombs		@	Elderm Courtyard		@	north
+Riorm Water Caves		@	Akrabor Catacombs		@	south-east
+Riorm Water Caves		@	Elderm Courtyard		@	north-east
+Elderm Courtyard		@	Akrabor Catacombs		@	south
+Elderm Courtyard		@	Riorm Water Caves		@	south-west
+Elderm Courtyard		@	Elderm Arcane University	@	north-west
+Elderm Arcane University	@	Elderm Courtyard		@	south-east
+Orm'ray Roads		@	Akrabor Ruins		@	west
+Orm'ray Roads		@	Aleeim Desert		@	north
+Orm'ray Roads		@	Tan'leri City		@	south
+Aleeim Desert		@	Akrabor Ruins		@	south-west
+Aleeim Desert		@	Orm'ray Roads		@	south
+Aleeim Desert		@	Omrr Oasis		@	east
+Aleeim Desert		@	Ageolda Desert		@	north-east
+Omrr Oasis		@	Aleeim Desert		@	west
+Omrr Oasis		@	Ageolda Desert		@	north-west
+Omrr Oasis		@	Caves Of The Scortching Sun	@	south-east
+Omrr Oasis		@	Nomads Outpost		@	south
+Nomads Outpost		@	Orm'ray Roads		@	west
+Nomads Outpost		@	Omrr Oasis		@	north
+Nomads Outpost		@	Caves Of The Scortching Sun	@	north-east
+Caves Of The Scortching Sun	@	Nomads Outpost		@	south-west
+Caves Of The Scortching Sun	@	Omrr Oasis		@	north-west
+Caves Of The Scortching Sun	@	Eld'ny Peak		@	east
+Eld'ny Peak		@	Caves Of The Scortching Sun	@	west
+Eld'ny Peak		@	Hopes End Wall		@	north-east
+Ageolda Desert		@	Aleeim Desert		@	south-west
+Ageolda Desert		@	Omrr Oasis		@	south-east
+Ageolda Desert		@	Scorpions Den		@	north-east
+Scorpions Den		@	Ageolda Desert		@	south-west
+Scorpions Den		@	E'sayiss Roads		@	north-east
+E'sayiss Roads		@	Scorpions Den		@	south-west
+E'sayiss Roads		@	Entrance Of Lost Souls	@	east
+Entrance Of Lost Souls	@	E'sayiss Roads		@	west
+Entrance Of Lost Souls	@	Tunnels Of Scream		@	south
+Tunnels Of Scream		@	Entrance Of Lost Souls	@	north
+Tunnels Of Scream		@	Torturing Chamber		@	east
+Torturing Chamber		@	Tunnels Of Scream		@	west
+Torturing Chamber		@	Scholomance Citadel		@	north-east
+Scholomance Citadel		@	Torturing Chamber		@	south-west
+Scholomance Citadel		@	Scholomance Depths		@	north
+Scholomance Citadel		@	Village Of Scholomance	@	south-east
+Scholomance Depths		@	Scholomance Citadel		@	south
+Village Of Scholomance	@	Scholomance Citadel		@	north-west
+Village Of Scholomance	@	Library Of Dark Arts		@	north
+Village Of Scholomance	@	Hopes End Wall		@	south
+Library Of Dark Arts		@	Village Of Scholomance	@	south
+Hopes End Wall		@	Village Of Scholomance	@	north
+Hopes End Wall		@	Eld'ny Peak		@	south-west

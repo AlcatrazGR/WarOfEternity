@@ -1,0 +1,7 @@
+battle
+attack
+charge
+hit
+strike
+beat
+raid

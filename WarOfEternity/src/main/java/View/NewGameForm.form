@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="War Of Eternity : New Game"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jTextField1" min="-2" pref="187" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" min="-2" pref="624" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jRadioButton1" min="-2" pref="189" max="-2" attributes="0"/>
+                  <Component id="jRadioButton2" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
+                  <Component id="jRadioButton3" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="20" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jRadioButton1" min="-2" pref="149" max="-2" attributes="0"/>
+                      <EmptySpace pref="11" max="32767" attributes="0"/>
+                      <Component id="jRadioButton2" min="-2" pref="143" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      <Component id="jRadioButton3" min="-2" pref="149" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="376" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Adobe Garamond Pro" size="15" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Enter Player Name : "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="lineWrap" type="boolean" value="true"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Important - Please read the following terms and conditions carefully. These terms constitute a legally binding agreement and by using this game application, you are indicated that you acknowledge and agree to be bound by these terms.&#xa;This text based game is property of the technological institute of serres and by submitting - agreeing with the terms and conditions you are bound to follow those terms. The basic terms are the following : A) The user must be at least eighteen years old (18), and that you have read and understood the content of this terms. B) If you agree to the terms but your age is between thirteen years old and eighteen years old (13 - 18), you represent that your leagal guardians has review the whole text of terms and conditions. C) If you are not at least thirteen years old and your guardians did or did not review this terms and license agreement then the technological institute of serres doeas not take any responsibility for any of the kids actions. We strongly recommend that If you do not agree with all of these Terms, or you are not at least thirteen (13) years of age, or you are between the ages of thirteen (13) and eighteen (18) and your legal guardian does not agree with all of these Terms, please do not access / aggree with the terms. &#xa;&#xa;1. LICENSE TO USE THE SERVICES&#xa;&#xa;(a) Subject to your compliance with these Terms, the technological institute of serres grants you a limited, non-exclusive, non-transferable, non-sublicense-able, revocable license to access and use the game solely for your personal non-commercial entertainment purposes. You may not use the game for any other purpose, commercial or otherwise.&#xa;(b) You agree not to: (i) use the game for any purpose other than as expressly permitted by these Terms; (ii) copy (except to execute games on your mobile phone for your personal non-commercial entertainment use), adapt, merge, modify, prepare any derivative works of, reverse engineer, disassemble, decompile, license, sell, stream, distribute or otherwise transfer, or otherwise exploit any materials (including any software) or any portion thereof, provided through the Site or Services; or (iii) otherwise violate these Terms, including the Code of Conduct described in Section 2 below. Any use of the Site or Services in violation of these limitations will be considered a breach of these Terms, is cause for immediate suspension and/or termination under Section 11(b) of these Terms, and/or may result in legal action against you.&#xa;&#xa;2. RESTRICTIONS AND CODE OF CONDUCT&#xa;&#xa;You agree that you will not (the following restrictions are referred to collectively as the &quot;Code of Conduct&quot;&#xa;(a) cheat or use, develop or distribute automation software programs (&quot;bots&quot;), &quot;macro&quot; software programs or other &#x201c;cheat utility&#x201d; software programs or applications which are designed to modify the Services or Machine Zone experience;&#xa;(b) exploit, distribute or publicly inform other users of any game error, miscue or bug which gives an unintended advantage or allows impersonation of another person;&#xa;(c) disrupt, attempt to, or otherwise assist in the disruption of (i) any computer or network used to provide or support the game or (ii) any other user&apos;s experience;&#xa;(d) upload files that contain viruses, Trojan horses, worms, time bombs, corrupted files or data, or any other similar software or programs that may damage the operation of the Services or other users&apos; computers;&#xa;(e) promote or encourage any illegal activity including, without limitation, hacking, cracking or distribution of counterfeit software, or cheats or hacks for the Services;&#xa;(f) publish, post, upload, transmit, distribute or disseminate User Content (as defined in Section 8(a) below) that is harmful to minors, otherwise harmful, abusive, vulgar, harassing, sexually explicit, sexually provocative, pornographic, defamatory, libelous, obscene, infringing, embarrassing, unwanted, invasive of another&apos;s right of privacy or publicity (including distributing another user&#x2019;s personal information if he or she has not made such information public on the host site (if applicable)), hateful, racist, homophobic, bigoted, or otherwise offensive or objectionable;&#xa;(g) submit material that is copyrighted, protected by trade secret or otherwise subject to third party intellectual property or proprietary rights, including privacy and publicity right, unless you are the owner of such rights or have permission from their rightful owner to post the material and to grant Machine Zone all of the license rights granted herein;&#xa;(h) restrict or inhibit any other user from using and enjoying the Services (such as, but not limited to, disrupting the flow of chat in chat rooms with vulgar language, abusiveness, hitting the return key repeatedly, inputting excessively large images so the screen goes by too fast to read, use of excessive SHOUTING (all caps) in an attempt to disturb other users, &quot;spamming,&quot; or flooding (continuous posting repetitive text);&#xa;(i) promote, encourage, or otherwise advocate the use of illegal drugs;&#xa;(j) violate any other terms governing the access or use of the Services (including any end user license, code of conduct or other terms of use/service or guidelines from any technologiacal institute of serres or third party web site through which the game are available);&#xa;(k) publish falsehoods or misrepresentations that could damage Machine Zone or any third party;&#xa;(l) post advertisements or solicitations of business, advertise or offer to sell or buy any goods or services for any purpose through the Services, unless the Services on which you are playing specifically and expressly allow such messages and provided further that offers to buy or sell in-game items, if expressly permitted by the technologiacal institute of serres, are limited to the forum or channel specified by Machine Zone for such offers;&#xa;(m) collect (in an automated manner or otherwise) personal information (including attempting to obtain password or account information) about other users without their written consent, or impersonate or create a false identity (such as a celebrity, web site administrator or a Machine Zone representative);&#xa;(n) remove or obscure any proprietary notices on the game;&#xa;(o) use the Services (including bulletin boards and other communications services) or your account in any manner other than for personal communication as an individual user (e.g. sending surveys, contests, pyramid schemes, chain letters, junk email, spam or any duplicative or unsolicited messages);&#xa;(p) sublease your account or offer &#x201c;free space&#x201d; on or other access to your account to third parties;&#xa;(q) improperly use support channels or complaint buttons to make false reports to Machine Zone;&#xa;(r) use the Services for fraudulent transactions or for any purpose that violates any applicable local, state, national, or foreign laws, regulations, or treaties; or&#xa;(s) otherwise create liability for Machine Zone.&#xa;As between the parties, technologiacal institute of serres shall own all title, ownership rights, and intellectual property rights in and to the Service, and any copies or portions thereof. In the event User submits any content, data or information to the game, User represents and warrants that User the full right and authority to do so (without any infringement of, or conflict with, the rights of any third party)."/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Adobe Garamond Pro" size="15" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="I agree with the terms and conditions"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Adobe Garamond Pro" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Start Game"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Adobe Garamond Pro" size="16" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&lt; Back"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Warrior"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioButton1MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rogue"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioButton2MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mage"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jRadioButton3MouseClicked"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

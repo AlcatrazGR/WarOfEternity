@@ -1,0 +1,21 @@
+Tomb Door		@	A wooden door leading into the catacombs.										@	 4 	@	10000	@	0	@	0.0	@	north
+Branch Gate		@	Big gate with branches and logs covering it with a small hole in the midde. 							@	 4 	@	10000	@	0	@	0.0	@	south
+Witch Barrier		@	A magical brown barrier, when trying touching it pushes you back.								@	 4 	@	10000	@	0	@	0.0	@	north
+Frozen Skull Gate		@	A huge frozen gate with a skull carved on it. The gate cannot be opend with bare hands.						@	 4 	@	10000	@	0	@	0.0	@	south-west
+Red Stone Gate		@	Heavy gate made with red sand stone. There is a carved symbol on its center.							@	 4 	@	10000	@	0	@	0.0	@	north-east
+Water Ward Barrier		@	Magical water barrier. There are lots of corpses at close to it, so you decide not to touch it.						@	 4 	@	10000	@	0	@	0.0	@	north-west	
+Dark Fissure		@	A dark energy is emiting from this barrier. You can also hear screams coming from it and see bones floating.				@	 4 	@	10000	@	0	@	0.0	@	south
+Scholomance Wall		@	The great wall that guards the domain of scholomance. There is a hole to insert levers.						@	 4 	@	10000	@	0	@	0.0	@	north
+Ship Wreck		@	Many ships laying destroyed on the bottom of the ocean.									@	 4 	@	10000	@	0	@	0.0	@	south	
+Jade Beam			@	A weird jade beam at the middle of the ocean. It seems that it originates from the depths. Inside the beam there is disturbance in the waters.	@	 4 	@	10000	@	0	@	0.0	@	sink	
+Wooden Key		@	A small wooden key. It seems old and withered.									@	 2	@	0.1	@	0	@	0.0
+Mossy Key			@	A meddium sized mossy key with branches and leafs at its top.								@	2	@	0.1	@	0	@	0.0
+Wooden Talisman		@	A simple wooden carved talisman a jem in its middle, that produces brown energy.						@	2	@	0.2	@	0	@	0.0
+Glacier Teeth		@	A glacier object shaped as a teeth.											@	2	@	0.4	@	0	@	0.0
+Golden Beetle		@	A small golden beetle statue.											@	2	@	0.3	@	0	@	0.0
+Dispel Scroll		@	Dispeling scroll, it can dispel magic attacks, wards and fields.								@	2	@	0.1	@	0	@	0.0
+Banish Evil		@	A small rune stone. It can banish any evil entity of harmfull spell.								@	2	@	0.2	@	0	@	0.0
+Black Iron Lever		@	A heavy lever made out of iron and coated in black color.									@	2	@	0.5	@	0	@	0.0
+Summon Ship		@	A very old spell scroll that summons a single ship from the ocean.								@	2	@	0.1	@	0	@	0.0
+Jade Orb			@	Orb that emittes jade colored light. It looks fragile.									@	2	@	0.3	@	0	@	0.0
+Eored Long Sword		@	Long elven sword made by the hands of elvish black smiths in rivendell.							@	 3	@	7	@	18	@	375.8

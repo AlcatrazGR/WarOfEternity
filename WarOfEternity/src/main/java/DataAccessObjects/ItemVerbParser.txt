@@ -1,0 +1,8 @@
+pick
+take
+grab
+search
+snatch
+use
+open
+equip

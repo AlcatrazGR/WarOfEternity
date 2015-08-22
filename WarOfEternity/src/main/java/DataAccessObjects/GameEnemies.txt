@@ -1,0 +1,19 @@
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	AmonSul			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg	
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Tharbad			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg	
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Moria Mines Entrance	@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg	
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Fornost			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Ettenmoors		@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Mount Gundabad		@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Gundabad Barracks		@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
+Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	CarnDum			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
+Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	Ettenmoors		@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
+Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	AmonSul			@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
+Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	Mount Gundabad		@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
+Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	Tharbad			@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
+Mountain Troll	@	Encountered Mountain Troll. The huge monster is roaring at you while aggresivly hitting its huge tree brach for weapon.					@	Ettenmoors		@	20	@	10	@	105	@	95.5 	@	18	@	mountainTroll.jpg
+Mountain Troll	@	Encountered Mountain Troll. The huge monster is roaring at you while aggresivly hitting its huge tree brach for weapon.					@	Mount Gundabad		@	20	@	10	@	105	@	95.5 	@	18	@	mountainTroll.jpg
+Wraith Lord	@	Encountered Wraith Lord. A cold chill hits your spin and a feeling of dread while the wraith is charging onto you and suddenly makes a piercing deadly cry.	@	BarrowDawns-Highlands	@	16	@	7	@	95	@	67.8	@	15	@	wraithLord.jpg
+Wraith Lord	@	Encountered Wraith Lord. A cold chill hits your spin and a feeling of dread while the wraith is charging onto you and suddenly makes a piercing deadly cry.	@	BarrowDawns		@	16	@	7	@	95	@	67.8	@	15	@	wraithLord.jpg
+Wraith Lord	@	Encountered Wraith Lord. A cold chill hits your spin and a feeling of dread while the wraith is charging onto you and suddenly makes a piercing deadly cry.	@	AmonSul			@	16	@	7	@	95	@	67.8	@	15	@	wraithLord.jpg
+Wraith Summoner	@	Encountered Wraith Summoner. The withered dead corpse is setting its deadly eyes onto you and starts casting a spell that shakes the ground rocks.		@	BarrowDawns-Highlands	@	14	@	9	@	73	@	46.7	@	14	@	wraithSummoner.jpg
+Wraith Summoner	@	Encountered Wraith Summoner. The withered dead corpse is setting its deadly eyes onto you and starts casting a spell that shakes the ground rocks.		@	BarrowDawns		@	14	@	9	@	73	@	46.7	@	14	@	wraithSummoner.jpg

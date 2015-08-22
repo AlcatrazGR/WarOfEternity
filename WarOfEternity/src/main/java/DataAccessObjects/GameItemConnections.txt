@@ -1,0 +1,30 @@
+Tomb Door	@	Angabur Cemetery		@	 open
+Branch Gate	@	Masson Tunnels		@	 open
+Witch Barrier	@	Elysium Mine's Entrance	@	 open
+Frozen Skull Gate	@	Aldor Summit		@	 open
+Red Stone Gate	@	Akrabor Domain		@	 open
+Water Ward Barrier	@	Elderm Courtyard		@	 open
+Dark Fissure	@	Entrance Of Lost Souls	@	 open
+Scholomance Wall	@	Hopes End Wall		@	 open
+Ship Wreck	@	Journeys End Island		@	 open
+Jade Beam		@	The Great Jade Sea		@	 open
+Wooden Key	@	Daramish			@	 pick
+Wooden Key	@	Angabur Cemetery		@	 use
+Mossy Key		@	Lilen Coast		@	 pick
+Mossy Key		@	Masson Tunnels		@	 use
+Wooden Talisman	@	Dead Mire Swamp		@	 pick
+Wooden Talisman	@	Elysium Mine's Entrance	@	 use
+Glacier Teeth	@	Baramish Ruins		@	 pick
+Glacier Teeth	@	Aldor Summit		@	 use
+Golden Beetle	@	Quekalsul Har Ruins		@	 pick
+Golden Beetle	@	Akrabor Domain		@	 use
+Dispel Scroll	@	Riorm Water Caves		@	 pick
+Dispel Scroll	@	Elderm Courtyard		@	 use
+Banish Evil	@	Shamans Reatreat		@	 pick
+Banish Evil	@	Entrance Of Lost Souls	@	 use
+Black Iron Lever	@	Scorpions Den		@	 pick
+Black Iron Lever	@	Hopes End Wall		@	 use
+Summon Ship	@	Elderm Arcane University	@	 pick
+Summon Ship	@	Journeys End Island		@	 use
+Jade Orb		@	Scholomance Depths		@	 pick
+Jade Orb		@	The Great Jade Sea		@	 use
