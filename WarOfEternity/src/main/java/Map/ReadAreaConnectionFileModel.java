@@ -1,12 +1,11 @@
 package Map;
 
 import GameFileConfiguration.SaveFolderConfig;
-import Parsers.ParserModel;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -71,8 +70,7 @@ public class ReadAreaConnectionFileModel {
             fileReader.close();
   
         }
-        catch(Exception ex){
-            ex.printStackTrace();
+        catch(IOException ex){
         }
         
         return stringBuffer;
@@ -101,7 +99,7 @@ public class ReadAreaConnectionFileModel {
      */
     public List<Area> GetListOfCurrentAreas(String dataOnLines[]){
        
-        List<Area> curAreasList = new ArrayList<Area>();
+        List<Area> curAreasList = new ArrayList();
         
         for(int i=0; i<dataOnLines.length; i++){
             String[] dataIndex = dataOnLines[i].split("@");
@@ -166,10 +164,10 @@ public class ReadAreaConnectionFileModel {
      * @return Returns the list are directions which represents the third column in the file.
      */
     public List<String> GetAreasDirections(String[] dataOnLine){
-        List<String> directions = new ArrayList<String>();
+        List<String> directions = new ArrayList();
         
-        for(int i=0; i<dataOnLine.length; i++){
-            String[] dataIndex = dataOnLine[i].split("@");
+        for (String line : dataOnLine) {
+            String[] dataIndex = line.split("@");
             directions.add(dataIndex[2].trim());
         }
         

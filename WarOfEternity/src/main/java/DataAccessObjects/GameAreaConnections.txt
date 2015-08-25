@@ -92,12 +92,12 @@ Tan'leri City		@	Plain's Of Estild		@	south-east
 Tan'leri City		@	Del'raku Oasis		@	west
 Tan'leri City		@	Orm'ray Roads		@	north
 Worach Watch Tower		@	Suloild'sh Road's		@	south-east
-Worach Watch Tower		@	Quekalsul	Har Ruins		@	north
+Worach Watch Tower		@	Quekalsul Har Ruins		@	north
 Worach Watch Tower		@	Del'raku Oasis		@	north-east
-Quekalsul	Har Ruins		@	Worach Watch Tower		@	south
-Quekalsul	Har Ruins		@	Del'raku Oasis		@	east
+Quekalsul Har Ruins		@	Worach Watch Tower		@	south
+Quekalsul Har Ruins		@	Del'raku Oasis		@	east
 Del'raku Oasis		@	Worach Watch Tower		@	south-west
-Del'raku Oasis		@	Quekalsul	Har Ruins		@	west
+Del'raku Oasis		@	Quekalsul Har Ruins		@	west
 Del'raku Oasis		@	Akrabor Ruins		@	north
 Del'raku Oasis		@	Tan'leri City		@	east
 Akrabor Ruins		@	Del'raku Oasis		@	south
@@ -157,3 +157,5 @@ Village Of Scholomance	@	Hopes End Wall		@	south
 Library Of Dark Arts		@	Village Of Scholomance	@	south
 Hopes End Wall		@	Village Of Scholomance	@	north
 Hopes End Wall		@	Eld'ny Peak		@	south-west
+Belkat Docks		@	Oldash Maze		@	south-west
+Belkat Docks		@	Lilen Coast		@	north-east

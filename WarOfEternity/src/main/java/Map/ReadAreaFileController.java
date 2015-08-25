@@ -24,7 +24,7 @@ public class ReadAreaFileController {
      * @return Returns the list of game areas.
      */
     public List<Area> AreaFileControllingMethod(){
-        List<Area> areaList = new ArrayList<Area>();
+        List<Area> areaList = new ArrayList();
         
         ReadAreaFileModel rafm = new ReadAreaFileModel();
         boolean filePathCheck = rafm.SetFilePath();

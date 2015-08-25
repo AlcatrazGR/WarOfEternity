@@ -25,9 +25,9 @@ public class ReadConnectionFileController {
         this.areasList = areas;
                 
         this.strBufData = null;
-        this.currentArea = new ArrayList<Area>();
-        this.nextArea = new ArrayList<Area>();
-        this.directions = new ArrayList<String>();
+        this.currentArea = new ArrayList();
+        this.nextArea = new ArrayList();
+        this.directions = new ArrayList();
     }
     
     /**
