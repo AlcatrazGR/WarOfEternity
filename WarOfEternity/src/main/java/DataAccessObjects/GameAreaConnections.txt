@@ -118,6 +118,7 @@ Elderm Arcane University	@	Elderm Courtyard		@	south-east
 Orm'ray Roads		@	Akrabor Ruins		@	west
 Orm'ray Roads		@	Aleeim Desert		@	north
 Orm'ray Roads		@	Tan'leri City		@	south
+Orm'ray Roads		@	Nomads Outpost		@	east
 Aleeim Desert		@	Akrabor Ruins		@	south-west
 Aleeim Desert		@	Orm'ray Roads		@	south
 Aleeim Desert		@	Omrr Oasis		@	east

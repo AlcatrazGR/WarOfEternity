@@ -38,7 +38,6 @@ public class MapController implements Serializable{
         //For every object in the above list call the SetAreaConnection method to
         //create the connection of areas.
         for(int i=0; i<currentAreas.size(); i++){
-            System.out.println(currentAreas.get(i).GetAreasName() + " @ " + nextArea.get(i).GetAreasName() + " @ " + directions.get(i));
             SetAreaConnection(currentAreas.get(i), nextArea.get(i), directions.get(i));
         }
         

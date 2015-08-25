@@ -24,28 +24,33 @@ public class ParserModel {
     private final List<String> itemParser;
     private final List<String> transactionParser;
     private final List<String> battleParser;
+    private final List<String> sailParser;
     
     private String directionParserPath;
     private String itemParserPath;
     private String transParsePath; 
     private String battleParserPath;
-            
+    private String sailParserPath;  
+    
     //Simple Constructor
     public ParserModel(){
         this.directionParser = new ArrayList();
         this.itemParser = new ArrayList();
         this.transactionParser = new ArrayList();
         this.battleParser = new ArrayList();
+        this.sailParser = new ArrayList();
         
         this.SetPathOfTheTextDirectionsParserFile();
         this.SetPathOfTheTextItemParserFile();
         this.SetPathOfTheTextTransactionParserFile();
         this.SetPathOfTheTextBattleParserFile();
+        this.SetPathOfSailParserText();
         
         this.SetDirectionParserFromDAOContent();
         this.SetItemParserFromDAOContent();
         this.SetTransactionParserFromDAOContent();
         this.SetBattleParserFromDAOContent();
+        this.SetSailParserFromDAOContent();
     }
     
     /**
@@ -113,6 +118,22 @@ public class ParserModel {
         }
         
         this.transParsePath = pathToTransactionParser.replace("%20", " ");
+    }
+    
+     /**
+     * Sets the path of the sail parser.
+     */
+    private void SetPathOfSailParserText(){
+        String usersHome = System.getProperty("user.home");
+        
+        String pathToTransactionParser = "";
+        try {
+            pathToTransactionParser = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\SailParser.txt", "UTF-8");
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        this.sailParserPath = pathToTransactionParser.replace("%20", " ");
     }
 
     /**
@@ -238,6 +259,37 @@ public class ParserModel {
         }
     
     }
+    
+     /**
+     * Sets the verbs of the sail data access object to a string list.
+     */
+    private void SetSailParserFromDAOContent(){
+        File file = new File(this.sailParserPath);
+        StringBuffer stringBuffer = null;
+        
+        try{
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            stringBuffer = new StringBuffer();
+            String line;
+            
+            //Read all the lines of the txt file and append them on string buffer variable.
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuffer.append(line);
+                stringBuffer.append("\n");
+            }
+            fileReader.close();
+  
+        }
+        catch(IOException ex){
+        }
+        
+        String[] dataOnLines = stringBuffer.toString().split("\n");
+        for (String dataOnLine : dataOnLines) {
+            this.sailParser.add(dataOnLine.trim());
+        }
+    }
+    
 
     /**
      * Split the command of the player.
@@ -268,5 +320,10 @@ public class ParserModel {
     //Returns the list of the verbs of the transaction parser text file.
     public List<String> GetListOfBattleParser(){
         return this.battleParser;
+    }
+    
+    //Returns the list of the verbs of the sail parser text file.
+    public List<String> GetListOfSailParser(){
+        return this.sailParser;
     }
 }

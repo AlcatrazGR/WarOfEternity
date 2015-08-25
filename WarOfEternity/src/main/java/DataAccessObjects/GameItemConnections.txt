@@ -8,6 +8,7 @@ Dark Fissure	@	Entrance Of Lost Souls	@	 open
 Scholomance Wall	@	Hopes End Wall		@	 open
 Ship Wreck	@	Journeys End Island		@	 open
 Jade Beam		@	The Great Jade Sea		@	 open
+Scholomance Gate	@	Scholomance Citadel		@	 open
 Wooden Key	@	Daramish			@	 pick
 Wooden Key	@	Angabur Cemetery		@	 use
 Mossy Key		@	Lilen Coast		@	 pick
@@ -28,3 +29,5 @@ Summon Ship	@	Elderm Arcane University	@	 pick
 Summon Ship	@	Journeys End Island		@	 use
 Jade Orb		@	Scholomance Depths		@	 pick
 Jade Orb		@	The Great Jade Sea		@	 use
+Iron Skull		@	Library Of Dark Arts		@	 pick
+Iron Skull		@	Scholomance Citadel		@	 use

@@ -8,6 +8,7 @@ Dark Fissure		@	A dark energy is emiting from this barrier. You can also hear sc
 Scholomance Wall		@	The great wall that guards the domain of scholomance. There is a hole to insert levers.						@	 4 	@	10000	@	0	@	0.0	@	north
 Ship Wreck		@	Many ships laying destroyed on the bottom of the ocean.									@	 4 	@	10000	@	0	@	0.0	@	south	
 Jade Beam			@	A weird jade beam at the middle of the ocean. It seems that it originates from the depths. Inside the beam there is disturbance in the waters.	@	 4 	@	10000	@	0	@	0.0	@	sink	
+Scholomance Gate		@	A huge black iron gate, preventing any intruders into the scholomance citadel.							@	 4 	@	10000	@	0	@	0.0	@	north
 Wooden Key		@	A small wooden key. It seems old and withered.									@	 2	@	0.1	@	0	@	0.0
 Mossy Key			@	A meddium sized mossy key with branches and leafs at its top.								@	2	@	0.1	@	0	@	0.0
 Wooden Talisman		@	A simple wooden carved talisman a jem in its middle, that produces brown energy.						@	2	@	0.2	@	0	@	0.0
@@ -18,4 +19,5 @@ Banish Evil		@	A small rune stone. It can banish any evil entity of harmfull spe
 Black Iron Lever		@	A heavy lever made out of iron and coated in black color.									@	2	@	0.5	@	0	@	0.0
 Summon Ship		@	A very old spell scroll that summons a single ship from the ocean.								@	2	@	0.1	@	0	@	0.0
 Jade Orb			@	Orb that emittes jade colored light. It looks fragile.									@	2	@	0.3	@	0	@	0.0
+Iron Skull			@	A heavy iron skull coated in black dye. It has a bell ring in its mouth. 								@	2	@	0.5	@	0	@	0.0
 Eored Long Sword		@	Long elven sword made by the hands of elvish black smiths in rivendell.							@	 3	@	7	@	18	@	375.8
