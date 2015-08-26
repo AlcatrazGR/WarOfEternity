@@ -1,4 +1,3 @@
 sail
 ship
 cruise
-voyage

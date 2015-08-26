@@ -92,14 +92,14 @@ public class MainGame extends javax.swing.JFrame {
                        jTextArea1.setText(textAreaContent);
                        commandTyped = jTextField1.getText().toString();
                        
-                       //decide the parsing action from the verb of action command that the user typed
+                       //Decide the parsing action from the verb of action command that the user typed
                        String parsingDecision = pc.ParserControllingMethodForActionDecision(jTextField1.getText());
-                   
-                       //Setting the action data for the player controller
-                       playerContr.parsingDecision = parsingDecision;
-                       playerContr.nounPartOfCommand = pc.GetNounOnPlayerCommand();
-                       playerContr.verbPartOfCommand = pc.GetVerbOnPlayerCommand();
                        
+                       //Setting the action data for the player controller   
+                       playerContr.SetParsingDecision(parsingDecision);
+                       playerContr.SetNounPartOfCommand(pc.GetNounOnPlayerCommand());
+                       playerContr.SetVerbPartOfCommand(pc.GetVerbOnPlayerCommand());
+        
                        //Sets the data of the enemies every time the user is making an action
                        //that is because whenever the player is attacking an enemy the enemies
                        //data are changing.

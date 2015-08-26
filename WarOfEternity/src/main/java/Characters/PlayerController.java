@@ -14,9 +14,9 @@ import java.util.List;
  */
 public class PlayerController {
     
-    public String parsingDecision;
-    public String nounPartOfCommand;
-    public String verbPartOfCommand;
+    private String parsingDecision;
+    private String nounPartOfCommand;
+    private String verbPartOfCommand;
     private Enemies enemyToCombat;
     private String playerCommandBeforeBattle;
     
@@ -148,4 +148,15 @@ public class PlayerController {
         this.enemyToCombat = enemy;  
     }
     
+    public void SetParsingDecision(String decision){
+        this.parsingDecision = decision;
+    }
+    
+    public void SetNounPartOfCommand(String noun){
+        this.nounPartOfCommand = noun;
+    }
+    
+    public void SetVerbPartOfCommand(String verb){
+        this.verbPartOfCommand = verb;
+    }
 }

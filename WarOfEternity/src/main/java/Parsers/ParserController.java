@@ -54,6 +54,7 @@ public class ParserController {
         String parsingDecision;
        
         String[] playerActionSplitted = pm.SplitPlayerCommand(action);
+        
         //If the command that the user has entered has more words than a noun the ...
         if(playerActionSplitted.length > 1){
             
@@ -133,6 +134,15 @@ public class ParserController {
         for(String eachBattleVerb : this.battleVerbParser){
             if(eachBattleVerb.trim().equalsIgnoreCase(playerActionSplitted[0])){
                 parsingDecision = "battle";
+                this.nounCommand = this.CreateNounWithMoreThanOneWords(playerActionSplitted);
+                this.verbCommand = playerActionSplitted[0].trim();
+            }
+        }
+        
+        //Passing all the battle verbs to decide the parsing decision
+        for(String eachSailVerb : this.sailVerbParser){
+            if(eachSailVerb.trim().equalsIgnoreCase(playerActionSplitted[0])){
+                parsingDecision = "sail";
                 this.nounCommand = this.CreateNounWithMoreThanOneWords(playerActionSplitted);
                 this.verbCommand = playerActionSplitted[0].trim();
             }

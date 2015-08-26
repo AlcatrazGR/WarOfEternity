@@ -1,0 +1,6 @@
+Belkat Docks	@	Oravor West Coast	@	2000.0
+Oravor West Coast	@	Belkat Docks	@	2000.0
+Oravor East Coast	@	Journeys End Island	@	400.0
+Journeys End Island	@	Oravor East Coast	@	400.0
+Journeys End Island	@	The Great Jade Sea	@	0.0
+The Great Jade Sea	@	Journeys End Island	@	0.0
