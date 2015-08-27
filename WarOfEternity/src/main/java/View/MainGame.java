@@ -1,5 +1,7 @@
 package View;
 
+import Characters.DockYard;
+import Characters.DockYardController;
 import Characters.Enemies;
 import Characters.EnemiesController;
 import Characters.Merchant;
@@ -52,6 +54,7 @@ public class MainGame extends javax.swing.JFrame {
     public Merchant breeMerchant;
     public EnemiesController ec;
     public Area startingArea;
+    public DockYardController dyc;
     
     private final String projectFolder;
     private Configuration configuration;
@@ -62,7 +65,7 @@ public class MainGame extends javax.swing.JFrame {
         this.projectFolder = System.getProperty("user.dir");
         
         //Configure the data for the voice recognition
-        this.ConfigureVoiceRecognitionData();
+       // this.ConfigureVoiceRecognitionData();
 
         if(newGameProcess)
             this.SettingDataForNewGame(playerName, playerClass);
@@ -279,6 +282,12 @@ public class MainGame extends javax.swing.JFrame {
         this.ic = new ItemController(mc.GetAreasList());
         this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
         this.ec = new EnemiesController(mc.GetAreasList());
+        this.dyc = new DockYardController(mc.GetAreasList());
+        
+        for(DockYard obj : this.dyc.GetDockYardList()){
+            System.out.println(obj.GetStartingDockLocation().GetAreasName()+" @ "+obj.GetDestinationDockLocation().GetAreasName()+" @ "+obj.GetSalingFee());
+        }
+        
         ec.SetGameEnemiesData();
     }
     
@@ -297,6 +306,7 @@ public class MainGame extends javax.swing.JFrame {
         this.ic = loadObj.GetItemController();
         this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
         this.ec = new EnemiesController(mc.GetAreasList());
+        this.dyc = new DockYardController(mc.GetAreasList());
         ec.SetGameEnemiesData();
         jProgressBar2.setValue(this.player.GetPlayerExperience());
         jProgressBar1.setValue(this.player.GetCharacterHealth());
@@ -644,7 +654,8 @@ public class MainGame extends javax.swing.JFrame {
         try {
             this.recognizer = new LiveSpeechRecognizer(this.configuration);
         } catch (IOException ex) {
-            Logger.getLogger(MainGame.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(MainGame.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("You dont have a microphone.");
         }
         
     }

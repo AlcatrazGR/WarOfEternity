@@ -27,7 +27,7 @@ public class ReadDockYardConnections {
     private List<String> shipFeeList;
     
     //Constructor
-    public void ReadDockYardConnections(){
+    public ReadDockYardConnections(){
         this.listOfDocks = new ArrayList();
         this.docksFileBuffer = null;
         
@@ -36,6 +36,7 @@ public class ReadDockYardConnections {
         this.shipFeeList = new ArrayList();
         
         this.SetDockFilePath();
+        this.GetDockYardConnectionsFileContent();
     }
     
     /**
@@ -57,6 +58,7 @@ public class ReadDockYardConnections {
      * Reads the content of the text file and puts it into a string buffer.
      */
     private void GetDockYardConnectionsFileContent(){
+        
         File file = new File(this.filePath);
         StringBuffer stringBuffer = null;
         
@@ -165,6 +167,16 @@ public class ReadDockYardConnections {
         return this.destinationDocksList;
     }
 
+    /**
+     * Method that determines which area objects are used in every specific string
+     * area list. It takes two parameters the string list of dock areas that can
+     * either be the starting dock areas or the destination dock areas and the 
+     * list of areas.
+     * 
+     * @param stringAreaList The string list of dock areas. It can either be starting dock areas or destination dock areas.
+     * @param areasList The list of game areas.
+     * @return Returns a list of areas that are either the starting dock areas or the destination dock areas.
+     */
     public List<Area> GetDockAreaList(List<String> stringAreaList, List<Area> areasList){
         List<Area> dockAreas = new ArrayList();
         
@@ -179,39 +191,36 @@ public class ReadDockYardConnections {
         return dockAreas;
     }
     
-    
-      /*
-    public List<Enemies> SetDockYardDataToList(){
-        List<Enemies> enemyList = new ArrayList();
-        String[] dataOnLines = SplitTextDataOnLines();
-
-        try{
-            for(int i=0; i<dataOnLines.length; i++){
-                String[] dataIndex = dataOnLines[i].split("@");
-                
-                
-                
-              
-                Enemies enemyObj = new Enemies(dataIndex[0].trim(), dataIndex[1].trim(), this.encounterArea.get(i), 
-                        this.ConvertStringToIntegerDataType(dataIndex[3].trim()), this.ConvertStringToIntegerDataType(dataIndex[4].trim()),
-                        this.ConvertStringToIntegerDataType(dataIndex[5].trim()), this.ConvertStringToDouble(dataIndex[6].trim()), 
-                        this.ConvertStringToIntegerDataType(dataIndex[7].trim()) ,dataIndex[8].trim());
-                 
-                
-                enemyList.add(enemyObj);
-            }
-        }
-        catch(Exception ex){
-        }
+    /**
+     * Method that creates the connection of dock yards from the two seperated 
+     * area list and the shipping fee list. At the end it ends all the dockyard
+     * objects into a list.
+     * 
+     * @param start
+     * @param dest 
+     */
+    public void SetDockYardConnectionsToList(List<Area> start, List<Area> dest){
         
-        return enemyList;
+        for(int i=0; i < this.shipFeeList.size(); i++){
+            DockYard dy = new DockYard(start.get(i), dest.get(i), this.ConvertStringToDouble(this.shipFeeList.get(i)));
+            this.AddDockYardObjectToTheList(dy);
+        }  
     }
     
-    private void AddAreaIntoTheEncounterAreaList(Area area){
-        this.encounterArea.add(area);
+    /**
+     * Method that adds a dock yard object into the dock yard list.
+     * 
+     * @param obj The dock yard object.
+     */
+    private void AddDockYardObjectToTheList(DockYard obj){
+        this.listOfDocks.add(obj);
     }
-    */
     
+    public List<DockYard> GetDockYardList(){
+        return this.listOfDocks;
+    }
+    
+     
     
     
 }
