@@ -794,6 +794,26 @@ public class Player implements ICharacter, Serializable {
     }
     
     /**
+     * Method that checks whether there is a person to sail on a different location.
+     * If there is then a apropriate message is created which shows the destionation
+     * and the fee required. If it doesnt exist then also a message is created.
+     * 
+     * @param listOfDocks The list of docks in the game.
+     * @return Returns the message created.
+     */
+    public String TalkToCaptainProcess(List<DockYard> listOfDocks){
+        String message = "There is no dockyard in this place!";
+        
+        for(DockYard eachDock : listOfDocks){
+            if(eachDock.GetStartingDockLocation().GetAreasName().equals(this.GetAreaLocation().GetAreasName()))
+                message = "I can get you to "+ eachDock.GetDestinationDockLocation().GetAreasName() +
+                        " for "+ eachDock.GetSalingFee() +" gold coins.";
+        }
+ 
+        return message;
+    }
+    
+    /**
      * Method that handles the experience earned by a battle
      *
      * @param enemyThatBattled The enemy object that the user has battled.

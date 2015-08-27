@@ -40,9 +40,10 @@ public class PlayerController {
      * @param enemyController   The object of the class EnemyController.
      * @param areasList  The list of game areas.
      * @param enemyList  The list of game enemies.
+     * @param docksList  The list of game dockyards
      * @return Returns a string message that describes the result of the action.
      */
-    public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, Merchant merchant, EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList){
+    public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, Merchant merchant, EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList, List<DockYard> docksList){
         String resultMessage = "";
 
         //if a player action is not battle or using a potion then cant excecute it while in battle
@@ -101,6 +102,9 @@ public class PlayerController {
                 if(personToContact.contains("doctor") || personToContact.contains("healer")){
                     resultMessage = player.TalkingToDoctorProcess();
                 }
+                else if(personToContact.contains("captain") || personToContact.contains("fisher")){
+                    resultMessage = player.TalkToCaptainProcess(docksList);
+                }
                 else{
                     MerchantController mercContr = new MerchantController(this.nounPartOfCommand, this.verbPartOfCommand);
                     resultMessage = mercContr.MerchantMainTransactionController(merchant, player, itemList);
@@ -116,6 +120,10 @@ public class PlayerController {
                     enemyController.SetBattleProgressState(false); 
                     resultMessage += "\n"+player.PlayerActionCommand(this.playerCommandBeforeBattle, itemList);
                 }
+            break;
+                
+            case "sail" :
+                
             break;
         }
 

@@ -109,7 +109,7 @@ public class MainGame extends javax.swing.JFrame {
                        ec.SetGameEnemiesData();
                        List<Enemies> enemyList = ec.GetGameEnemyList();
                        
-                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, ic.GetListOfItems(), breeMerchant, ec, mc.GetAreasList(), enemyList);
+                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, ic.GetListOfItems(), breeMerchant, ec, mc.GetAreasList(), enemyList, dyc.GetDockYardList());
         
                        //if the command that the user gave is invalid then ...
                        if(actionResult.equals("")){
@@ -283,11 +283,6 @@ public class MainGame extends javax.swing.JFrame {
         this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
         this.ec = new EnemiesController(mc.GetAreasList());
         this.dyc = new DockYardController(mc.GetAreasList());
-        
-        for(DockYard obj : this.dyc.GetDockYardList()){
-            System.out.println(obj.GetStartingDockLocation().GetAreasName()+" @ "+obj.GetDestinationDockLocation().GetAreasName()+" @ "+obj.GetSalingFee());
-        }
-        
         ec.SetGameEnemiesData();
     }
     
