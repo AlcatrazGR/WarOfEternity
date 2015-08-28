@@ -6,7 +6,7 @@ A/A	Name				Image		Main Description
 4	Belverus Lake			ok		A small lake in the middle of the region. Its a misty place full of beasts and other predators. While following the road you find your self at the meeting point of three roads, one leading to the west, one to the south-west and one to the south-east. 
 5	Baramish Ruins			ok		Baramish ruins are one of the many ruins that the great war left at its passage. Before that it was an outpost to supply weapons and armor to the soldiers of the south.
 6	Nimrod Beach			ok		The sound of the waves calms your mind as you walk towards the coast. You realize there is pirate ship in the horizon loading barrels and food from the coast line. 
-7	Anglor Bay				ok		Anglor bay is the main hideout of pirates and smuglers on the south parts of Yeress. You carefully try to sneak into the cave withoun any of the pirates noticeing you.
+7	Anglor Bay			ok		Anglor bay is the main hideout of pirates and smuglers on the south parts of Yeress. You carefully try to sneak into the cave withoun any of the pirates noticeing you.
 8	Angabur Village			ok		While entring the village you realize that some of the villagers are gazing at you with a buldersome glance. At the far east of the village next to a shop you see a doctor puting dead bodies into a caravan.  
 9	Angabur Cemetery			ok		People from angabur village and the plains of hope have been buring their dead since the great war, when a necromancer laid a curse on their desendants.
 10	Angabur Tombs			ok		While opening the door to the tomb you smell an intense scent of dead corpses. Continueing down the stairs you hear creape sounds and so you draw emidiately your weapon.
@@ -22,7 +22,7 @@ A/A	Name				Image		Main Description
 20	Drash Mire Swamp			ok		One of the three main swamps in the land of Yeress. Drash Mire Swamp is the one closest to the kingdom of Tan'leri. While wondering into the swamp you hear voices coming from the trees.
 21	Plain's Of Estild			ok		A peaceful place which is located at the borders of the Tan'leri kingdom. Merchants from the west pass from this route often.
 22	Suloild'sh Road's			ok		This roads was the primary route of the merchants from the west. Now it is an abandoned peacefull place due to the watch tower on the north-west that has been runsucked by bandits and outlaws.
-23	Worach Watch Tower 			ok		The tower stands tall into the sky. While geting closer to the tower you realize that it is heavily guarded by bandits. So, you start sneaking to the gate trying not to notice you. 
+23	Worach Watch Tower 		ok		The tower stands tall into the sky. While geting closer to the tower you realize that it is heavily guarded by bandits. So, you start sneaking to the gate trying not to notice you. 
 24	Quekalsul	Har Ruins			ok		Before the great war Quekalsul Har ruins was a monastery of water mages. Now after its destruction it still holds mysteries about the creation of the clan.
 25	Del'raku Oasis			ok		Slowly you aproach the little pond at the middle of the oasis to drink water. A pack of lions are staring at you and so you back up.
 26	Tan'leri City			ok		The great city of Tan'leri stands proud at the border of the Tan'leri kingdom. By entering the city you see a couple of merchants selling their stuff to the citizens and the city guards at the top of the wall's of the city observing any intruders into the kindoms from the east and from the north.
@@ -245,22 +245,26 @@ A/A	Gate Location		Key Location		Blocking Path		Embedded		Test
 10	Journeys End Island		Elderm Arcane University	south			ok
 11	The Great Jade Sea		Scholomance Depths		sink			ok		
 
----------------------------------------------------------------------------------------------------------------------
-Errors										State
----------------------------------------------------------------------------------------------------------------------
-1	orthografika sthn perioxh lake of enala 						ok
-2	den emfanizete eikona stin perioxh lake of enala					ok
-3	connections me to belkat docs							ok
-4	provlima me ta connection tou worach watch tower					ok
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Errors											State
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+1	orthografika sthn perioxh lake of enala 							ok
+2	den emfanizete eikona stin perioxh lake of enala						ok
+3	connections me to belkat docs								ok
+4	provlima me ta connection tou worach watch tower						ok
 5	provlima me ta connection tou orm'ray roads						ok
 6	provlima me ta connection tou delraku oasis						ok
-7	provlima me ta connection tou omrr oasis						ok	
-8	loipei to east connection sto orm'ray roads						ok
-9	delraku oasis kai ageolda desert exoun idia eikona					ok
-10	den yparxei antikeimeno kleidh sto dark library kai porta sto scholomance citadel.		ok	
+7	provlima me ta connection tou omrr oasis							ok	
+8	loipei to east connection sto orm'ray roads							ok
+9	delraku oasis kai ageolda desert exoun idia eikona						ok
+10	den yparxei antikeimeno kleidh sto dark library kai porta sto scholomance citadel.			ok	
 11	provlima me tis portes sto scholomance domain mporei na perasei kapios an erxete apo thn allh meria.
-
-
+12	na emfanizei to description tis perioxhs meta apo sail (na epistrefei to message to description).		ok
+13	na mporeis na grapseis kai se mikra grammata to onoma tis perioxhs gia sail.			ok
+14	bold grammatoseira se shmeia shmantika.
+15	loipoun ta connection tou oravor west cost kai oravor east coast.					ok
+16	den mporei na epistrepsei apo journeys end island sto oravor east coast.
+17	stis perioxes me doors/gates meta apo sail na se kovei ton dromo.
 
 The year is seven hundred and twenty two (722) when war started at the lands of Yeress, which later is know as the war of eternity.
 The kingdom of Aldor, the kingdom of Ash'vor, the kingdom of Tan'leri and the clan of the water mages all combined to face the 

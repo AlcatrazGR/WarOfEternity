@@ -3,6 +3,7 @@ package Characters;
 import Items.Item;
 import Map.Area;
 import java.util.List;
+import org.json.simple.JSONObject;
 
 /**
  * Class PlayeController is the controlling class for every player action command
@@ -103,7 +104,8 @@ public class PlayerController {
                     resultMessage = player.TalkingToDoctorProcess();
                 }
                 else if(personToContact.contains("captain") || personToContact.contains("fisher")){
-                    resultMessage = player.TalkToCaptainProcess(docksList);
+                    JSONObject jObj = player.TalkToCaptainProcess(docksList);
+                    resultMessage = (String) jObj.get("message");
                 }
                 else{
                     MerchantController mercContr = new MerchantController(this.nounPartOfCommand, this.verbPartOfCommand);
@@ -123,7 +125,7 @@ public class PlayerController {
             break;
                 
             case "sail" :
-                
+                resultMessage = player.ChangeAreaOnSailAction(docksList, this.nounPartOfCommand);
             break;
         }
 

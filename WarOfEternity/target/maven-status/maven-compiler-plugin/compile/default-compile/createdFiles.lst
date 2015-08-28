@@ -30,6 +30,7 @@ View\MainGame$6.class
 View\LoadGameForm$3.class
 View\MainGame$1.class
 Characters\Player.class
+Characters\DockYardController.class
 View\LoadGameForm$2.class
 Items\ItemController.class
 View\StartGUI$7.class

@@ -44,7 +44,7 @@ public class DockYard {
         this.destinationDock = dest;
     }
     
-    public double GetSalingFee(){
+    public double GetSaillingFee(){
         return this.sailingFee;
     }
     

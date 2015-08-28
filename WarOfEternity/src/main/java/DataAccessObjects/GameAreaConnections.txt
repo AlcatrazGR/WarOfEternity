@@ -160,3 +160,5 @@ Hopes End Wall		@	Village Of Scholomance	@	north
 Hopes End Wall		@	Eld'ny Peak		@	south-west
 Belkat Docks		@	Oldash Maze		@	south-west
 Belkat Docks		@	Lilen Coast		@	north-east
+Oravor West Coast		@	Oravor Coast Road		@	north
+Oravor East Coast		@	Oravor Coast Road		@	north
