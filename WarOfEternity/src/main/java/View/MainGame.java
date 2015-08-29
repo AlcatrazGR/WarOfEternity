@@ -282,7 +282,8 @@ public class MainGame extends javax.swing.JFrame {
         this.ic = new ItemController(mc.GetAreasList());
         this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
         this.ec = new EnemiesController(mc.GetAreasList());
-        this.dyc = new DockYardController(mc.GetAreasList());
+        this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
+        this.dyc.DockYardMainControllingMethod();
         ec.SetGameEnemiesData();
     }
     
@@ -301,7 +302,8 @@ public class MainGame extends javax.swing.JFrame {
         this.ic = loadObj.GetItemController();
         this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
         this.ec = new EnemiesController(mc.GetAreasList());
-        this.dyc = new DockYardController(mc.GetAreasList());
+        this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
+        this.dyc.DockYardMainControllingMethod();
         ec.SetGameEnemiesData();
         jProgressBar2.setValue(this.player.GetPlayerExperience());
         jProgressBar1.setValue(this.player.GetCharacterHealth());

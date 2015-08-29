@@ -6,7 +6,7 @@ Red Stone Gate		@	Heavy gate made with red sand stone. There is a carved symbol 
 Water Ward Barrier		@	Magical water barrier. There are lots of corpses at close to it, so you decide not to touch it.						@	 4 	@	10000	@	0	@	0.0	@	north-west	
 Dark Fissure		@	A dark energy is emiting from this barrier. You can also hear screams coming from it and see bones floating.				@	 4 	@	10000	@	0	@	0.0	@	south
 Scholomance Wall		@	The great wall that guards the domain of scholomance. There is a hole to insert levers.						@	 4 	@	10000	@	0	@	0.0	@	north
-Ship Wreck		@	Many ships laying destroyed on the bottom of the ocean.									@	 4 	@	10000	@	0	@	0.0	@	south	
+Ship Wreck		@	Many ships laying destroyed on the bottom of the ocean.									@	 4 	@	10000	@	0	@	0.0	@	The Great Jade Sea
 Jade Beam			@	A weird jade beam at the middle of the ocean. It seems that it originates from the depths. Inside the beam there is disturbance in the waters.	@	 4 	@	10000	@	0	@	0.0	@	sink	
 Scholomance Gate		@	A huge black iron gate, preventing any intruders into the scholomance citadel.							@	 4 	@	10000	@	0	@	0.0	@	north
 Wooden Key		@	A small wooden key. It seems old and withered.									@	 2	@	0.1	@	0	@	0.0

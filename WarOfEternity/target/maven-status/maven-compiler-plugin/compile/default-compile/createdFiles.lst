@@ -9,6 +9,7 @@ View\StartGUI$1.class
 View\StoryForm$1.class
 Characters\EnemiesController.class
 Characters\ReadEnemyDataModel.class
+Characters\DockYardActionModel.class
 Interfaces\ICharacter.class
 Items\ReadItemDataController.class
 View\MainGame$4.class

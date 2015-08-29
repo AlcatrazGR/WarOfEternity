@@ -664,31 +664,7 @@ public class Player implements ICharacter, Serializable {
         
         this.SetEquipedItemListOfPlayer(newEquipedItemList);
     }
-    
-    /**
-     * Method that changes the status of the player when equipping a item (or un equipping),
-     * 
-     * @param item  The item to that is going to replace the old one.
-     * @param num   The basic (starting) player status.
-     */
-    /*
-    private void ChangePlayerStatsWhenChangingEquipment(Item item, int num){
-        
-        switch(item.GetItemType()){
-            //the item is a weapon
-            case 3 :
-                this.SetCharacterDamage(this.GetCharacterDamage() + num);
-            break;
-            //the item is armor or shield    
-            case 6 :
-            case 5 :
-                this.SetCharacterArmor(this.GetCharacterArmor() + num);
-            break;
-           
-        }
-    }
-    */
-    
+
     /**
      * This method sets the data needed for battle. Generally if the player is
      * about to encounter an enemy is sets a list of enemies that dwell in the 
@@ -806,67 +782,26 @@ public class Player implements ICharacter, Serializable {
 
         String message = "There is no dockyard in this place!";
         boolean status = false;
-        DockYard dockObj = null;
         
+        List<DockYard> listOfDocksThatAreConnectedToArea = new ArrayList();
+
         for(DockYard eachDock : listOfDocks){
             if(eachDock.GetStartingDockLocation().GetAreasName().equals(this.GetAreaLocation().GetAreasName())){
-                message = "I can get you to "+ eachDock.GetDestinationDockLocation().GetAreasName() +
+                if(eachDock.GetSaillingFee() != 0.0)
+                    message = "I can get you to "+ eachDock.GetDestinationDockLocation().GetAreasName() +
                         " for "+ eachDock.GetSaillingFee() +" gold coins.";
+                
                 status = true;
-                dockObj = eachDock;
+                listOfDocksThatAreConnectedToArea.add(eachDock);
             }     
         }
- 
+
         JSONObject jObj = new JSONObject();
         jObj.put("message", message);
         jObj.put("status", status);
-        jObj.put("dock", dockObj);
+        jObj.put("docklist", listOfDocksThatAreConnectedToArea);
         
         return jObj;
-    }
-    
-    /**
-     * Method that handles the sailling from one area to another. Firstly it
-     * checks whether there is a captain on that particullar area, then if 
-     * the command given contains the destination area and lastly if the
-     * player has the amount of gold needed for the travel. At the end is 
-     * sends a string message which indicates the status of the transaction.
-     * 
-     * @param listOfDocks The list of docks in this game.
-     * @param nounPart The noun part of the command.
-     * @return Returns a string message that indicates the status of the transaction.
-     */
-    public String ChangeAreaOnSailAction(List<DockYard> listOfDocks, String nounPart){
-        String message = "";
-        
-        JSONObject jObj = this.TalkToCaptainProcess(listOfDocks);
-        DockYard dockObj = (DockYard) jObj.get("dock");
-        
-        if((boolean) jObj.get("status")){
-            if(nounPart.contains(dockObj.GetDestinationDockLocation().GetAreasName().toLowerCase())){
-                if(this.GetCharacterGold() >= dockObj.GetSaillingFee()){
-                    
-                    this.SetCharacterGold(this.GetCharacterGold() - dockObj.GetSaillingFee());
-                    this.SetAreaLocation(dockObj.GetDestinationDockLocation());
-                    message = dockObj.GetDestinationDockLocation().GetAreaDescription();
-                }
-                else{
-                    message = "You don't have enough gold coins to travel to "+dockObj.GetDestinationDockLocation().GetAreasName();
-                }
-            }
-            else{
-                message = "There is no such destination!";
-            }
-        }
-        else{
-            message = "There is no dockyard in this place!";
-        }
-
-        return message;
-    }
-    
-    private void SaillingDestinationIsBlocked(){
-    
     }
     
     /**
