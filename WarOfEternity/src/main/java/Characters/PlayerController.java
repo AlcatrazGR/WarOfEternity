@@ -126,8 +126,7 @@ public class PlayerController {
                 
             case "sail" :
                 DockYardController dyc = new DockYardController(areasList, itemList);
-                resultMessage = dyc.DockYardCommandActionProcess(player, docksList, this.nounPartOfCommand);
-                // resultMessage = player.ChangeAreaOnSailAction(docksList, this.nounPartOfCommand);
+                resultMessage = dyc.DockYardCommandActionProcess(player, docksList, this.nounPartOfCommand, this.verbPartOfCommand);
             break;
         }
 

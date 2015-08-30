@@ -80,6 +80,10 @@ public class ParserController {
                     this.nounCommand = playerActionSplitted[0].trim();
                     parsingDecision = "item";
                 }
+                else if(result.equals("sail")){
+                    this.nounCommand = playerActionSplitted[1].trim();
+                    parsingDecision = "sail";
+                }
                 else
                     parsingDecision = "Unclear command given!";
             }

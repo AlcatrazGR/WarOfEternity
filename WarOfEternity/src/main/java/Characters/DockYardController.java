@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Controlling class for sail action commands.
+ * 
  * @author Vasilis Triantaris
  */
 public class DockYardController {
@@ -15,6 +16,7 @@ public class DockYardController {
     private final List<Area> listOfAreas;
     private List<DockYard> listOfDockYards;
     private final List<Item> listOfItems;
+    
     
     //Constructor
     public DockYardController(List<Area> areas, List<Item> items){
@@ -49,10 +51,17 @@ public class DockYardController {
      * @param noun The noun part of the command.
      * @return Returns a string message that will be displayed to the user.
      */
-    public String DockYardCommandActionProcess(Player player, List<DockYard> docks, String noun){
+    public String DockYardCommandActionProcess(Player player, List<DockYard> docks, String noun, String verb){
         
+        String message;
         DockYardActionModel dyam = new DockYardActionModel(docks, noun, this.listOfItems, this.listOfAreas);
-        String message = dyam.ChangeAreaOnSailAction(player);
+        
+        if(!verb.toLowerCase().equals("sink")){
+            message = dyam.ChangeAreaOnSailAction(player);
+        }
+        else{
+            message = dyam.SinkActionCommandProcess(player);
+        }
         
         return message;
     }
