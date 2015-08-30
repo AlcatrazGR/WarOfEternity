@@ -1,7 +1,6 @@
 
 package Characters;
 
-import Items.GateItem;
 import Items.Item;
 import Items.ItemConnectionWithArea;
 import Map.Area;
@@ -168,8 +167,8 @@ public class DockYardActionModel {
      * it checks whether the action is blocked by an item and the it implements
      * the battle. 
      * 
-     * @param player
-     * @return 
+     * @param player The object that contains the data of the player.
+     * @return Retuens a message indicating the status of the process.
      */
     public String SinkActionCommandProcess(Player player){
 

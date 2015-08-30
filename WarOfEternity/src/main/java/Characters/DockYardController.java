@@ -49,6 +49,7 @@ public class DockYardController {
      * @param player The object that refers to the player.
      * @param docks The list of docks in the game.
      * @param noun The noun part of the command.
+     * @param verb The verb part of the command.
      * @return Returns a string message that will be displayed to the user.
      */
     public String DockYardCommandActionProcess(Player player, List<DockYard> docks, String noun, String verb){

@@ -38,6 +38,7 @@ public class MerchantController {
         String message = "";
         String locationIntegrity = this.playersLocationCanStartATransaction(merchantObj, player);
         
+        /*
         if(!locationIntegrity.equals(""))
             return locationIntegrity;
         
@@ -80,6 +81,7 @@ public class MerchantController {
         else if(this.verbPartOfCommand.equalsIgnoreCase("sell")){
             message = merchantObj.MerchantSellItemProcess(player, this.nounPartOfCommand);
         }
+        */
 
         return message;
     }
