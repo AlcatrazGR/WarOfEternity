@@ -5,6 +5,7 @@ import Characters.DockYardController;
 import Characters.Enemies;
 import Characters.EnemiesController;
 import Characters.Merchant;
+import Characters.MerchantController;
 import Characters.Player;
 import Characters.PlayerController;
 import Items.Item;
@@ -51,7 +52,7 @@ public class MainGame extends javax.swing.JFrame {
     public String commandTyped; 
     public MapController mc;    
     public ItemController ic;
-    public Merchant breeMerchant;
+    public MerchantController merc;
     public EnemiesController ec;
     public Area startingArea;
     public DockYardController dyc;
@@ -109,7 +110,7 @@ public class MainGame extends javax.swing.JFrame {
                        ec.SetGameEnemiesData();
                        List<Enemies> enemyList = ec.GetGameEnemyList();
                        
-                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, ic.GetListOfItems(), breeMerchant, ec, mc.GetAreasList(), enemyList, dyc.GetDockYardList());
+                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, ic.GetListOfItems(), ec, mc.GetAreasList(), enemyList, dyc.GetDockYardList());
         
                        //if the command that the user gave is invalid then ...
                        if(actionResult.equals("")){
@@ -145,7 +146,7 @@ public class MainGame extends javax.swing.JFrame {
         getRootPane().getActionMap().put("Cancel", new AbstractAction(){
             public void actionPerformed(ActionEvent e){
                     
-                StartGUI sgui = new StartGUI(true, player, ec, breeMerchant, mc, ic);
+                StartGUI sgui = new StartGUI(true, player, ec, merc, mc, ic);
                 sgui.setVisible(true); 
                 
             }
@@ -280,7 +281,10 @@ public class MainGame extends javax.swing.JFrame {
         jLabel1.setIcon(icon);
 
         this.ic = new ItemController(mc.GetAreasList());
-        this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
+        
+        this.merc = new MerchantController(mc.GetAreasList());
+        this.merc.SetMerchantSectionDataControllingMethod();
+        
         this.ec = new EnemiesController(mc.GetAreasList());
         this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
         this.dyc.DockYardMainControllingMethod();
@@ -300,7 +304,10 @@ public class MainGame extends javax.swing.JFrame {
         jLabel1.setIcon(icon);
         
         this.ic = loadObj.GetItemController();
-        this.breeMerchant = new Merchant(mc.GetAreasList().get(0), "Bree Merchant", 0);
+        
+        this.merc = new MerchantController(mc.GetAreasList());
+        this.merc.SetMerchantSectionDataControllingMethod();
+        
         this.ec = new EnemiesController(mc.GetAreasList());
         this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
         this.dyc.DockYardMainControllingMethod();

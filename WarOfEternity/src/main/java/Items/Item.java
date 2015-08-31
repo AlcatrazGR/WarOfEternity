@@ -1,6 +1,7 @@
 package Items;
 
 import Interfaces.IItem;
+import Map.Area;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,11 +42,11 @@ public class Item extends GateItem implements IItem, Serializable {
         this.itemValue = value;
         this.itemCost = cost;
         this.itemHealingPower = healPower;
-        itemConnectionsList = new ArrayList<ItemConnectionWithArea>();
+        itemConnectionsList = new ArrayList();
     }
     
     //Constructor with parametres for simple item connection
-    public Item(String name, String descr, int type, double weight, int value, double cost){
+    public Item(String name, String descr, int type, double weight, int value, String atribute, int atrValue, Area merchArea, double cost){
         this.itemName = name;
         this.itemDescription = descr;
         this.itemType = type;

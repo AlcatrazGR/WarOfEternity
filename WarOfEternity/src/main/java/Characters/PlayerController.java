@@ -44,7 +44,7 @@ public class PlayerController {
      * @param docksList  The list of game dockyards
      * @return Returns a string message that describes the result of the action.
      */
-    public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, Merchant merchant, EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList, List<DockYard> docksList){
+    public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList, List<DockYard> docksList){
         String resultMessage = "";
 
         //if a player action is not battle or using a potion then cant excecute it while in battle
@@ -108,8 +108,8 @@ public class PlayerController {
                     resultMessage = (String) jObj.get("message");
                 }
                 else{
-                    MerchantController mercContr = new MerchantController(this.nounPartOfCommand, this.verbPartOfCommand);
-                    resultMessage = mercContr.MerchantMainTransactionController(merchant, player, itemList);
+                    MerchantController mercContr = new MerchantController(areasList);
+                  //  resultMessage = mercContr.MerchantMainTransactionController(merchant, player, itemList);
                 }
             break;
                 

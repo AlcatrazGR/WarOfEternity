@@ -1,6 +1,8 @@
 package Characters;
 
 import Items.Item;
+import Map.Area;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,34 +13,46 @@ import java.util.List;
  */
 public class MerchantController {
     
-    private final String nounPartOfCommand;
-    private final String verbPartOfCommand;
+    private final List<Area> listOfGameAreas;
+    private List<Merchant> listOfMerchants;
 
-    public MerchantController(String nounPart, String verbPart){
-        this.nounPartOfCommand = nounPart;
-        this.verbPartOfCommand = verbPart;
+    public MerchantController(List<Area> areas){
+        this.listOfGameAreas = areas;
+        this.listOfMerchants = new ArrayList(); 
     }
 
-    
     /**
-     * This method is the main controlling method for merchant actions. It calls
-     * the competent methods to check the location integrity of the merchant based
-     * on the location of the player. Based on the command given decides if the 
-     * action is referred to a merchant or a healer / doctor. Initializes the 
-     * inventory of the merchant and how that is going to be displayed. And lastly
-     * calls the methods of sell and buy if the user action is referred for buying
-     * or selling items to the merchant.
+     * Method that controlles the reading of merchant object from the text
+     * file. 
+     */
+    public void SetMerchantSectionDataControllingMethod(){
+        
+        ReadMerchantConnections rmc = new ReadMerchantConnections();
+        
+        rmc.GetTextFileColumnsToList();
+        List<Area> listOfMerchantAreas = rmc.GetAreasAssociatedWithTheMerchants(this.listOfGameAreas);
+        this.listOfMerchants = rmc.SetMerchantList(listOfMerchantAreas);
+    }
+    
+    private List<Merchant> GetListOfMerchants(){
+        return this.listOfMerchants;
+    }
+
+    /**
+     * This method controlles the reading of items for the merchant that will
+     * be displayed to the player after a talk to merchant action command.
      * 
-     * @param merchantObj   The object of the merchant.
-     * @param player    The object of the player.
-     * @param gameItemList  The list of game items.
+     * @param listOfGameItems The list of game items.
      * @return Returns the inventory of the merchant analytically written object by object if everything goes wright or else a message that describes the result of the action command.
      */
-    public String MerchantMainTransactionController(Merchant merchantObj, Player player, List<Item> gameItemList){
+    public String SetMerchantItemListToBeDisplayed(List<Item> listOfGameItems){
+        
+         
+        /*
         String message = "";
         String locationIntegrity = this.playersLocationCanStartATransaction(merchantObj, player);
         
-        /*
+       
         if(!locationIntegrity.equals(""))
             return locationIntegrity;
         
@@ -83,7 +97,7 @@ public class MerchantController {
         }
         */
 
-        return message;
+        return "";
     }
     
     /**

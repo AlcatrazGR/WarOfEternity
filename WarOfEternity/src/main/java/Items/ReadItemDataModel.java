@@ -5,6 +5,7 @@ import Map.Area;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +20,20 @@ import java.util.logging.Logger;
  */
 public class ReadItemDataModel {
     
+    private final List<Area> listOfAreas;
+    
     private String itemFilePath;
     private String itemConnectionsFilePath;
+    private StringBuffer itemBuffer;
+    private StringBuffer itemConnectionsBuffer;
 
-    public ReadItemDataModel(){
+    public ReadItemDataModel(List<Area> areas){
+        
+        this.listOfAreas = areas;
+        this.itemBuffer = null;
+        this.itemConnectionsBuffer = null;
+        this.itemFilePath = "";
+        this.itemConnectionsFilePath = "";
         
         //Setting file data
         this.SetItemFilePath();
@@ -67,7 +78,7 @@ public class ReadItemDataModel {
      * 
      * @return Returns a string buffer which represents the content of the item file.
      */
-    private StringBuffer GetItemFileContent(){
+    private void GetItemFileContent(){
         File file = new File(this.itemFilePath);
         StringBuffer stringBuffer = null;
         
@@ -85,11 +96,10 @@ public class ReadItemDataModel {
             fileReader.close();
   
         }
-        catch(Exception ex){
-            ex.printStackTrace();
+        catch(IOException ex){
         }
         
-        return stringBuffer;
+        this.itemBuffer = stringBuffer;
     }
     
     /**
@@ -97,7 +107,7 @@ public class ReadItemDataModel {
      * 
      * @return Returns a string buffer which represents the content of the item connections file.
      */
-    private StringBuffer GetItemConnectionsFileContent(){
+    private void GetItemConnectionsFileContent(){
         File file = new File(this.itemConnectionsFilePath);
         StringBuffer stringBuffer = null;
         
@@ -115,11 +125,10 @@ public class ReadItemDataModel {
             fileReader.close();
   
         }
-        catch(Exception ex){
-            ex.printStackTrace();
+        catch(IOException ex){
         }
         
-        return stringBuffer;
+        this.itemConnectionsBuffer = stringBuffer;
     }
     
     /**
@@ -131,7 +140,6 @@ public class ReadItemDataModel {
     private String[] SplitStringBufferDataToLines(StringBuffer strBuf){
     
         String[] dataOnLines = strBuf.toString().split("\n");
-        
         return dataOnLines;
     }
     
@@ -169,6 +177,16 @@ public class ReadItemDataModel {
         
         return doubleData;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     /**
      * Method that sets the item data of the file into a list.

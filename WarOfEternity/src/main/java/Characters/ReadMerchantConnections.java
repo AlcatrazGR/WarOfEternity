@@ -1,4 +1,3 @@
-
 package Characters;
 
 import Map.Area;

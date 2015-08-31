@@ -2,6 +2,7 @@ package View;
 
 import Characters.EnemiesController;
 import Characters.Merchant;
+import Characters.MerchantController;
 import Characters.Player;
 import GameFileConfiguration.MainFolderConfig;
 import GameFileConfiguration.ResourceFolderConfig;
@@ -27,10 +28,10 @@ public class StartGUI extends javax.swing.JFrame {
     public Player player;
     public MapController mc;    
     public ItemController ic;
-    public Merchant breeMerchant;
+    public MerchantController merc;
     public EnemiesController ec;
 
-    public StartGUI(boolean inGame, Player playerObj, EnemiesController ecObj, Merchant breeMerchantObj, MapController mcObj, ItemController icObj) {
+    public StartGUI(boolean inGame, Player playerObj, EnemiesController ecObj, MerchantController merContr, MapController mcObj, ItemController icObj) {
         initComponents();
 
         String projectFold = System.getProperty("user.dir");
@@ -44,7 +45,7 @@ public class StartGUI extends javax.swing.JFrame {
         this.player = playerObj;
         this.mc = mcObj;    
         this.ic = icObj;
-        this.breeMerchant = breeMerchantObj;
+        this.merc = merContr;
         this.ec = ecObj;
     
         //If the game is in progress (the player pressed the ESC button)
