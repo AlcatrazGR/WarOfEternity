@@ -33,6 +33,10 @@ public class Item extends GateItem implements IItem, Serializable {
      * 6 --> Shields
      */
     
+    private Area itemArea;
+    private String attributeType;
+    private int attributeValue;
+    
     //Constructor that sets and item object type 1 (consumble (potion))
     public Item(String name, String descr, int type, double weight, int value, double cost, int healPower){
         this.itemName = name;
@@ -42,9 +46,81 @@ public class Item extends GateItem implements IItem, Serializable {
         this.itemValue = value;
         this.itemCost = cost;
         this.itemHealingPower = healPower;
+        
         itemConnectionsList = new ArrayList();
+        this.itemArea = null;
+        this.attributeType = "";
+        this.attributeValue = 0;
     }
     
+    //Constructor that sets items type 2 (keys)
+    public Item(String name, String descr, int type, double weight, int value, double cost){
+        this.itemName = name;
+        this.itemDescription = descr;
+        this.itemType = type;
+        this.itemWeight = weight;
+        this.itemValue = value;
+        this.itemCost = cost;
+        
+        itemConnectionsList = new ArrayList();
+        this.itemArea = null;
+        this.attributeType = "";
+        this.attributeValue = 0;
+        this.itemHealingPower = 0;
+    }
+    
+    //Constructor that sets items type 3 (weapon)
+    public Item(String name, String descr, int type, double weight, int value, String atr, int atrVal, Area area, double cost){
+        this.itemName = name;
+        this.itemDescription = descr;
+        this.itemType = type;
+        this.itemWeight = weight;
+        this.itemValue = value;
+        this.attributeType = atr;
+        this.attributeValue = atrVal;
+        this.itemArea = area;
+        this.itemCost = cost;
+        
+        itemConnectionsList = new ArrayList();
+        this.itemHealingPower = 0;
+    }
+    
+    //Constructor that sets items type 4 (Gates)
+    public Item(String name, String descr, int type, double weight, int value, double cost, String blockDir){
+        this.itemName = name;
+        this.itemDescription = descr;
+        this.itemType = type;
+        this.itemWeight = weight;
+        this.itemValue = value;
+        this.itemCost = cost;
+        this.blockingDirection = blockDir;
+        
+        itemConnectionsList = new ArrayList();
+        this.itemHealingPower = 0;
+        this.itemArea = null;
+        this.attributeType = "";
+        this.attributeValue = 0;
+    }
+    
+    //Constructor that sets items type 5-6 (armor / shield)
+    public Item(String name, String descr, int type, double weight, int value, Area area, double cost){
+        this.itemName = name;
+        this.itemDescription = descr;
+        this.itemType = type;
+        this.itemWeight = weight;
+        this.itemValue = value;
+        this.itemArea = area;
+        this.itemCost = cost;
+        
+        itemConnectionsList = new ArrayList();
+        this.attributeType = "";
+        this.attributeValue = 0;
+        this.itemHealingPower = 0;
+    }
+    
+   
+    
+    /*
     //Constructor with parametres for simple item connection
     public Item(String name, String descr, int type, double weight, int value, String atribute, int atrValue, Area merchArea, double cost){
         this.itemName = name;
@@ -54,7 +130,7 @@ public class Item extends GateItem implements IItem, Serializable {
         this.itemValue = value;
         this.itemCost = cost;
         this.itemHealingPower = 0;
-        itemConnectionsList = new ArrayList<ItemConnectionWithArea>();
+        itemConnectionsList = new ArrayList();
     }
     
     //COnstructor with parametres for setting gate / door object attributes.
@@ -67,8 +143,9 @@ public class Item extends GateItem implements IItem, Serializable {
         this.blockingDirection = blockDir;
         this.itemCost = cost;
         this.itemHealingPower = 0;
-        itemConnectionsList = new ArrayList<ItemConnectionWithArea>();
+        itemConnectionsList = new ArrayList();
     }
+    */
     
     public List<ItemConnectionWithArea> GetItemConnectionsWithArea(){
         return this.itemConnectionsList;
@@ -76,6 +153,30 @@ public class Item extends GateItem implements IItem, Serializable {
     
     public void AddItemConnectionWithAreaToList(ItemConnectionWithArea icwa){
         this.itemConnectionsList.add(icwa);
+    }
+
+    public void SetItemArea(Area area){
+        this.itemArea = area;
+    }
+    
+    public Area GetItemArea(){
+        return this.itemArea;
+    }
+    
+    public void SetAttributeType(String atr){
+        this.attributeType = atr;
+    }
+    
+    public String GetAttributeType(){
+        return this.attributeType;
+    }
+    
+    public void SetAttributeValue(int atrVal){
+        this.attributeValue = atrVal;
+    }
+    
+    public int GetAttributeValue(){
+        return this.attributeValue;
     }
 
     public String GetItemName() {

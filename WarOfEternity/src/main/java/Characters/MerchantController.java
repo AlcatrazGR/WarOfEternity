@@ -48,7 +48,7 @@ public class MerchantController {
     public String SetMerchantItemListToBeDisplayed(List<Item> listOfGameItems){
         
          
-        /*
+      /*
         String message = "";
         String locationIntegrity = this.playersLocationCanStartATransaction(merchantObj, player);
         

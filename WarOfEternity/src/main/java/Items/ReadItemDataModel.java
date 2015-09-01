@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 public class ReadItemDataModel {
     
     private final List<Area> listOfAreas;
+    private List<Item> listOfGameItems;
     
     private String itemFilePath;
     private String itemConnectionsFilePath;
@@ -34,10 +35,13 @@ public class ReadItemDataModel {
         this.itemConnectionsBuffer = null;
         this.itemFilePath = "";
         this.itemConnectionsFilePath = "";
+        this.listOfGameItems = new ArrayList();
         
         //Setting file data
         this.SetItemFilePath();
         this.SetItemConnectionsFilePath();
+        this.GetItemFileContent();
+        this.GetItemConnectionsFileContent();
     }
     
     /**
@@ -178,6 +182,97 @@ public class ReadItemDataModel {
         return doubleData;
     }
     
+    private void SetItemDataList(){
+       
+        String[] dataOnLines = SplitStringBufferDataToLines(this.itemBuffer);
+        
+        for(int i=0; i<dataOnLines.length; i++){
+            String[] dataIndex = dataOnLines[i].split("@");
+                
+            switch(dataOnLines[2].trim()){
+            
+                //Case the item is consumable
+                case "1" :
+                    Item itemObj = new Item(dataIndex[0].trim(), dataIndex[1].trim(),
+                        this.ConvertStringToInteger(dataIndex[2].trim()), this.ConvertStringToDouble(dataIndex[3].trim()),
+                        this.ConvertStringToInteger(dataIndex[4].trim()), this.ConvertStringToDouble(dataIndex[5].trim()),
+                        this.ConvertStringToInteger(dataIndex[6].trim()));
+                    this.AddItemIntoTheItemList(itemObj);
+                break;
+                   
+                //Case the item is miscenelous
+                case "2" :
+                    
+                    break;
+                  
+                //Case the item is a weapon
+                case "3" :
+                    
+                    break;
+                  
+                //Case the item is a gate
+                case "4" :
+                    
+                    break;
+                 
+                //Case the item is armor / shield
+                case "5" :
+                case "6" :
+                    
+                break;
+                
+              
+            }
+            
+            
+            
+            
+            
+            /*
+            if(dataIndex.length == 6){
+                    Item itemObj = new Item(dataIndex[0].trim(), dataIndex[1].trim(), ConvertStringToInteger(dataIndex[2].trim()), 
+                            ConvertStringToDouble(dataIndex[3].trim()), ConvertStringToInteger(dataIndex[4].trim()), ConvertStringToDouble(dataIndex[5].trim()));                         
+                    itemList.add(itemObj);
+            }  
+            else{
+                if(dataIndex[6].trim().matches("-?\\d+(\\.\\d+)?")){
+                    Item itemObj = new Item(dataIndex[0].trim(), dataIndex[1].trim(), ConvertStringToInteger(dataIndex[2].trim()), 
+                            ConvertStringToDouble(dataIndex[3].trim()), ConvertStringToInteger(dataIndex[4].trim()), ConvertStringToDouble(dataIndex[5].trim()), ConvertStringToInteger(dataIndex[6].trim())); 
+                    itemList.add(itemObj);    
+                }
+                else{
+                    Item itemObj = new Item(dataIndex[0].trim(), dataIndex[1].trim(), ConvertStringToInteger(dataIndex[2].trim()), 
+                            ConvertStringToDouble(dataIndex[3].trim()), ConvertStringToInteger(dataIndex[4].trim()), ConvertStringToDouble(dataIndex[5].trim()), dataIndex[6].trim()); 
+                    itemList.add(itemObj);
+                }
+            }
+            */
+            
+        }
+                
+            
+        
+    }
+    
+    private Area GetEligibleAreaForItem(String itemAreaName){
+        
+        Area eligibleItemArea = null;
+        
+        for(Area eachGameArea : this.listOfAreas){
+            if(eachGameArea.GetAreasName().equals(itemAreaName))
+                eligibleItemArea = eachGameArea;
+        }
+        
+        return eligibleItemArea;
+    }
+
+    private void AddItemIntoTheItemList(Item item){
+        this.listOfGameItems.add(item);
+    }
+    
+    public List<Item> GetListOfGameItems(){
+        return this.listOfGameItems;
+    }
     
     
     
@@ -188,11 +283,14 @@ public class ReadItemDataModel {
     
     
     
+    
+   
     /**
      * Method that sets the item data of the file into a list.
      * 
      * @return Returns the list of game items.
      */
+    /*
     public List<Item> SetItemDataList(){
         List<Item> itemList = new ArrayList();
         StringBuffer strBuf = GetItemFileContent();
@@ -227,6 +325,7 @@ public class ReadItemDataModel {
         
         return itemList;
     }
+    */
     
     /**
      * Method processes the text of gameItemConnections and returns a 
@@ -235,6 +334,7 @@ public class ReadItemDataModel {
      * @param listItems     The list of game items.
      * @return Returns a list of items from the first column of the item connections file
      */
+    /*
     public List<Item> SetConnectionItemList(List<Item> listItems){
         List<Item> connectionsItems = new ArrayList();
         StringBuffer strBuf = this.GetItemConnectionsFileContent();
@@ -252,6 +352,7 @@ public class ReadItemDataModel {
         
         return connectionsItems;
     }
+    */
     
     /**
      * Method processes the text of gameItemConnections and returns a 
@@ -260,6 +361,7 @@ public class ReadItemDataModel {
      * @param listAreas The list of game areas.
      * @return Returns a list of areas that represents the second column of the item connections file.
      */
+    /*
     public List<Area> SetConnectionItemAreasList(List<Area> listAreas){
         List<Area> connectionAreas = new ArrayList();
         StringBuffer strBuf = this.GetItemConnectionsFileContent();
@@ -277,6 +379,7 @@ public class ReadItemDataModel {
         
         return connectionAreas;
     }
+    */
     
     /**
      * Method processes the text of gameItemConnections and returns 
@@ -284,6 +387,7 @@ public class ReadItemDataModel {
      * 
      * @return Returns a list of string data which represent the third column of the item connections file.
      */
+    /*
     public List<String> SetConnectionItemPurposeList(){
         List<String> connectionPurpose = new ArrayList();
         StringBuffer strBuf = this.GetItemConnectionsFileContent();
@@ -298,5 +402,6 @@ public class ReadItemDataModel {
         
         return connectionPurpose;
     }
+    */
     
 }
