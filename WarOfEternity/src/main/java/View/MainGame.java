@@ -281,6 +281,8 @@ public class MainGame extends javax.swing.JFrame {
         jLabel1.setIcon(icon);
 
         this.ic = new ItemController(mc.GetAreasList());
+        this.ic.SetItemDataForGame();
+
         
         this.merc = new MerchantController(mc.GetAreasList());
         this.merc.SetMerchantSectionDataControllingMethod();

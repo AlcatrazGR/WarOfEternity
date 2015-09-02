@@ -4,14 +4,14 @@ Witch Barrier	@	Elysium Mine's Entrance	@	 open
 Frozen Skull Gate	@	Aldor Summit		@	 open
 Red Stone Gate	@	Akrabor Domain		@	 open
 Water Ward Barrier	@	Elderm Courtyard		@	 open
-Dark Fissure	@	Entrance Of Lost Souls	@	 open
+Dark Fissure	@	Entrance Of Lost Souls		@	 open
 Scholomance Wall	@	Hopes End Wall		@	 open
 Ship Wreck	@	Journeys End Island		@	 open
 Jade Beam		@	The Great Jade Sea		@	 open
 Scholomance Gate	@	Scholomance Citadel		@	 open
 Wooden Key	@	Daramish			@	 pick
 Wooden Key	@	Angabur Cemetery		@	 use
-Mossy Key		@	Lilen Coast		@	 pick
+Mossy Key		@	Lilen Coast			@	 pick
 Mossy Key		@	Masson Tunnels		@	 use
 Wooden Talisman	@	Dead Mire Swamp		@	 pick
 Wooden Talisman	@	Elysium Mine's Entrance	@	 use
@@ -21,8 +21,8 @@ Golden Beetle	@	Quekalsul Har Ruins		@	 pick
 Golden Beetle	@	Akrabor Domain		@	 use
 Dispel Scroll	@	Riorm Water Caves		@	 pick
 Dispel Scroll	@	Elderm Courtyard		@	 use
-Banish Evil	@	Shamans Reatreat		@	 pick
-Banish Evil	@	Entrance Of Lost Souls	@	 use
+Banish Evil		@	Shamans Reatreat		@	 pick
+Banish Evil		@	Entrance Of Lost Souls		@	 use
 Black Iron Lever	@	Scorpions Den		@	 pick
 Black Iron Lever	@	Hopes End Wall		@	 use
 Summon Ship	@	Elderm Arcane University	@	 pick
