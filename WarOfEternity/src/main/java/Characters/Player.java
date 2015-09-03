@@ -119,7 +119,7 @@ public class Player implements ICharacter, Serializable {
         return this.itemsSelected;
     }
 
-    public void SetItemsSelectedByPLayer(List<Item> itemList){
+    public void SetItemsSelectedByPlayer(List<Item> itemList){
         this.itemsSelected = itemList;
     }
     
@@ -182,7 +182,7 @@ public class Player implements ICharacter, Serializable {
                 listOfNewSelectedItems.add(eachItem);
         }
         
-        this.SetItemsSelectedByPLayer(listOfNewSelectedItems);
+        this.SetItemsSelectedByPlayer(listOfNewSelectedItems);
     }
     
     public void SetCharacterGold(double goldCoins) {
@@ -201,7 +201,7 @@ public class Player implements ICharacter, Serializable {
         return this.equipedItems;
     }
     
-    private void AddItemToEquipedItemListOfPlayer(Item item){
+    public void AddItemToEquipedItemListOfPlayer(Item item){
         this.equipedItems.add(item);
     }
 
@@ -353,160 +353,6 @@ public class Player implements ICharacter, Serializable {
     }
 
     /**
-     * Method that processes the pick / take item command action.
-     * 
-     * @param playerAction  The action command of the player.
-     * @param itemList  The list of game items.
-     * @return Returns a message that describes the result of a pick / take action command. This message will be shown to the user.
-     */
-    public String PlayerItemActionCommand(String playerAction, List<Item> itemList){
-        boolean itemExistsOnTheAreaCheck = false;
-        String message = "";
-
-        int i=0;
-        for(Item eachItem : itemList){
-            for(ItemConnectionWithArea icwa : eachItem.GetItemConnectionsWithArea()) {
-
-                //If the the item is the same with the one that the player is trying to pick and there
-                //is a connection of this specific item with the area that the player is on then ...
-                if(((eachItem.GetItemName().equalsIgnoreCase(playerAction)) || (eachItem.GetItemDescription().contains(playerAction))) && 
-                        (icwa.GetItemUsage().equals("pick")) && (icwa.GetConnectionWithAreaReference().GetAreasName().equals(this.currentAreaLocation.GetAreasName()))) {
-     
-                    //if the summary of weight plus the items is more than the limit then..
-                    if(this.CalculatingPlayerInventoryItemWeight() + eachItem.GetItemWeight() > 100.0)
-                        return "Exceeding weight limit, can't pick that up!";
-                    
-                    switch(itemList.get(i).GetItemType()){
-                        
-                        //case it is misceleneous
-                        case 2 :
-                           if(itemList.get(i).GetItemValue() == 0){
-                               itemExistsOnTheAreaCheck = true;
-                               message = "Item "+playerAction+" is picked.\n--> Description : "+eachItem.GetItemDescription();
-                               itemList.get(i).SetItemValue(1);
-                               this.itemsSelected.add(itemList.get(i));
-                           }
-                           else {
-                               itemExistsOnTheAreaCheck = true;
-                               message = "You have already picked : "+playerAction;
-                           } 
-                        break;
-                    
-                        case 1:
-                            if(itemList.get(i).GetItemValue() > 0){
-                                itemExistsOnTheAreaCheck = true;
-                                message = "Item "+playerAction+" is picked\n--> Decription : "+eachItem.GetItemDescription();
-                                itemList.get(i).SetItemValue(0);
-                                this.itemsSelected.add(itemList.get(i));
-                            }
-                            else{
-                                itemExistsOnTheAreaCheck = true;
-                                message = "You have already picked : "+playerAction;
-                            }
-                        break;
-                    }
-                }
-            }
-            i++;
-        }
-   
-        if(!itemExistsOnTheAreaCheck)
-            message = "There is no item : "+playerAction;
-        
-        return message;
-    }
-    
-    /**
-     * Method that processes the use of potion items command actions.
-     * 
-     * @param playerAction  The action command of the player.
-     * @param itemList  The list of game items.
-     * @param enemyController   The object of the enemy controller class. It is used to decide whether the player is in a battle phase.
-     * @param enemyToCombat     The enemy object that the user is battling. It is used in order to maintain the battle cycle.
-     * @return Returns a message that describes the result of a use potion item action command. This message will be shown to the user.
-     */
-    public String PlayerUseItemPotionCommand(String playerAction, List<Item> itemList, EnemiesController enemyController, Enemies enemyToCombat){
-        String message = "";
-        List<Item> newInventory = new ArrayList();
-        
-        int i=0;
-        for(Item eachItemOnInventory : this.itemsSelected){
-            if((eachItemOnInventory.GetItemName().equalsIgnoreCase(playerAction)) && (eachItemOnInventory.GetItemValue() > 0)){
-                this.SetCharacterHealth(this.GetCharacterHealth() + eachItemOnInventory.GetItemHealingPower());
-                this.itemsSelected.get(i).SetItemValue(this.itemsSelected.get(i).GetItemValue() - 1);
-                
-                //If the player runs out of potion then the item must be removed from inventory
-                if(this.itemsSelected.get(i).GetItemValue() == 0){
-                    for(Item eachItem: this.itemsSelected){
-                        if(!eachItem.GetItemName().equals(eachItemOnInventory.GetItemName()))
-                            newInventory.add(eachItem); 
-                    }
-                    
-                    this.SetItemsSelectedByPLayer(newInventory);
-                }
-                
-                message = eachItemOnInventory.GetItemName()+" has been used!";
-            }
-            i++;
-        }
-        
-        if(enemyController.GetBattleProgressState())
-            message += "\n"+AttackFromEnemyToPlayerProcess(enemyToCombat);
-
-        return message;
-    }
-
-    /**
-     * Method that processes the use of keys command actions.
-     * 
-     * @param playerAction  The action command of the player.
-     * @param itemList  The list of items of the game.
-     * @return Returns a message that describes the result of a use item action command.
-     */
-    public String PlayerUseItemKeyActionCommand(String playerAction, List<Item> itemList){
-        boolean itemCanBeUsedOnSpecificArea = false;
-        String doorItemNameOnArea;
-        String message = "";
-
-        int i = 0;
-        for(Item eachItem : itemList){
-            for(ItemConnectionWithArea icwa : eachItem.GetItemConnectionsWithArea()) { 
-                
-                //If the item item to be used its purposed for usage and its already picked by the player and there 
-                //is a usage connection of the item with the speciific are that the player is on then ...
-                if((icwa.GetItemUsage().equals("use")) && (icwa.GetConnectionWithAreaReference().GetAreasName().equals(this.currentAreaLocation.GetAreasName()))){
-                    if(itemList.get(i).GetItemValue() != 0){
-
-                        switch(itemList.get(i).GetItemType()){
-
-                            //case item is misceleneous
-                            case 2 :
-                                doorItemNameOnArea = this.GetGateNameFromItemList(playerAction, itemList);
-                                String gateIntegrityMessage = this.UsageIntegrityOfTheGate(playerAction, itemList, doorItemNameOnArea);
-                                if(!gateIntegrityMessage.equals(""))
-                                    return gateIntegrityMessage;
-
-                                this.ChangeStateOfGate(itemList, doorItemNameOnArea);
-                                itemCanBeUsedOnSpecificArea = true;
-                                message = "Gate has been open!";
-                            break;
-                       }
-                    }
-                    else{
-                        message = "Item : "+playerAction+" has already been used!";
-                    }
-                }
-            }
-            i++;   
-        } 
-        
-        if(!itemCanBeUsedOnSpecificArea)
-            return "This item can't be used here!";
-
-        return message;
-    }
-    
-    /**
      * Method that returns the name of the gate in the specific area.
      * 
      * @param playerAction  The action command of the player.
@@ -574,95 +420,6 @@ public class Player implements ICharacter, Serializable {
 
             i++;
         }
-    }
-    
-    /**
-     * Method that handles the equip item action of the player.
-     * 
-     * @param equipItemCommand    The name of the item to be equipped. 
-     * @return Returns a message from equipping an item action command.
-     */
-    public String EquipItemPlayerAction(String equipItemCommand){
-        String message;
-        Item itemToBeEquiped = null;
- 
-        for(Item eachItemOnInventory : this.itemsSelected){
-            //If the item to be equiped existes in the inventory
-            if(eachItemOnInventory.GetItemName().equalsIgnoreCase(equipItemCommand))
-                itemToBeEquiped = eachItemOnInventory;
-        }
-      
-        if(itemToBeEquiped != null){
-            switch(itemToBeEquiped.GetItemType()){
-                case 1 :
-                case 2 :
-                    message = "This item cant be equiped!";
-                break;
-                    
-                default :
-                    this.RemoveItemWithSameTypeThatIsAlreadyEquipedOnPlayer(itemToBeEquiped);
-                    this.AddItemToEquipedItemListOfPlayer(itemToBeEquiped);
-                    this.CalculateGeneralPlayerDamage();
-                    this.CalculatePlayersArmor();
-                    message = itemToBeEquiped.GetItemName()+" is equiped!";
-                break;
-            }
-        }
-        else{
-            message = "There no such item in your inventory!";
-        }
-
-        return message;
-    }
-    
-    /**
-     * Method that handles the search for items action.
-     * 
-     * @param itemList  The list of items of the game.
-     * @return Returns a message as a result of the search command and it is displayed to the user.
-     */
-    public String PlayerSearchItemProcess(List<Item> itemList){
-        String message = "";
-            
-        for(Item eachItem : itemList){
-            for(ItemConnectionWithArea icwa : eachItem.GetItemConnectionsWithArea()){
-                if((icwa.GetItemUsage().equals("pick")) && (icwa.GetConnectionWithAreaReference().GetAreasName().equals(this.GetAreaLocation().GetAreasName())) && (eachItem.GetItemValue() == 0))
-                    message += "--> "+eachItem.GetItemDescription()+"\n";
-                
-                if((icwa.GetItemUsage().equals("open")) && (icwa.GetConnectionWithAreaReference().GetAreasName().equals(this.GetAreaLocation().GetAreasName())) && (eachItem.GetItemValue() == 0))
-                    message += "--> "+eachItem.GetItemDescription()+"\n";
-            }
-        }
-        
-        if(message.equals(""))
-            message = "Nothing found while searching!";
-        else
-            message = "While searching you found : \n"+message;
-        
-        return message;
-    }
-    
-    /**
-     * Method that if there is an item with the same type already equipped then 
-     * it removes it from the list of equipped items.
-     * 
-     * @param itemToBeEquiped   The specific item that is going to replace an existing of its same item type when going to equip.
-     */
-    private void RemoveItemWithSameTypeThatIsAlreadyEquipedOnPlayer(Item itemToBeEquiped){
-        List<Item> newEquipedItemList = new ArrayList();
-        
-        for(Item eachEquipedItem : this.equipedItems){
-            
-            //If the type there is an item with same type with new item already equiped 
-            //then it must be unequip it.
-            if(eachEquipedItem.GetItemType() != itemToBeEquiped.GetItemType())
-                newEquipedItemList.add(eachEquipedItem); 
-            //else{
-            //    this.ChangePlayerStatsWhenChangingEquipment(eachEquipedItem, -eachEquipedItem.GetItemValue());   
-            //}
-        }
-        
-        this.SetEquipedItemListOfPlayer(newEquipedItemList);
     }
 
     /**
@@ -749,60 +506,9 @@ public class Player implements ICharacter, Serializable {
         return message;
     }
 
-    /**
-     * Method that handles the doctor - healing process.
-     * 
-     * @return Returns a message as a result of talk to healer/doctor action command.
-     */
-    public String TalkingToDoctorProcess(){
-        String message = "";
-        
-        if(this.GetCharacterGold() < 10)
-            return "Iam sorry sir, you dont have enough money for me to heal you...";
-        
-        if(this.characterHealth == 100)
-            return "You don't have a single scratch!";
-        
-        int healthToBeRestored = 100 - this.characterHealth; 
-        this.SetCharacterHealth(this.GetCharacterHealth() + healthToBeRestored);
-        this.SetCharacterGold(this.GetCharacterGold() - 10.0);
-        
-        return "The doctor healed "+healthToBeRestored+" health points, for 10 gold coins!";
-    }
     
-    /**
-     * Method that checks whether there is a person to sail on a different location.
-     * If there is then a apropriate message is created which shows the destionation
-     * and the fee required. If it doesnt exist then also a message is created.
-     * 
-     * @param listOfDocks The list of docks in the game.
-     * @return Returns the message created.
-     */
-    public JSONObject TalkToCaptainProcess(List<DockYard> listOfDocks){
-
-        String message = "There is no dockyard in this place!";
-        boolean status = false;
-        
-        List<DockYard> listOfDocksThatAreConnectedToArea = new ArrayList();
-
-        for(DockYard eachDock : listOfDocks){
-            if(eachDock.GetStartingDockLocation().GetAreasName().equals(this.GetAreaLocation().GetAreasName())){
-                if(eachDock.GetSaillingFee() != 0.0)
-                    message = "I can get you to "+ eachDock.GetDestinationDockLocation().GetAreasName() +
-                        " for "+ eachDock.GetSaillingFee() +" gold coins.";
-                
-                status = true;
-                listOfDocksThatAreConnectedToArea.add(eachDock);
-            }     
-        }
-
-        JSONObject jObj = new JSONObject();
-        jObj.put("message", message);
-        jObj.put("status", status);
-        jObj.put("docklist", listOfDocksThatAreConnectedToArea);
-        
-        return jObj;
-    }
+    
+    
     
     /**
      * Method that handles the experience earned by a battle

@@ -245,27 +245,28 @@ A/A	Gate Location		Key Location		Blocking Path		Embedded		Test
 10	Journeys End Island		Elderm Arcane University	south			ok		ok
 11	The Great Jade Sea		Scholomance Depths		sink			ok		
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
-Errors											State
------------------------------------------------------------------------------------------------------------------------------------------------------------
-1	orthografika sthn perioxh lake of enala 							ok
-2	den emfanizete eikona stin perioxh lake of enala						ok
-3	connections me to belkat docs								ok
-4	provlima me ta connection tou worach watch tower						ok
-5	provlima me ta connection tou orm'ray roads							ok
-6	provlima me ta connection tou delraku oasis							ok
-7	provlima me ta connection tou omrr oasis							ok	
-8	loipei to east connection sto orm'ray roads							ok
-9	delraku oasis kai ageolda desert exoun idia eikona						ok
-10	den yparxei antikeimeno kleidh sto dark library kai porta sto scholomance citadel.			ok	
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Errors													State
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1	orthografika sthn perioxh lake of enala 									ok
+2	den emfanizete eikona stin perioxh lake of enala								ok
+3	connections me to belkat docs										ok
+4	provlima me ta connection tou worach watch tower								ok
+5	provlima me ta connection tou orm'ray roads									ok
+6	provlima me ta connection tou delraku oasis									ok
+7	provlima me ta connection tou omrr oasis									ok	
+8	loipei to east connection sto orm'ray roads									ok
+9	delraku oasis kai ageolda desert exoun idia eikona								ok
+10	den yparxei antikeimeno kleidh sto dark library kai porta sto scholomance citadel.					ok	
 11	provlima me tis portes sto scholomance domain mporei na perasei kapios an erxete apo thn allh meria.
-12	na emfanizei to description tis perioxhs meta apo sail (na epistrefei to message to description).		ok
-13	na mporeis na grapseis kai se mikra grammata to onoma tis perioxhs gia sail.				ok
+12	na emfanizei to description tis perioxhs meta apo sail (na epistrefei to message to description).				ok
+13	na mporeis na grapseis kai se mikra grammata to onoma tis perioxhs gia sail.						ok
 14	bold grammatoseira se shmeia shmantika.
-15	loipoun ta connection tou oravor west cost kai oravor east coast.					ok
-16	den mporei na epistrepsei apo journeys end island sto oravor east coast.				ok
-17	stis perioxes me doors/gates meta apo sail na se kovei ton dromo.					ok
+15	loipoun ta connection tou oravor west cost kai oravor east coast.							ok
+16	den mporei na epistrepsei apo journeys end island sto oravor east coast.						ok
+17	stis perioxes me doors/gates meta apo sail na se kovei ton dromo.							ok
 18	na diorthosw to process tou sink		
+19	meta apo thn ulopoihsh twn merchant na efarmosw ta extra attribute points pou diavazwntai apo to text, sta attributes tou pexth.
 
 
 

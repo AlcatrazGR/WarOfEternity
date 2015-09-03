@@ -41,8 +41,9 @@ public class DockYardActionModel {
      */
     public String ChangeAreaOnSailAction(Player player){
         String message;
+        CaptainActionModel cam = new CaptainActionModel(this.listOfDocks);
         
-        JSONObject jObj = player.TalkToCaptainProcess(this.listOfDocks);
+        JSONObject jObj = cam.TalkToCaptainProcess(player);
         List<DockYard> docksOnArea = (List<DockYard>) jObj.get("docklist");
         
         if((boolean) jObj.get("status")){

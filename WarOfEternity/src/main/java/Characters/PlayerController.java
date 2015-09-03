@@ -1,6 +1,7 @@
 package Characters;
 
 import Items.Item;
+import Items.ItemController;
 import Map.Area;
 import java.util.List;
 import org.json.simple.JSONObject;
@@ -37,14 +38,17 @@ public class PlayerController {
      * 
      * @param player    The player object.
      * @param itemList  The list of game items.
-     * @param merchant  The object of the merchant.
      * @param enemyController   The object of the class EnemyController.
      * @param areasList  The list of game areas.
      * @param enemyList  The list of game enemies.
-     * @param docksList  The list of game dockyards
+     * @param docksList  The list of game dockyards.
+     * @param listOfMerchants The list of game merchants.
      * @return Returns a string message that describes the result of the action.
      */
-    public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList, List<DockYard> docksList){
+    public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, 
+            EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList, 
+            List<DockYard> docksList, List<Merchant> listOfMerchants){
+        
         String resultMessage = "";
 
         //if a player action is not battle or using a potion then cant excecute it while in battle
@@ -76,41 +80,13 @@ public class PlayerController {
             break;
         
             case "item" :
-                if(this.verbPartOfCommand.equals("equip"))
-                    resultMessage = player.EquipItemPlayerAction(this.nounPartOfCommand);
-                else if(this.verbPartOfCommand.equals("use"))
-                    switch(this.GetTypeOfItemForUsagePurpose(player)){
-                        case 0 :
-                            resultMessage = "There is no such item in your inventory!";     
-                        break;
-                        
-                        case 1 :
-                            resultMessage = player.PlayerUseItemPotionCommand(this.nounPartOfCommand, itemList, enemyController, this.enemyToCombat);
-                        break;
-                            
-                        case 2 :
-                            resultMessage = player.PlayerUseItemKeyActionCommand(this.nounPartOfCommand, itemList);
-                        break;
-                    }  
-                else if(this.verbPartOfCommand.equals("search"))
-                    resultMessage = player.PlayerSearchItemProcess(itemList);
-                else
-                    resultMessage = player.PlayerItemActionCommand(this.nounPartOfCommand, itemList);
+                ItemController ic = new ItemController(this.verbPartOfCommand, this.nounPartOfCommand, itemList);
+                resultMessage = ic.ItemActionCommandProcessController(player, enemyController, this.enemyToCombat);
             break;
                 
             case "transaction" :
-                String personToContact = this.nounPartOfCommand.toLowerCase();
-                if(personToContact.contains("doctor") || personToContact.contains("healer")){
-                    resultMessage = player.TalkingToDoctorProcess();
-                }
-                else if(personToContact.contains("captain") || personToContact.contains("fisher")){
-                    JSONObject jObj = player.TalkToCaptainProcess(docksList);
-                    resultMessage = (String) jObj.get("message");
-                }
-                else{
-                    MerchantController mercContr = new MerchantController(areasList);
-                  //  resultMessage = mercContr.MerchantMainTransactionController(merchant, player, itemList);
-                }
+                TransactionController tc = new TransactionController(areasList, listOfMerchants, this.nounPartOfCommand, this.verbPartOfCommand);
+                tc.TransactionCommandProcessControll(player, docksList, itemList);
             break;
                 
             case "battle" :
@@ -133,23 +109,7 @@ public class PlayerController {
         return resultMessage;
     }
 
-    /**
-     * This method finds the specific item to be used by the player and returns
-     * its item type.
-     * 
-     * @param player    The player object.
-     * @return Returns the integer code of the item type.
-     */
-    private int GetTypeOfItemForUsagePurpose(Player player){
-        int itemType = 0;
-        
-        for(Item eachSelectedItem : player.GetItemsSelectedByTheUser()){
-            if(eachSelectedItem.GetItemName().equalsIgnoreCase(this.nounPartOfCommand))
-                itemType = eachSelectedItem.GetItemType();
-        }
-        
-        return itemType;
-    }
+    
     
     public Enemies GetEnemyToBattle(){
         return this.enemyToCombat;
