@@ -86,7 +86,7 @@ public class PlayerController {
                 
             case "transaction" :
                 TransactionController tc = new TransactionController(areasList, listOfMerchants, this.nounPartOfCommand, this.verbPartOfCommand);
-                tc.TransactionCommandProcessControll(player, docksList, itemList);
+                resultMessage = tc.TransactionCommandProcessControll(player, docksList, itemList);
             break;
                 
             case "battle" :

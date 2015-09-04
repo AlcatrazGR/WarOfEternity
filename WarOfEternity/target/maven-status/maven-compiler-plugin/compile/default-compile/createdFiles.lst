@@ -6,7 +6,6 @@ View\NewGameForm$5.class
 View\StartGUI$5.class
 View\MainGame$2.class
 View\StartGUI$1.class
-View\StoryForm$1.class
 Characters\EnemiesController.class
 Characters\ReadEnemyDataModel.class
 Characters\DockYardActionModel.class
@@ -22,7 +21,9 @@ Parsers\ParserController.class
 View\NewGameForm$3.class
 Interfaces\IItem.class
 View\LoadGameForm$1.class
+Characters\CaptainActionModel.class
 Serialization\SaveGameData.class
+Characters\DoctorActionModel.class
 View\LoadGameForm.class
 View\NewGameForm$1.class
 Serialization\LoadGameData.class
@@ -50,13 +51,14 @@ Items\ReadItemDataModel.class
 View\NewGameForm$7.class
 Map\ReadAreaFileController.class
 Characters\MerchantActionModel.class
-Characters\MerchantController.class
+Characters\TransactionController.class
 Items\ItemConnectionWithArea.class
+Characters\BattleActionModel.class
 View\StartGUI$4.class
 Map\ReadAreaFileModel.class
 View\MapForm$1.class
-View\StoryForm.class
 GameFileConfiguration\ResourceFolderConfig.class
+Items\ItemActionModel.class
 View\MainGame$3.class
 View\StartGUI$6.class
 View\MapForm.class

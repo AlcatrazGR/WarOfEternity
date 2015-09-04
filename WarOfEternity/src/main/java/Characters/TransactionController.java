@@ -62,9 +62,15 @@ public class TransactionController {
             JSONObject jObj = cam.TalkToCaptainProcess(player);
             resultMessage = (String) jObj.get("message");
         }
-        else{
+        else if(((!this.verbPart.equals("sell")) || (!this.verbPart.equals("buy"))) && (personToContact.contains("merchant") || personToContact.contains("merchandise"))){
             MerchantActionModel mam = new MerchantActionModel(this.verbPart, this.nounPart, listOfItems, this.listOfGameAreas, this.listOfMerchants);
             resultMessage = mam.SetMerchantItemListToBeDisplayed(player);
+        }
+        else if((this.verbPart.equals("sell")) || (this.verbPart.equals("buy"))){
+            //TODO: sell and buy transaction
+        }
+        else{
+            resultMessage = "There is no such transaction / person to contact!";
         }
         
         
