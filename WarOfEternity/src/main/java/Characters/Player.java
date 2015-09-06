@@ -168,23 +168,6 @@ public class Player implements ICharacter, Serializable {
         return this.playerClass;
     }
 
-    /**
-     * This method removes an item from the list of selected player items (players
-     * inventory). Basically this method is used whenever an item is sold.
-     * 
-     * @param item  The item to be removed from the inventory.
-     */
-    public void RemoveItemFromSelectedItemsByPlayer(Item item){
-        List<Item> listOfNewSelectedItems = new ArrayList();
-        
-        for(Item eachItem : this.itemsSelected){
-            if(!eachItem.GetItemName().equals(item.GetItemName()))
-                listOfNewSelectedItems.add(eachItem);
-        }
-        
-        this.SetItemsSelectedByPlayer(listOfNewSelectedItems);
-    }
-    
     public void SetCharacterGold(double goldCoins) {
         this.charactersGold = goldCoins;
     }
@@ -212,6 +195,44 @@ public class Player implements ICharacter, Serializable {
     public int GetCharacterHealth() {
         return this.characterHealth;
     }
+    
+    
+    /**
+     * This method removes an item from the list of selected player items (players
+     * inventory). Basically this method is used whenever an item is sold.
+     * 
+     * @param item  The item to be removed from the inventory.
+     */
+    public void RemoveItemFromSelectedItemsByPlayer(Item item){
+        List<Item> listOfNewSelectedItems = new ArrayList();
+        
+        for(Item eachItem : this.itemsSelected){
+            if(!eachItem.GetItemName().equals(item.GetItemName()))
+                listOfNewSelectedItems.add(eachItem);
+        }
+        
+        this.SetItemsSelectedByPlayer(listOfNewSelectedItems);
+    }
+    
+     /**
+     * This method is removes an item from the equipped item list of the player
+     * whenever this item is about to be sold to the merchant.
+     * 
+     * @param itemToBeSold  The item to be sold to the merchant
+     */
+    public void RemoveItemFromPlayerEquipedInventory(Item itemToBeSold){
+        List<Item> newListOfEquipedItems = new ArrayList();
+        
+        for(Item eachEquipedItem : this.GetEquipedItemListOfPlayer()){
+           
+            if(!eachEquipedItem.GetItemName().equals(itemToBeSold.GetItemName()))
+                newListOfEquipedItems.add(eachEquipedItem); 
+        }
+        
+        this.SetEquipedItemListOfPlayer(newListOfEquipedItems);
+    }
+    
+    
     
     /**
      * Calculates the whole armor value of the player from all the equipped

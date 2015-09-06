@@ -73,7 +73,10 @@ public class TransactionController {
             resultMessage = bam.BuyItemFromMerchantProcess(player, jObj);
         }
         else if(this.verbPart.equals("sell")){
-            //TODO: sell transaction
+            MerchantActionModel mam = new MerchantActionModel(this.verbPart, this.nounPart, listOfItems, this.listOfGameAreas, this.listOfMerchants);
+            JSONObject jObj = mam.PlayersLocationCanStartATransaction(player.GetAreaLocation().GetAreasName());
+            SellActionModel sam = new SellActionModel(this.nounPart);
+            resultMessage = sam.SellItemToMerchantProcess(player, jObj);
         }
         else{
             resultMessage = "There is no such transaction / person to contact!";
