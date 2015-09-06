@@ -41,7 +41,7 @@ public class PlayerController {
      * @param enemyController   The object of the class EnemyController.
      * @param areasList  The list of game areas.
      * @param enemyList  The list of game enemies.
-     * @param docksList  The list of game dockyards.
+     * @param docksList  The list of game dock yards.
      * @param listOfMerchants The list of game merchants.
      * @return Returns a string message that describes the result of the action.
      */

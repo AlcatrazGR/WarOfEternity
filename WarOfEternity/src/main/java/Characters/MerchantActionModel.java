@@ -27,7 +27,7 @@ public class MerchantActionModel {
     }
 
     /**
-     * This method controlles the reading of items for the merchant that will
+     * This method controls the reading of items for the merchant that will
      * be displayed to the player after a talk to merchant action command.
      * 
      * @param player The object that contains all the data for the player.
@@ -58,9 +58,10 @@ public class MerchantActionModel {
      * Method that checks if the location of the player is at the same of the merchants
      * so it can start a transaction.
      * 
+     * @param playersAreaName The name of the player
      * @return Returns a message if the user is trying to start a transaction in a area with no merchants. If there is a merchant then it returns an empty message.
      */
-    private JSONObject PlayersLocationCanStartATransaction(String playersName){
+    public JSONObject PlayersLocationCanStartATransaction(String playersAreaName){
         
         JSONObject jObj = new JSONObject();
         String message = "There is no merchant in this area!";
@@ -68,7 +69,7 @@ public class MerchantActionModel {
         Merchant merchant = null;
         
         for(Merchant eachGameMerchant : this.listOfGameMerchants){
-            if(eachGameMerchant.GetAreaLocation().GetAreasName().equals(playersName)){
+            if(eachGameMerchant.GetAreaLocation().GetAreasName().equals(playersAreaName)){
                 message = "";
                 status = true;
                 merchant = eachGameMerchant;

@@ -15,8 +15,8 @@ public class TransactionController {
     private final List<Area> listOfGameAreas;
     private List<Merchant> listOfMerchants;
     
-    private String nounPart;
-    private String verbPart;
+    private final String nounPart;
+    private final String verbPart;
 
     //Constructor for reading merchant data.
     public TransactionController(List<Area> areas){
@@ -36,7 +36,7 @@ public class TransactionController {
     }
 
     /**
-     * Method that controlles the reading of merchant object from the text
+     * Method that controls the reading of merchant object from the text
      * file. 
      */
     public void SetMerchantSectionDataControllingMethod(){
@@ -66,8 +66,14 @@ public class TransactionController {
             MerchantActionModel mam = new MerchantActionModel(this.verbPart, this.nounPart, listOfItems, this.listOfGameAreas, this.listOfMerchants);
             resultMessage = mam.SetMerchantItemListToBeDisplayed(player);
         }
-        else if((this.verbPart.equals("sell")) || (this.verbPart.equals("buy"))){
-            //TODO: sell and buy transaction
+        else if(this.verbPart.equals("buy")){
+            MerchantActionModel mam = new MerchantActionModel(this.verbPart, this.nounPart, listOfItems, this.listOfGameAreas, this.listOfMerchants);
+            JSONObject jObj = mam.PlayersLocationCanStartATransaction(player.GetAreaLocation().GetAreasName());
+            BuyActionModel bam = new BuyActionModel(this.nounPart);
+            resultMessage = bam.BuyItemFromMerchantProcess(player, jObj);
+        }
+        else if(this.verbPart.equals("sell")){
+            //TODO: sell transaction
         }
         else{
             resultMessage = "There is no such transaction / person to contact!";
