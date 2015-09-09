@@ -65,7 +65,7 @@ public class EnemiesController implements Serializable{
         //For every area conneciton, if in a connection the direction of the player exists and there isn't
         //any doors / gates blocking the way then ...
         for(AreaConnectionMaker acm :  player.GetAreaLocation().GetListOfAreaConnections()){
-            directionIsBlockedMessage = player.DirectionToNextAreaIsBlockedByItem(itemList, acm, playerCommand);
+          /*  directionIsBlockedMessage = player.DirectionToNextAreaIsBlockedByItem(itemList, acm, playerCommand);
             if(acm.GetDirectionToOtherArea().equalsIgnoreCase(playerCommand) && (directionIsBlockedMessage.equals(""))){
                 
                 //If the area that the user is about to travel has enemies
@@ -74,6 +74,7 @@ public class EnemiesController implements Serializable{
                         check = true;
                 }
             }
+                  */
         }
         
         return check;

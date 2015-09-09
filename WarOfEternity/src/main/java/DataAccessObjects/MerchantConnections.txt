@@ -1,5 +1,5 @@
-Plains Of Hope          @	Plains Of Hope Merchant         
-Angabur Village         @	Angabur Village Merchant	
-Ash'vor                 @	Ash'vor Merchant		
+Plains Of Hope	@	Plains Of Hope Merchant         
+Angabur Village	@	Angabur Village Merchant	
+Ash'vor		@	Ash'vor Merchant		
 Aldor Reign Castle	@	Aldor Reign Castle Merchant	
-Tan'leri City           @	Tan'leri City Merchant		
+Tan'leri City	@	Tan'leri City Merchant		

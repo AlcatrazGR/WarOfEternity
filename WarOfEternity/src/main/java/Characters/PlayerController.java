@@ -4,7 +4,6 @@ import Items.Item;
 import Items.ItemController;
 import Map.Area;
 import java.util.List;
-import org.json.simple.JSONObject;
 
 /**
  * Class PlayeController is the controlling class for every player action command
@@ -76,7 +75,8 @@ public class PlayerController {
         switch(this.parsingDecision){
             
             case "direction" :
-                resultMessage = player.PlayerActionCommand(this.nounPartOfCommand, itemList);
+                DirectionActionModel dam = new DirectionActionModel(this.nounPartOfCommand, itemList);
+                resultMessage = dam.PlayerActionCommand(player);
             break;
         
             case "item" :
@@ -90,6 +90,7 @@ public class PlayerController {
             break;
                 
             case "battle" :
+                /*
                 resultMessage = player.AttackEnemyProcess(this.GetEnemyToBattle());
                 if(!resultMessage.equals("The enemy is dead!"))
                     resultMessage += "\n"+player.AttackFromEnemyToPlayerProcess(this.GetEnemyToBattle());
@@ -98,6 +99,7 @@ public class PlayerController {
                     enemyController.SetBattleProgressState(false); 
                     resultMessage += "\n"+player.PlayerActionCommand(this.playerCommandBeforeBattle, itemList);
                 }
+                */
             break;
                 
             case "sail" :

@@ -68,8 +68,9 @@ public class ItemActionModel {
                 default :
                     this.RemoveItemWithSameTypeThatIsAlreadyEquipedOnPlayer(player, itemToBeEquiped);
                     player.AddItemToEquipedItemListOfPlayer(itemToBeEquiped);
-                    this.CalculateGeneralPlayerDamage(player);
-                    this.CalculatePlayersArmor(player);
+                    player.CalculatePlayersAttributePoints();
+                    player.CalculateGeneralPlayerDamage();
+                    player.CalculatePlayersArmor();
                     message = itemToBeEquiped.GetItemName()+" is equiped!";
                 break;
             }
@@ -102,75 +103,6 @@ public class ItemActionModel {
         }
         
         player.SetEquipedItemListOfPlayer(newEquipedItemList);
-    }
-    
-    /**
-     * Method that calculates the whole player damage for the specific items
-     * that the player has equipped.
-     * 
-     * @param player The object that holds all the player data.
-     */
-    public void CalculateGeneralPlayerDamage(Player player){
-        int equippedItemDam = this.CalculatePlayersDamageFromEquippedItems(player);  
-        int damage;
-        double classPercentage;
-        
-        switch(player.GetChatacterClass()){
-            
-            case "warrior":
-                classPercentage = player.GetCharacterStrength() * 0.01;
-                damage = (int) ((equippedItemDam * player.GetPlayerLevel()) * classPercentage) + 10;
-                player.SetCharacterDamage(damage);
-            break;
-                
-            case "rogue":
-                classPercentage =  player.GetCharacterAgility() / 100;
-                damage = (int) ((equippedItemDam * player.GetPlayerLevel()) * classPercentage) + 10;
-                player.SetCharacterDamage(damage);
-            break;
-                
-            case "mage":
-                classPercentage =  player.GetCharacterInteligence() / 100;
-                damage = (int) ((equippedItemDam * player.GetPlayerLevel()) * classPercentage) + 10;
-                player.SetCharacterDamage(damage);
-            break;
-                
-        }
-        
-    }
-    
-    /**
-     * Calculates players damage from all the equipped weapon sets of the player.
-     * 
-     * @param player The object that holds all the player data.
-     * @return Returns the summary of the damage from the equipped items.
-     */
-    public int CalculatePlayersDamageFromEquippedItems(Player player){
-        int sum=10;
-        
-        for(Item eachEquipedItem : player.GetEquipedItemListOfPlayer()){
-            if(eachEquipedItem.GetItemType() == 3)
-                sum += eachEquipedItem.GetItemValue();
-        }
-        
-        return sum;
-    }
-    
-    /**
-     * Calculates the whole armor value of the player from all the equipped
-     * armor sets.
-     * @param player The object that holds all the player data.
-     */
-    public void CalculatePlayersArmor(Player player){
-        int sum=0;
-        
-        for(Item eachEquipedItem : player.GetEquipedItemListOfPlayer()){
-            if(eachEquipedItem.GetItemType() == 5 || eachEquipedItem.GetItemType() == 6)
-                sum += eachEquipedItem.GetItemValue();
-        }
-        sum += 10;
-        
-        player.SetCharacterArmor(sum);
     }
     
     /**

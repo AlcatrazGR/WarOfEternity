@@ -256,6 +256,9 @@ public class MainGame extends javax.swing.JFrame {
         jLabel10.setText(this.player.GetCharacterArmor()+"");
         jLabel12.setText(player.GetAreaLocation().GetAreasName());
         jLabel14.setText("Level : "+ this.player.GetPlayerLevel());
+        jLabel16.setText(this.player.GetCharacterStrength()+"");
+        jLabel18.setText(this.player.GetCharacterAgility()+"");
+        jLabel20.setText(this.player.GetCharacterInteligence()+"");
         jProgressBar1.setValue(player.GetCharacterHealth());
         jProgressBar2.setValue(player.GetPlayerExperience());
         

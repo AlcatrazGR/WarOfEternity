@@ -50,7 +50,7 @@ public class TransactionController {
     
     public String TransactionCommandProcessControll(Player player, List<DockYard> docksList, List<Item> listOfItems){
     
-        String resultMessage = null;
+        String resultMessage;
         String personToContact = this.nounPart.toLowerCase();
         
         if(personToContact.contains("doctor") || personToContact.contains("healer")){

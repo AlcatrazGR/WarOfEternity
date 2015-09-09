@@ -266,28 +266,31 @@ public class Player implements ICharacter, Serializable {
         return sum;
     }
     
+    /**
+     * Method that calculates the final player damage. The attribute of the character
+     * makes the 60% of the final damage while the item damage the 30% and the
+     * players level the 10%.
+     */
     public void CalculateGeneralPlayerDamage(){
         int equippedItemDam = this.CalculatePlayersDamageFromEquippedItems();  
         int damage;
-        double classPercentage;
+        
+        System.out.println("Item Damage : "+equippedItemDam);
         
         switch(this.GetChatacterClass()){
             
             case "warrior":
-                classPercentage = this.GetCharacterStrength() * 0.01;
-                damage = (int) ((equippedItemDam * this.GetPlayerLevel()) * classPercentage) + 10;
+                damage = (int) ((equippedItemDam * 0.3) + (this.GetCharacterStrength() * 0.6) + (this.GetPlayerLevel() * 0.1));
                 this.SetCharacterDamage(damage);
             break;
                 
             case "rogue":
-                classPercentage =  this.GetCharacterAgility() / 100;
-                damage = (int) ((equippedItemDam * this.GetPlayerLevel()) * classPercentage) + 10;
+                damage = (int) ((equippedItemDam * 0.3) + (this.GetCharacterAgility() * 0.6) + (this.GetPlayerLevel() * 0.1));
                 this.SetCharacterDamage(damage);
             break;
                 
             case "mage":
-                classPercentage =  this.GetCharacterInteligence() / 100;
-                damage = (int) ((equippedItemDam * this.GetPlayerLevel()) * classPercentage) + 10;
+                damage = (int) ((equippedItemDam * 0.3) + (this.GetCharacterInteligence() * 0.6) + (this.GetPlayerLevel() * 0.1));
                 this.SetCharacterDamage(damage);
             break;
                 
@@ -295,7 +298,75 @@ public class Player implements ICharacter, Serializable {
         
     }
     
+    /**
+     * Method that calculates the attribute points (strength, agility, intelligence) 
+     * of the player.
+     */
+    public void CalculatePlayersAttributePoints(){
+        
+        int strengthAttribute = 0;
+        int agilityAttribute = 0;
+        int intelligenceAttribute = 0;
+        JSONObject jObj = this.GetPlayerClassStartingStats();
+        
+        for(Item eachEquippedItem : this.equipedItems){
 
+            if(eachEquippedItem.GetItemType() == 3 && eachEquippedItem.GetAttributeType().equals("str"))
+                strengthAttribute += eachEquippedItem.GetAttributeValue();
+
+            if(eachEquippedItem.GetItemType() == 3 && eachEquippedItem.GetAttributeType().equals("agi"))
+                agilityAttribute += eachEquippedItem.GetAttributeValue();
+            
+            if(eachEquippedItem.GetItemType() == 3 && eachEquippedItem.GetAttributeType().equals("int"))
+                intelligenceAttribute += eachEquippedItem.GetAttributeValue();
+
+        }
+        
+        this.SetCharacterStrenght(strengthAttribute + (int) jObj.get("strength"));
+        this.SetCharacterAgility(agilityAttribute + (int) jObj.get("agility"));
+        this.SetCharacterInteligence(intelligenceAttribute + (int) jObj.get("intelligence"));
+       
+    }
+    
+    /**
+     * Method that returns the starting attribute points for each class.
+     * @return Returns a JSON object which contains the starting attribute points for each class.
+     */
+    private JSONObject GetPlayerClassStartingStats(){
+        
+        JSONObject jObj = new JSONObject();
+        int strength = 0;
+        int agility = 0;
+        int intelligence = 0;
+        
+        switch(this.playerClass){
+            
+            case "warrior":
+                strength = 14;
+                agility = 8;
+                intelligence = 6;
+            break;
+                
+            case "rogue":
+                strength = 6;
+                agility = 14;
+                intelligence = 8;
+            break;
+                
+            case "mage":
+                strength = 5;
+                agility = 9;
+                intelligence = 14;
+            break;
+        }
+        
+        jObj.put("strength", strength);
+        jObj.put("agility", agility);
+        jObj.put("intelligence", intelligence);
+     
+        return jObj;
+    }
+    
     /**
      * Calculating the whole wight of item in the inventory of player.
      * 
@@ -310,69 +381,6 @@ public class Player implements ICharacter, Serializable {
         return weightSum;
     }
     
-    /**
-     * Method manipulates the direction commands. It checks if the direction that
-     * the player can go to exist or if it is accessible and if everything is fine 
-     * then it redirects him to the next area.
-     * 
-     * @param playerAction  The action command given by the user.
-     * @param itemList  The list of game items. It is used to redirect the player to areas that maybe blocked by doors / gates.
-     * @return Returns a message that describes the result of the player redirection action command given.
-     */
-    public String PlayerActionCommand(String playerAction, List<Item> itemList){
-        boolean directionToAreaIsCorrect = false;
-        String directionIsBlockedMessage;
-        String message = "";
-
-        for(AreaConnectionMaker acm : this.currentAreaLocation.GetListOfAreaConnections()){
-            
-            if(acm.GetDirectionToOtherArea().equalsIgnoreCase(playerAction)){
-                
-                directionIsBlockedMessage = this.DirectionToNextAreaIsBlockedByItem(itemList, acm, playerAction);
-                if(directionIsBlockedMessage.equals("")){
-                    this.currentAreaLocation = acm.GetNextArea();
-                    directionToAreaIsCorrect = true;
-                    message = this.currentAreaLocation.GetAreaDescription();
-                }
-                else{
-                    message = directionIsBlockedMessage;
-                    directionToAreaIsCorrect = true;
-                }
-            }
-        }
-        
-        if(!directionToAreaIsCorrect)
-            message = "There is no direction to : "+playerAction;
-        
-        return message;  
-    }
-    
-    /**
-     * This method checks whether the area that the user is in is blocked by a gate / door.
-     * 
-     * @param itemList  The list of game items.
-     * @param acm   The object of area connections.
-     * @param nounPart  The noun part of a action command.
-     * @return Returns a message if the next area that the user is trying to go is blocked by a door/gate. Else it returns an empty message.
-     */
-    public String DirectionToNextAreaIsBlockedByItem(List<Item> itemList, AreaConnectionMaker acm, String nounPart){
-        String checkMessage = "";
-        
-        for(Item eachItem : itemList){
-            for(ItemConnectionWithArea icwa : eachItem.GetItemConnectionsWithArea()){
-
-                //If the item in there is a object door/gate in the area that the user is in and is still
-                //closed then...
-                if((eachItem.GetItemType() == 4) && (icwa.GetItemUsage().equals("open") && (eachItem.GetItemValue() == 0) && (eachItem.GetBlockingDirection().equalsIgnoreCase(nounPart)) && 
-                        (this.currentAreaLocation.GetAreasName().equals(icwa.GetConnectionWithAreaReference().GetAreasName())))){
-                    checkMessage = "You cannot proceed further. The gate is blocking your path!";
-                }
-            }
-        }
-        
-        return checkMessage;
-    }
-
     /**
      * Method that returns the name of the gate in the specific area.
      * 
@@ -425,22 +433,6 @@ public class Player implements ICharacter, Serializable {
             message = "The item : "+playerAction+" can't be used here!";
             
         return message;
-    }
-
-    /**
-     * Method that changes the state of the gate (Sets is to 1 which means unlocked).
-     * 
-     * @param itemList  The list of items of the game.
-     * @param doorName  The name of the door that is blocking a specific path.
-     */
-    private void ChangeStateOfGate(List<Item> itemList, String doorName){
-        int i = 0;
-        for(Item eachItem : itemList){
-            if(eachItem.GetItemName().equals(doorName))
-                itemList.get(i).SetItemValue(1);
-
-            i++;
-        }
     }
 
     /**
@@ -527,10 +519,6 @@ public class Player implements ICharacter, Serializable {
         return message;
     }
 
-    
-    
-    
-    
     /**
      * Method that handles the experience earned by a battle
      *
