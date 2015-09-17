@@ -196,8 +196,8 @@ public class ReadDockYardConnections {
      * area list and the shipping fee list. At the end it ends all the dockyard
      * objects into a list.
      * 
-     * @param start
-     * @param dest 
+     * @param start The starting dock yard location.
+     * @param dest The destination dock yard.
      */
     public void SetDockYardConnectionsToList(List<Area> start, List<Area> dest){
         

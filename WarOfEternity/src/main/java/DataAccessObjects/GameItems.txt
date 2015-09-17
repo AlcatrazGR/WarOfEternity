@@ -15,15 +15,15 @@ Wooden Talisman		@	A simple wooden carved talisman a jem in its middle, that pro
 Glacier Teeth		@	A glacier object shaped as a teeth.											@	2	@	0.4	@	0	@	0.0
 Golden Beetle		@	A small golden beetle statue.											@	2	@	0.3	@	0	@	0.0
 Dispel Scroll		@	Dispeling scroll, it can dispel magic attacks, wards and fields.								@	2	@	0.1	@	0	@	0.0
-Banish Evil		@	A small rune stone. It can banish any evil entity of harmfull spell.								@	2	@	0.2	@	0	@	0.0
+Banish Evil			@	A small rune stone. It can banish any evil entity of harmfull spell.								@	2	@	0.2	@	0	@	0.0
 Black Iron Lever		@	A heavy lever made out of iron and coated in black color.									@	2	@	0.5	@	0	@	0.0
 Summon Ship		@	A very old spell scroll that summons a single ship from the ocean.								@	2	@	0.1	@	0	@	0.0
 Jade Orb			@	Orb that emittes jade colored light. It looks fragile.									@	2	@	0.3	@	0	@	0.0
 Iron Skull			@	A heavy iron skull coated in black dye. It has a bell ring in its mouth. 								@	2	@	0.5	@	0	@	0.0
 Copper Sword		@	Medium sized sword made out of copper.											@	 3	@	4	@	7	@	str		@	1		@	Plains Of Hope	@	175.8
-Falling Star			@	A one-handed mace with spines on its top.											@	 3	@	6	@	8	@	str		@	2		@	Plains Of Hope	@	205.4
+Falling Star		@	A one-handed mace with spines on its top.											@	 3	@	6	@	8	@	str		@	2		@	Plains Of Hope	@	205.4
 Double Katana		@	A heavy double bladed katana sword.											@	 3	@	11	@	11	@	str		@	3		@	Plains Of Hope	@	469.7
-Bowie Knifes		@	Small sharpened thrawable knifes.												@	 3	@	2	@	3	@	agi		@	2		@	Plains Of Hope	@	47.4
+Bowie Knifes		@	Small sharpened thrawable knifes.											@	 3	@	2	@	3	@	agi		@	2		@	Plains Of Hope	@	47.4
 Wooden Bow		@	Simple wooden bow.													@ 	 3	@	3	@	5	@	agi		@	3		@	Plains Of Hope	@	107.4
 Main-Gauche		@	A very sharpened small dagger.												@ 	 3	@	2	@	5	@	agi		@	4		@	Plains Of Hope	@	237.4
 Light Staff			@	Simple staff carved out off oak wood.											@ 	 3	@	4	@	5	@	int		@	4		@	Plains Of Hope	@	257.4

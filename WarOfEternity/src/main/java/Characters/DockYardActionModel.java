@@ -138,6 +138,8 @@ public class DockYardActionModel {
             } 
         }
         
+        
+        
         return check;
     }
     
@@ -169,28 +171,71 @@ public class DockYardActionModel {
      * the battle. 
      * 
      * @param player The object that contains the data of the player.
-     * @return Retuens a message indicating the status of the process.
+     * @return Returns a message indicating the status of the process.
      */
     public String SinkActionCommandProcess(Player player){
 
-        String message = "To implement the battle ... ";
+        String message;
         Item blockItem = null;
 
-        for(Item eachItem : this.listOfItems){
-            for(ItemConnectionWithArea icwa : eachItem.GetItemConnectionsWithArea()){
-                
-                if((eachItem.GetItemType() == 4) && (icwa.GetItemUsage().equals("open") && (eachItem.GetItemValue() == 0) 
-                        && (eachItem.GetBlockingDirection().equalsIgnoreCase("sink")))){
-                    message = "You cannot procced further, the beam is blocking the ship!";
-                }
-            }
-        }
+        JSONObject jObj = this.FindSinkArea(player);
+        if(!(boolean) jObj.get("status"))
+            return (String) jObj.get("message");
         
-        //TODO : Implement the battle and form the code of the method.
-       
-
+        DockYard eligibleSinkArea = (DockYard) jObj.get("areadock");
+        player.SetAreaLocation(eligibleSinkArea.GetDestinationDockLocation());
+        message = eligibleSinkArea.GetDestinationDockLocation().GetAreaDescription();
+        
         return message;
     }
+    
+    /**
+     * Method that checks whether the area that the player is on can sink the ship
+     * and if the area is blocked by any gates / doors. If the player can sink the 
+     * ship then returns the eligible sink area data.
+     * 
+     * @param player The object that contains the data of the player.
+     * @return Returns a JSON object that holds the message of the check, the status and the eligible sink area.
+     */
+    private JSONObject FindSinkArea(Player player){
+        
+        JSONObject jObj = new JSONObject();
+        DockYard sinkArea = null;
+        String message = "You cannot sink the ship!";
+        boolean status = false;
+        
+        for(DockYard eachDock : this.listOfDocks){
+           for(Item eachItem : this.listOfItems){
+                for(ItemConnectionWithArea icwa : eachItem.GetItemConnectionsWithArea()){
+                
+                    if((eachItem.GetItemType() == 4) && (icwa.GetItemUsage().equals("open") 
+                        && (eachItem.GetItemValue() == 0) && (eachItem.GetBlockingDirection().equalsIgnoreCase("sink")))
+                        && player.GetAreaLocation().GetAreasName().equals("The Great Jade Sea")){
+                    
+                        message = "You cannot procced further, the beam is blocking the ship!";
+                        status = false;
+                    }
+                    else if((eachItem.GetItemType() == 4) && (icwa.GetItemUsage().equals("open") 
+                        && (eachItem.GetItemValue() == 1) && (eachItem.GetBlockingDirection().equalsIgnoreCase("sink"))) 
+                        && player.GetAreaLocation().GetAreasName().equals("The Great Jade Sea") 
+                        && eachDock.GetDestinationDockLocation().GetAreasName().equals("Jade Sea Depths")){
+                        
+                        message = "";
+                        sinkArea = eachDock;
+                        status = true;
+                    }
+                }
+            }      
+        }
+        
+        jObj.put("message", message);
+        jObj.put("status", status);
+        jObj.put("areadock", sinkArea);
+        
+        return jObj;
+    }
+    
+    
     
     
     

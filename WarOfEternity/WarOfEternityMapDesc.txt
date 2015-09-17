@@ -1,72 +1,72 @@
-A/A	Name				Image		Main Description
-----------------------------------------------------------------------------------------------------------------------
-1	Plains Of Hope			ok		You stand next to the smithy while a wind current hits your face. While standing idle watching the merchant bringing his new merchantice out of the caravan and the doctor tending the wounds of a peasant, you observe in the horizon a way pointer pointing north-west, north-east and west. 
-2	Dead Wing Passage			ok		The wind hits the two statues of men violently will a cold breeze comes from the snowy mountains of the south.
-3	Daramish				ok		This area was once plains where farmers grew their crops, now bandits and outlaws inhabit this area and they have camps all over the plains.
-4	Belverus Lake			ok		A small lake in the middle of the region. Its a misty place full of beasts and other predators. While following the road you find your self at the meeting point of three roads, one leading to the west, one to the south-west and one to the south-east. 
-5	Baramish Ruins			ok		Baramish ruins are one of the many ruins that the great war left at its passage. Before that it was an outpost to supply weapons and armor to the soldiers of the south.
-6	Nimrod Beach			ok		The sound of the waves calms your mind as you walk towards the coast. You realize there is pirate ship in the horizon loading barrels and food from the coast line. 
-7	Anglor Bay				ok		Anglor bay is the main hideout of pirates and smuglers on the south parts of Yeress. You carefully try to sneak into the cave withoun any of the pirates noticeing you.
-8	Angabur Village			ok		While entring the village you realize that some of the villagers are gazing at you with a buldersome glance. At the far east of the village next to a shop you see a doctor puting dead bodies into a caravan.  
-9	Angabur Cemetery			ok		People from angabur village and the plains of hope have been buring their dead since the great war, when a necromancer laid a curse on their desendants.
-10	Angabur Tombs			ok		While opening the door to the tomb you smell an intense scent of dead corpses. Continueing down the stairs you hear creape sounds and so you draw emidiately your weapon.
-11	Delta Rivers			ok		Bandits and other tribes from the south have made their residence on delta rivers. You are trying to find a way to cross the rivers and head west without noticing you.
-12	Aldor Ascend			ok		The road to the mountains of Aldor is steep and the cold winter wind makes your body tremble. You slowly see the peak at the horizon on the west.
-13	Aldor Summit			ok		At the mountain summit you road is blocked by a huge rocky gate. After a while observing this gate you realize that a big skull is carved on it.
-14	Fortress Of The Mists			ok		Once a training fortress for the paladins of the south, now its been overrun by outlaws isolating the kingdom of Aldor from the rest of Yeress.
-15	Aldor Reign Castle			ok	 	Upon entering the castle you see many militia troops come and go from the castle's warehouse. 
-16	Dead Mire Swamp			ok		Travelers try to avoid passing through this place due to its legends from the great war. It is said that witches aligned with the necromancers and learn from them the arts of dark magic and summoning demons. The whole place gives you the feeling of dread and suffering.
-17	Quag Mire Swamp			ok		A very gummy and dark place. From the moment you entered the swamp you feel thousands of eyes gazing towards you.	
-18	Elysium Mine's Entrance		ok		The entrance to the mine is directly connected with Quag Mire Swamp. Upon arriving on the mine's entrance you see that it is a monster's head and on its throat a big gate made out of brances is blocking your path.
-19	Elysium Mine			ok		Before the war dwarves maid this mine in order to mine copper, iron, mithril and other materials to support the troops in the upcoming battle. Now this mine is abandoned and you can see the skeleton of the dwarves still lying on the floor.
-20	Drash Mire Swamp			ok		One of the three main swamps in the land of Yeress. Drash Mire Swamp is the one closest to the kingdom of Tan'leri. While wondering into the swamp you hear voices coming from the trees.
-21	Plain's Of Estild			ok		A peaceful place which is located at the borders of the Tan'leri kingdom. Merchants from the west pass from this route often.
-22	Suloild'sh Road's			ok		This roads was the primary route of the merchants from the west. Now it is an abandoned peacefull place due to the watch tower on the north-west that has been runsucked by bandits and outlaws.
-23	Worach Watch Tower 			ok		The tower stands tall into the sky. While geting closer to the tower you realize that it is heavily guarded by bandits. So, you start sneaking to the gate trying not to notice you. 
-24	Quekalsul	Har Ruins			ok		Before the great war Quekalsul Har ruins was a monastery of water mages. Now after its destruction it still holds mysteries about the creation of the clan.
-25	Del'raku Oasis			ok		Slowly you aproach the little pond at the middle of the oasis to drink water. A pack of lions are staring at you and so you back up.
-26	Tan'leri City			ok		The great city of Tan'leri stands proud at the border of the Tan'leri kingdom. By entering the city you see a couple of merchants selling their stuff to the citizens and the city guards at the top of the wall's of the city observing any intruders into the kindoms from the east and from the north.
-27	Orm'ray Roads			ok		The main roads connecting all the areas of the desert together. Even though it is close to the city of Tan'leri many beast of the desert and raiders pass from here.
-28	Akrabor Ruins			ok		You stands at the entrance of the ruins and try to find your way through them. A strong current hits you coming from north-west. You start heading that way and at the end you find a huge gate made out of red stone.
-29	Akrabor Domain			ok		By entering the domain you see in the horizon two huge head statues and you head through them. At the end you find a big tomb entrance filled with bats.
-30	Akrabor Catacombs			ok		The feeling of dread and the smell of decaied corpses become more strong with every step you take down to the tombs. When you finally reached the bottom you see a big circular room with carved graves on the walls and a big pillar made out of skulls and bones.
-31	Omrr Oasis			ok		After your journeys on the Tan'leri deserts you enter the omrr oasis to quench your thirst. You drink a sip of water and imidiatelly you feel you strenght return to you.
-32	Forest of Sorrows			ok		A battle was held in this forest at the time of the great war, where a battalion of soldiers had to savrifice themselves in order to stop the summoning of a witch king. Thats why this place is called the forest of sorrows.
-33	Oldash Maze			ok		Oldash maze is a maze built long before the war by the tribes of trolls. You entered the maze and after a while you riallize that everything looks the same. After many hours of searching an exit which leads to three different places, north, nort-east and north-west.
-34	Belkat Docks			ok		Ships come and go from this dock to bring merchantices from other lands into Yeress. You can also find here vessels to take you to the island of Oravor.
-35	Aleeim Desert			ok		The scorching sun makes every move in the desert really difficult. After a while you find yourself at a split road which leads to south, south-west, east and north-east.
-36	Ageolda Desert			ok		The strong sun is blinding your shight so find a temporary caving to rest and to plan you next move. After a while you realize there are only two options, the first is to return to the desert and the other to travel north-east through a nomads camp.
-37	Nomads Outpost			ok		A big camp of nomads is located in the middle of this desert. While observing their camp you see that the guards are guarding the eastern passage from their camp.
-38	Caves Of The Scortching Sun		ok		You stand at the entrance of the cave lighting up a torch and entering the cave. You slowly feel the heat of the desert to leave your body and the darkness surround you with every step you take into the cave.
-39	Eld'ny Peak			ok		After a while venturing into the borders of the necromancers domain you find your self at the top of Eld'ny mountain. From here you can see the scortched land of Tan'leri the forest's and jungles of Asvor as well as the dread necromancers domain.
-40	Azol' Eldar Jungle			ok		The middle of the continent that once was habitted by trolls. There are paths that lead to the north, south, north-west and south-west.
-41	Lilen Coast				ok		The moon is your guide while you across the coast. The waves of the sea seems peacefull so you decide to make camp at the coast for the night.
-42	Azol' Angar Jungle			ok		The trees in the jungle are huge thus blocking the light of the sun. There are many totems in this place each one has carvings made by the trolls hundreds years ago. 
-43	Masson Tunnels			ok		While exiting the jungle you found a small path leading into the mountains. You cut your way through the vines and the trees that are in your path. Finally you came at the end of the path which led you to a cave entrance block by a gate with white mamouth horns.
-44	Smelter of Al' Hateck			ok		After venturing into the depth of the cave you finally reached the end of the stairs. While observing the area you see small houses embeded into the mountain's wall and at the middle you see a big iron smelter. You quickly realize that this whole place is an underground hideout.
-45	Shamans Reatreat			ok		After venturing into the jungle you found yourself at what seems to be small ruins. You decide to  search the ruins and after a while you find an altar. While observing the altar you see sketches on it a a sacrificial knife on its top.
-46	Lake Of Enala			ok		You approach the lake to get some water and suddenly you feel calm and peacefull. When you finishe you filt your head towards the west and sou see the lands of scholomance, the abomination of the necromancers.
-47	Passage To Ash'vor			ok		A small and narrow passage inside the mountains which leads to Ashvor city. At the end of the passage you see a small house for the guards who watch the road.
-48	Ash'vor				ok		The greate city of Ashvor stands tall at the mountains of the north. Many of the houses here are emebedded inside the mountain's rock thus making this city strong against any attacks. 
-49	Hopes End Wall			ok		You stand in a cliff west of the wall and observe the wall. You see a big force of enemies such as skeletons, excecutionares and othe abominations making their way inside the scholomance domain. When every last of them got through the wall you slowly start approaching the gate.
-50	Oravor Coast Road			ok		This place is full of cliffs so you slowly make your way to your destination, climbing and hicking all the way until the end of the road.
-51	Village Of Scholomance		ok		This place once was a farmers village. When the forces of Yeress forced the necromancers back they retreated to this domain. Legend says that when they came to this place they slaughtered the villagers and some others where made as an experiment for their dark magic. Now the only thing that exists here are dead bodys and hanged skeletons.
-52	Library Of Dark Arts			ok		The sacred library of the necromancers here they draw all their knowledge for the dark arts. You also see some glyphs of the walls and wonder what they say.
-53	Scholomance Citadel			ok		While aproaching the gates of the citadel you feel the chill of dread and sorrow. Wispers and screams are heard all around this place while magic green fire is lighting this dreadful place. 
-54	Scholomance Depths			ok		After venduring at the depths of the scholomance citadel you see place of tombs and graves. At the middle of the room there is a big sarcofagus and two warrior statues on either side. 
-55	Torturing Chamber			ok		During the great war the necromancers imprisoned and tortured people in this place. You can still see the marks of blood in the walls and hear their eternal screams through out the chamber.
-56	Tunnels Of Scream			ok		Surrounded by the darkness of the cave you vendure deep into the cave. You can hear wispers from all around the cave. Suddenly you see an exit on the east.
-57	Entrance Of Lost Souls			ok		This entrance leads to the kingdom of scholomance the home of the necromancers. You see two huge statues on either side of the entrance while inside of it a magic ward is blocking your way.
-58	Oravor West Coast			ok		The beauty of the oravor island is unmatched and its mysteries also. At the time of the great war this island was captured not only by the forces of Yeress but also from the necromancers, due its unique place with the rest of the world.
-59	Oravor East Coast			ok		The wind makes the sea unweary and the moon is you guide on the coast. While walking towards the end of the coast you can see a fisher man with its boat counting the days catch.
-60	Journeys End Island			ok		This small island is constantly day and night covert in a black cloud. Legend says that the necromancers at the end of the war made a watchtower in this island to practice their magic for summoning the beast from the seas that will win them the war. Now there are only ruins and carved mysteries in this place.
-61	Riorm Water Caves			ok		You entered the caves and surprisingly water is located in it. While observing the place you can recognize carving and symbols on the walls.
-62	Elderm Courtyard			ok		The central home of the water mages. Before they were vanished this was a place of higher knowledge and power. Statues that depict the order of edernium are everywhere.
-63	Elderm Arcane University		ok		You entered the abandoned university and start looking the area for clues. You find carvings and symbos on the walls that lead you into a room. At the end of a room you see a statue holding a glowing blue sphere. The bottom of the statue says "The key of the bottom less evil".
-64	Scorpions Den			ok		This abandoned route is now infested with huge scorpions of the desert. You start slowing your pace so that you wont be noticed by the beasts.
-65	E'sayiss Roads			ok		The strong current of the scortching desert gave this particullar shape to the rocks of this place. After a venduring into the desert you stopped to retain your powers and relax.
-66	The Great Jade Sea			ok		You stand at your boat gazing upon the endless sea and then you realize there is a jade color beam ten meters south of you. You emidiately head there with your boat to examine this.
-----------------------------------------------------------------------------------------------------------------------------------
+A/A	Name				Image		Enemies		Main Description
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1	Plains Of Hope			ok		nope		You stand next to the smithy while a wind current hits your face. While standing idle watching the merchant bringing his new merchantice out of the caravan and the doctor tending the wounds of a peasant, you observe in the horizon a way pointer pointing north-west, north-east and west. 
+2	Dead Wing Passage			ok		1		The wind hits the two statues of men violently will a cold breeze comes from the snowy mountains of the south.
+3	Daramish				ok		2		This area was once plains where farmers grew their crops, now bandits and outlaws inhabit this area and they have camps all over the plains.
+4	Belverus Lake			ok		2		A small lake in the middle of the region. Its a misty place full of beasts and other predators. While following the road you find your self at the meeting point of three roads, one leading to the west, one to the south-west and one to the south-east. 
+5	Baramish Ruins			ok		2		Baramish ruins are one of the many ruins that the great war left at its passage. Before that it was an outpost to supply weapons and armor to the soldiers of the south.
+6	Nimrod Beach			ok		2		The sound of the waves calms your mind as you walk towards the coast. You realize there is pirate ship in the horizon loading barrels and food from the coast line. 
+7	Anglor Bay				ok		2		Anglor bay is the main hideout of pirates and smuglers on the south parts of Yeress. You carefully try to sneak into the cave withoun any of the pirates noticeing you.
+8	Angabur Village			ok		nope		While entring the village you realize that some of the villagers are gazing at you with a buldersome glance. At the far east of the village next to a shop you see a doctor puting dead bodies into a caravan.  
+9	Angabur Cemetery			ok		2		People from angabur village and the plains of hope have been buring their dead since the great war, when a necromancer laid a curse on their desendants.
+10	Angabur Tombs			ok		2		While opening the door to the tomb you smell an intense scent of dead corpses. Continueing down the stairs you hear creape sounds and so you draw emidiately your weapon.
+11	Delta Rivers			ok		2		Bandits and other tribes from the south have made their residence on delta rivers. You are trying to find a way to cross the rivers and head west without noticing you.
+12	Aldor Ascend			ok		2		The road to the mountains of Aldor is steep and the cold winter wind makes your body tremble. You slowly see the peak at the horizon on the west.
+13	Aldor Summit			ok		3		At the mountain summit you road is blocked by a huge rocky gate. After a while observing this gate you realize that a big skull is carved on it.
+14	Fortress Of The Mists			ok		1		Once a training fortress for the paladins of the south, now its been overrun by outlaws isolating the kingdom of Aldor from the rest of Yeress.
+15	Aldor Reign Castle			ok	 	nope		Upon entering the castle you see many militia troops come and go from the castle's warehouse. 
+16	Dead Mire Swamp			ok		2		Travelers try to avoid passing through this place due to its legends from the great war. It is said that witches aligned with the necromancers and learn from them the arts of dark magic and summoning demons. The whole place gives you the feeling of dread and suffering.
+17	Quag Mire Swamp			ok		2		A very gummy and dark place. From the moment you entered the swamp you feel thousands of eyes gazing towards you.	
+18	Elysium Mine's Entrance		ok		2		The entrance to the mine is directly connected with Quag Mire Swamp. Upon arriving on the mine's entrance you see that it is a monster's head and on its throat a big gate made out of brances is blocking your path.
+19	Elysium Mine			ok		3		Before the war dwarves maid this mine in order to mine copper, iron, mithril and other materials to support the troops in the upcoming battle. Now this mine is abandoned and you can see the skeleton of the dwarves still lying on the floor.
+20	Drash Mire Swamp			ok		2		One of the three main swamps in the land of Yeress. Drash Mire Swamp is the one closest to the kingdom of Tan'leri. While wondering into the swamp you hear voices coming from the trees.
+21	Plain's Of Estild			ok		2		A peaceful place which is located at the borders of the Tan'leri kingdom. Merchants from the west pass from this route often.
+22	Suloild'sh Road's			ok		2		This roads was the primary route of the merchants from the west. Now it is an abandoned peacefull place due to the watch tower on the north-west that has been runsucked by bandits and outlaws.
+23	Worach Watch Tower 			ok		2		The tower stands tall into the sky. While geting closer to the tower you realize that it is heavily guarded by bandits. So, you start sneaking to the gate trying not to notice you. 
+24	Quekalsul	Har Ruins			ok		2		Before the great war Quekalsul Har ruins was a monastery of water mages. Now after its destruction it still holds mysteries about the creation of the clan.
+25	Del'raku Oasis			ok		3		Slowly you aproach the little pond at the middle of the oasis to drink water. A pack of lions are staring at you and so you back up.
+26	Tan'leri City			ok		nope		The great city of Tan'leri stands proud at the border of the Tan'leri kingdom. By entering the city you see a couple of merchants selling their stuff to the citizens and the city guards at the top of the wall's of the city observing any intruders into the kindoms from the east and from the north.
+27	Orm'ray Roads			ok		3		The main roads connecting all the areas of the desert together. Even though it is close to the city of Tan'leri many beast of the desert and raiders pass from here.
+28	Akrabor Ruins			ok		3		You stands at the entrance of the ruins and try to find your way through them. A strong current hits you coming from north-west. You start heading that way and at the end you find a huge gate made out of red stone.
+29	Akrabor Domain			ok		2		By entering the domain you see in the horizon two huge head statues and you head through them. At the end you find a big tomb entrance filled with bats.
+30	Akrabor Catacombs			ok		3		The feeling of dread and the smell of decaied corpses become more strong with every step you take down to the tombs. When you finally reached the bottom you see a big circular room with carved graves on the walls and a big pillar made out of skulls and bones.
+31	Omrr Oasis			ok		2		After your journeys on the Tan'leri deserts you enter the omrr oasis to quench your thirst. You drink a sip of water and imidiatelly you feel you strenght return to you.
+32	Forest of Sorrows			ok		3		A battle was held in this forest at the time of the great war, where a battalion of soldiers had to savrifice themselves in order to stop the summoning of a witch king. Thats why this place is called the forest of sorrows.
+33	Oldash Maze			ok		1		Oldash maze is a maze built long before the war by the tribes of trolls. You entered the maze and after a while you riallize that everything looks the same. After many hours of searching an exit which leads to three different places, north, nort-east and north-west.
+34	Belkat Docks			ok		nope		Ships come and go from this dock to bring merchantices from other lands into Yeress. You can also find here vessels to take you to the island of Oravor.
+35	Aleeim Desert			ok		3		The scorching sun makes every move in the desert really difficult. After a while you find yourself at a split road which leads to south, south-west, east and north-east.
+36	Ageolda Desert			ok		3		The strong sun is blinding your shight so find a temporary caving to rest and to plan you next move. After a while you realize there are only two options, the first is to return to the desert and the other to travel north-east through a nomads camp.
+37	Nomads Outpost			ok		2		A big camp of nomads is located in the middle of this desert. While observing their camp you see that the guards are guarding the eastern passage from their camp.
+38	Caves Of The Scortching Sun		ok		2		You stand at the entrance of the cave lighting up a torch and entering the cave. You slowly feel the heat of the desert to leave your body and the darkness surround you with every step you take into the cave.
+39	Eld'ny Peak			ok		3		After a while venturing into the borders of the necromancers domain you find your self at the top of Eld'ny mountain. From here you can see the scortched land of Tan'leri the forest's and jungles of Asvor as well as the dread necromancers domain.
+40	Azol' Eldar Jungle			ok		4		The middle of the continent that once was habitted by trolls. There are paths that lead to the north, south, north-west and south-west.
+41	Lilen Coast				ok		4		The moon is your guide while you across the coast. The waves of the sea seems peacefull so you decide to make camp at the coast for the night.
+42	Azol' Angar Jungle			ok		4		The trees in the jungle are huge thus blocking the light of the sun. There are many totems in this place each one has carvings made by the trolls hundreds years ago. 
+43	Masson Tunnels			ok		3		While exiting the jungle you found a small path leading into the mountains. You cut your way through the vines and the trees that are in your path. Finally you came at the end of the path which led you to a cave entrance block by a gate with white mamouth horns.
+44	Smelter of Al' Hateck			ok		2		After venturing into the depth of the cave you finally reached the end of the stairs. While observing the area you see small houses embeded into the mountain's wall and at the middle you see a big iron smelter. You quickly realize that this whole place is an underground hideout.
+45	Shamans Reatreat			ok		2		After venturing into the jungle you found yourself at what seems to be small ruins. You decide to  search the ruins and after a while you find an altar. While observing the altar you see sketches on it a a sacrificial knife on its top.
+46	Lake Of Enala			ok		2		You approach the lake to get some water and suddenly you feel calm and peacefull. When you finishe you filt your head towards the west and sou see the lands of scholomance, the abomination of the necromancers.
+47	Passage To Ash'vor			ok		2		A small and narrow passage inside the mountains which leads to Ashvor city. At the end of the passage you see a small house for the guards who watch the road.
+48	Ash'vor				ok		nope		The greate city of Ashvor stands tall at the mountains of the north. Many of the houses here are emebedded inside the mountain's rock thus making this city strong against any attacks. 
+49	Hopes End Wall			ok		3		You stand in a cliff west of the wall and observe the wall. You see a big force of enemies such as skeletons, excecutionares and othe abominations making their way inside the scholomance domain. When every last of them got through the wall you slowly start approaching the gate.
+50	Oravor Coast Road			ok		3		This place is full of cliffs so you slowly make your way to your destination, climbing and hicking all the way until the end of the road.
+51	Village Of Scholomance		ok		4		This place once was a farmers village. When the forces of Yeress forced the necromancers back they retreated to this domain. Legend says that when they came to this place they slaughtered the villagers and some others where made as an experiment for their dark magic. Now the only thing that exists here are dead bodys and hanged skeletons.
+52	Library Of Dark Arts			ok		3		The sacred library of the necromancers here they draw all their knowledge for the dark arts. You also see some glyphs of the walls and wonder what they say.
+53	Scholomance Citadel			ok		3		While aproaching the gates of the citadel you feel the chill of dread and sorrow. Wispers and screams are heard all around this place while magic green fire is lighting this dreadful place. 
+54	Scholomance Depths			ok		1		After venduring at the depths of the scholomance citadel you see place of tombs and graves. At the middle of the room there is a big sarcofagus and two warrior statues on either side. 
+55	Torturing Chamber			ok		4		During the great war the necromancers imprisoned and tortured people in this place. You can still see the marks of blood in the walls and hear their eternal screams through out the chamber.
+56	Tunnels Of Scream			ok		3		Surrounded by the darkness of the cave you vendure deep into the cave. You can hear wispers from all around the cave. Suddenly you see an exit on the east.
+57	Entrance Of Lost Souls		ok		2		This entrance leads to the kingdom of scholomance the home of the necromancers. You see two huge statues on either side of the entrance while inside of it a magic ward is blocking your way.
+58	Oravor West Coast			ok		nope		The beauty of the oravor island is unmatched and its mysteries also. At the time of the great war this island was captured not only by the forces of Yeress but also from the necromancers, due its unique place with the rest of the world.
+59	Oravor East Coast			ok		nope		The wind makes the sea unweary and the moon is you guide on the coast. While walking towards the end of the coast you can see a fisher man with its boat counting the days catch.
+60	Journeys End Island			ok		nope		This small island is constantly day and night covert in a black cloud. Legend says that the necromancers at the end of the war made a watchtower in this island to practice their magic for summoning the beast from the seas that will win them the war. Now there are only ruins and carved mysteries in this place.
+61	Riorm Water Caves			ok				You entered the caves and surprisingly water is located in it. While observing the place you can recognize carving and symbols on the walls.
+62	Elderm Courtyard			ok		1		The central home of the water mages. Before they were vanished this was a place of higher knowledge and power. Statues that depict the order of edernium are everywhere.
+63	Elderm Arcane University		ok		1		You entered the abandoned university and start looking the area for clues. You find carvings and symbos on the walls that lead you into a room. At the end of a room you see a statue holding a glowing blue sphere. The bottom of the statue says "The key of the bottom less evil".
+64	Scorpions Den			ok		2		This abandoned route is now infested with huge scorpions of the desert. You start slowing your pace so that you wont be noticed by the beasts.
+65	E'sayiss Roads			ok		2		The strong current of the scortching desert gave this particullar shape to the rocks of this place. After a venduring into the desert you stopped to retain your powers and relax.
+66	The Great Jade Sea			ok				You stand at your boat gazing upon the endless sea and then you realize there is a jade color beam ten meters south of you. You emidiately head there with your boat to examine this.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Plains Of Hope		@	Daramish			@	north
 Plains Of Hope		@	Belverus Lake		@	north-east
@@ -210,10 +210,10 @@ Ageolda Desert		@	Scorpions Den		@	north-east
 Scorpions Den		@	Ageolda Desert		@	south-west
 Scorpions Den		@	E'sayiss Roads		@	north-east
 E'sayiss Roads		@	Scorpions Den		@	south-west
-E'sayiss Roads		@	Entrance Of Lost Souls		@	east
-Entrance Of Lost Souls		@	E'sayiss Roads		@	west
-Entrance Of Lost Souls		@	Tunnels Of Scream		@	south
-Tunnels Of Scream		@	Entrance Of Lost Souls		@	north
+E'sayiss Roads		@	Entrance Of Lost Souls	@	east
+Entrance Of Lost Souls	@	E'sayiss Roads		@	west
+Entrance Of Lost Souls	@	Tunnels Of Scream		@	south
+Tunnels Of Scream		@	Entrance Of Lost Souls	@	north
 Tunnels Of Scream		@	Torturing Chamber		@	east
 Torturing Chamber		@	Tunnels Of Scream		@	west
 Torturing Chamber		@	Scholomance Citadel		@	north-east
@@ -230,24 +230,24 @@ Hopes End Wall		@	Eld'ny Peak		@	south-west
 
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 A/A	Gate Location		Key Location		Blocking Path		Embedded		Test
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1	Angabur Cemetery		Daramish			north			ok		ok
 2	Masson Tunnels		Lilen Coast			south			ok		ok	
 3	Elysium Mine's Entrance	Dead Mire Swamp		north			ok		ok
 4	Aldor Summit		Baramish Ruins		south-west			ok		ok
 5	Akrabor Domain		Quekalsul	Har Ruins		north-east			ok		ok		
 6	Elderm Courtyard		Riorm Water Caves		north-west			ok		ok
-7	Entrance Of Lost Souls		Shamans Reatreat		south			ok		ok
+7	Entrance Of Lost Souls	Shamans Reatreat		south			ok		ok
 8	Hopes End Wall		Scorpions Den		north			ok		ok
 9	Scholomance Citadel		Library Of Dark Arts		north			ok		ok
 10	Journeys End Island		Elderm Arcane University	south			ok		ok
 11	The Great Jade Sea		Scholomance Depths		sink			ok		
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Errors													State
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1	orthografika sthn perioxh lake of enala 									ok
 2	den emfanizete eikona stin perioxh lake of enala								ok
 3	connections me to belkat docs										ok
@@ -266,7 +266,176 @@ Errors													State
 16	den mporei na epistrepsei apo journeys end island sto oravor east coast.						ok
 17	stis perioxes me doors/gates meta apo sail na se kovei ton dromo.							ok
 18	na diorthosw to process tou sink		
-19	meta apo thn ulopoihsh twn merchant na efarmosw ta extra attribute points pou diavazwntai apo to text, sta attributes tou pexth.
+19	meta apo thn ulopoihsh twn merchant na efarmosw ta extra attribute points pou diavazwntai apo to text, sta attributes tou pexth.	ok
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Enemies Name	@	Enemies Description										@	Enemies Area		@ 	Enemy Damage	@	Enemy Armor	@	Enemy Health	@	Max Gold Carrying	@	Exp	@	Enemy Image	@	Percentage
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.	@	Angabur Cemetery		@	15		@	12		@	55		@	49.8		@	11	@	skeletalwarriors.jpg	@	40
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.	@	Angabur Tombs		@	16		@	13		@	55		@	52.8		@	12	@	skeletalwarriors.jpg	@	50
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.	@	Akrabor Catacombs		@	20		@	17		@	75		@	78.3		@	18	@	skeletalwarriors.jpg	@	30
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.	@	Baramish Ruins		@	14		@	12		@	55		@	40.0		@	11	@	skeletalwarriors.jpg	@	40
+
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Quekalsul	Har Ruins		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Del'raku Oasis		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Akrabor Ruins		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Akrabor Domain		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Orm'ray Roads		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Omrr Oasis		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Aleeim Desert		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Ageolda Desert		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Nomads Outpost		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	60
+
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Quekalsul	Har Ruins		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Akrabor Domain		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Aleeim Desert		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Ageolda Desert		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.					@	Scorpions Den		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.					@	E'sayiss Roads		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.					@	Worach Watch Tower		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.					@	Del'raku Oasis		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.					@	Orm'ray Roads		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.					@	Aleeim Desert		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.					@	Ageolda Desert		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Akrabor Ruins		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60	
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Worach Watch Tower		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Del'raku Oasis		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Orm'ray Roads		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Omrr Oasis		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Nomads Outpost		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	70
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.					@	Caves Of The Scortching Sun	@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+	
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Akrabor Ruins		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Akrabor Catacombs		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Elderm Courtyard		@	21		@	19		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	70
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Elderm Arcane University	@	21		@	19		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	70
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Scorpions Den		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	E'sayiss Roads		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Entrance Of Lost Souls	@	21		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60	
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Caves Of The Scortching Sun	@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60		
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.				@	Eld'ny Peak		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60		
+
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.				@	Dead Mire Swamp		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	40
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.				@	Quag Mire Swamp		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.				@	Drash Mire Swamp		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.				@	Azol' Eldar Jungle		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.				@	Azol' Angar Jungle		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.				@	Forest of Sorrows		@	16		@	17		@	70		@	58.8		@	18	@	ettin.jpg		@	40
+
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Delta Rivers		@	16		@	15		@	70		@	56.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Aldor Ascend		@	16		@	16		@	80		@	66.3		@	22	@	graegarwarrior.jpg	@	60
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Aldor Summit		@	17		@	18		@	85		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Fortress Of The Mists		@	17		@	18		@	85		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Plain's Of Estild		@	18		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Suloild'sh Road's		@	18		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Passage To Ash'vor		@	19		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.		@	Lake Of Enala		@	17		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.				@	Azol' Eldar Jungle		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.				@	Azol' Angar Jungle		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.				@	Masson Tunnels		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.				@	Forest of Sorrows		@	16		@	15		@	70		@	35.3		@	16	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.				@	Belverus Lake		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.				@	Elysium Mine's Entrance	@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Angabur Tombs		@	17		@	15		@	90		@	45.1		@	15	@	undeadlord.jpg	@	40
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Elysium Mine		@	19		@	17		@	90		@	75.1		@	20	@	undeadlord.jpg	@	50
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Hopes End Wall		@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	60
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Village Of Scholomance	@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	60
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Torturing Chamber		@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	40
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Tunnels Of Scream		@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	40
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.				@	Akrabor Catacombs		@	19		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	50
+
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.			@	Quag Mire Swamp		@	17		@	16		@	80		@	65.3		@	18	@	swampworm.jpg	@	60
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.			@	Dead Mire Swamp		@	18		@	18		@	80		@	65.3		@	18	@	swampworm.jpg	@	40
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.			@	Drash Mire Swamp		@	17		@	16		@	80		@	65.3		@	18	@	swampworm.jpg	@	60
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.			@	Elysium Mine's Entrance	@	18		@	19		@	80		@	65.3		@	18	@	swampworm.jpg	@	60
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.			@	Forest of Sorrows		@	16		@	14		@	80		@	65.3		@	15	@	swampworm.jpg	@	50
+
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.						@	Aldor Summit		@	18		@	18		@	100		@	56.6		@	20	@	lich.jpg		@	50
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.						@	Eld'ny Peak		@	19		@	18		@	100		@	56.6		@	20	@	lich.jpg		@	50
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.						@	Library Of Dark Arts		@	22		@	20		@	100		@	86.6		@	25	@	lich.jpg		@	60
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.						@	Scholomance Citadel		@	22		@	20		@	100		@	86.6		@	25	@	lich.jpg		@	50
+
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.				@	Shamans Reatreat		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	60
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.				@	Azol' Angar Jungle		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	40
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.				@	Azol' Eldar Jungle		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	40
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.				@	Masson Tunnels		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	60
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.				@	Smelter of Al' Hateck		@	20		@	22		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	90
+
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.				@	Shamans Reatreat		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	70
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.				@	Azol' Angar Jungle		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	40
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.				@	Azol' Eldar Jungle		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	40
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.				@	Masson Tunnels		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	60
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.				@	Smelter of Al' Hateck		@	21		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	90
+
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.				@	Passage To Ash'vor		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.				@	Lake Of Enala		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.				@	Dead Wing Passage		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.				@	Suloild'sh Road's		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.				@	Plain's Of Estild		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.				@	Belverus Lake		@	16		@	15		@	80		@	55.3		@	15	@	banshee.jpg	@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.				@	Baramish Ruins		@	16		@	15		@	80		@	55.3		@	15	@	banshee.jpg	@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.				@	Angabur Cemetery		@	16		@	15		@	80		@	55.3		@	15	@	banshee.jpg	@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.				@	Elysium Mine		@	18		@	17		@	80		@	55.3		@	18	@	banshee.jpg	@	50
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.				@	Oldash Maze		@	18		@	17		@	80		@	55.3		@	18	@	banshee.jpg	@	50
+
+Spider Lord	@	Enemy encountered, Poison drips from the fangs of the spider while it mesures you as its prey.			@	Daramish			@	16		@	16		@	70		@	43.6		@	14	@	spiderlord.jpg	@	60
+Spider Lord	@	Enemy encountered, Poison drips from the fangs of the spider while it mesures you as its prey.			@	Elysium Mine		@	18		@	19		@	70		@	63.6		@	14	@	spiderlord.jpg	@	60
+
+Brood Mother	@	Enemy encountered, The brood mother screams and calls its brood to attack you.				@	Daramish			@	17		@	17		@	80		@	43.6		@	14	@	spiderlord.jpg	@	60
+
+Azol The Damned	@	Enemy encountered, The lord of scholomance draws his sword and yells "There is no escape from hell, The order has lost!".	@	Scholomance Depths		@	45		@	55		@	150		@	687.8		@	68	@	azolthedamned.jpg	@	100
+
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Anglor Bay			@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	70	
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Nimrod Beach		@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	70	
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Delta Rivers		@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	30	
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Lilen Coast			@	18		@	19		@	80		@	52.2		@	18	@	pirate.jpg		@	30	
+
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Lilen Coast			@	20		@	18		@	100		@	63.3		@	20	@	hydra.jpg		@	60
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Oravor Coast Road		@	24		@	22		@	100		@	93.3		@	25	@	hydra.jpg		@	70
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Nimrod Beach		@	15		@	15		@	100		@	43.3		@	14	@	hydra.jpg		@	40
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Anglor Bay			@	15		@	16		@	100		@	43.3		@	14	@	hydra.jpg		@	40
+
+Naga Warrior	@	Enemy encountered, The naga warrior picks its scyth and charges to you.					@	Lilen Coast			@	20		@	22		@	90		@	56.6		@	20	@	nagawarrior.jpg	@	60
+Naga Warrior	@	Enemy encountered, The naga warrior picks its scyth and charges to you.					@	Oravor Coast Road		@	23		@	22		@	90		@	56.6		@	20	@	nagawarrior.jpg	@	60
+
+Giant Armored Crab	@	Enemy encountered, The crab jumps out of the sea floor and grabs you with its big claws.				@	Lilen Coast			@	20		@	26		@	85		@	65.3		@	23	@	giantarmoredcrab.jpg	@	60	
+Giant Armored Crab	@	Enemy encountered, The crab jumps out of the sea floor and grabs you with its big claws.				@	Oravor Coast Road		@	23		@	30		@	95		@	85.3		@	28	@	giantarmoredcrab.jpg	@	60	
+
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Hopes End Wall		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Village Of Scholomance	@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Library Of Dark Arts		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Scholomance Citadel		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Torturing Chamber		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Entrance Of Lost Souls	@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	40
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.		@	Tunnels Of Scream		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	60
+
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.				@	Village Of Scholomance	@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80		
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.				@	Library Of Dark Arts		@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.				@	Scholomance Citadel		@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.				@	Torturing Chamber		@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80
+
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.				@	Aldor Ascend		@	17		@	20		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.				@	Aldor Summit		@	17		@	20		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.				@	Eld'ny Peak		@	21		@	25		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Village Of Scholomance	@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75	
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Torturing Chamber		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Tunnels Of Scream		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Hopes End Wall		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+
+
+
+
+
+
 
 
 
@@ -284,9 +453,6 @@ and the clan of the water mages vanished. Even though the armies of Yeress manag
 at the farther north parth of the land the cost was too much and the war was practicly lost. The people started to recover and also 
 lose their faith in the order for abandoning them in their finest our. Now six hundred years have passed since the war of eternity that
 struck the lands of Yeress. While all those memories pass through your mind, you sudenly wake up with no memory how you got here...
-
-
-Six hundred years have past since the war of eternity that struck the lands of Yeress
 
 
 Tinoum	Ryn'ougho	Ilore	Issight	Kel'eme	Athpol

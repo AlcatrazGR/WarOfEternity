@@ -90,6 +90,8 @@ public class PlayerController {
             break;
                 
             case "battle" :
+                
+                
                 /*
                 resultMessage = player.AttackEnemyProcess(this.GetEnemyToBattle());
                 if(!resultMessage.equals("The enemy is dead!"))

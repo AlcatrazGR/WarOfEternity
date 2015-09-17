@@ -36,6 +36,38 @@ public class EnemiesController implements Serializable{
         this.enemiesList = redm.SetEnemyDataToList();
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * Returns a random integer number from which it will be decided if 
      * there will be a enemy encounter.

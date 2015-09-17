@@ -1,10 +1,8 @@
 package View;
 
-import Characters.DockYard;
 import Characters.DockYardController;
 import Characters.Enemies;
 import Characters.EnemiesController;
-import Characters.Merchant;
 import Characters.Player;
 import Characters.PlayerController;
 import Characters.TransactionController;
@@ -26,8 +24,6 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.AbstractAction;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
@@ -86,6 +82,7 @@ public class MainGame extends javax.swing.JFrame {
         jTextField1.addKeyListener(new KeyAdapter() {
                 
                //Key event.
+               @Override
                public void keyPressed(KeyEvent e){
 
                    //If the button 'Enter' is pressed then ...
@@ -144,6 +141,8 @@ public class MainGame extends javax.swing.JFrame {
         //Event Listener that occurres whenever the ESC button is pressed 
         getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put( KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "Cancel"); 
         getRootPane().getActionMap().put("Cancel", new AbstractAction(){
+            
+            @Override
             public void actionPerformed(ActionEvent e){
                     
                 StartGUI sgui = new StartGUI(true, player, ec, tc, mc, ic);
@@ -691,6 +690,7 @@ public class MainGame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                
                 new MainGame("", true, null, "").setVisible(true);
