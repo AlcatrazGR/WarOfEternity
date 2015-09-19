@@ -12,19 +12,28 @@ import java.util.Random;
  * Class EnemiesController is the controlling class (since the application 
  * follows the MVC architecture) for actions based for enemies / battle.
  * 
- * @author Thomas Liakos
+ * @author Triantaris Vasilis
  */
 public class EnemiesController implements Serializable{
+      // private boolean battleInProgress;
+    //private List<Enemies> enemiesList;
     
-    private List<Enemies> enemiesList;
+    
     private final List<Area> areas;
-    private boolean battleInProgress;
-    
+
     public EnemiesController(List<Area> areas){
-        this.enemiesList = new ArrayList();
+        
         this.areas = areas;
-        this.battleInProgress = false;
+    //     this.enemiesList = new ArrayList();  
+    //     this.battleInProgress = false;
     }
+    
+    public void SetEnemiesForGame(){
+        ReadEnemyDataModel redm = new ReadEnemyDataModel();
+        
+        
+    }
+    
     
     /**
      * Sets the data for the enemies. Those are the list of all the game enemies

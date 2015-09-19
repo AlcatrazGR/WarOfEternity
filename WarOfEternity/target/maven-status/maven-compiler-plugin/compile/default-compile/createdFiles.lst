@@ -10,6 +10,7 @@ Characters\EnemiesController.class
 Characters\ReadEnemyDataModel.class
 Characters\DockYardActionModel.class
 Interfaces\ICharacter.class
+Characters\DirectionActionModel.class
 View\MainGame$4.class
 Map\ReadAreaConnectionFileModel.class
 Characters\ReadDockYardConnections.class
@@ -30,6 +31,7 @@ Serialization\LoadGameData.class
 View\MainGame$6.class
 View\LoadGameForm$3.class
 View\MainGame$1.class
+Characters\BuyActionModel.class
 Characters\Player.class
 Characters\DockYardController.class
 View\LoadGameForm$2.class
@@ -40,6 +42,7 @@ Parsers\ParserModel.class
 Characters\PlayerController.class
 View\LoadGameForm$5.class
 GameFileConfiguration\MainFolderConfig.class
+Characters\SellActionModel.class
 View\NewGameForm$4.class
 View\NewGameForm.class
 View\NewGameForm$2.class
@@ -53,6 +56,7 @@ Map\ReadAreaFileController.class
 Characters\MerchantActionModel.class
 Characters\TransactionController.class
 Items\ItemConnectionWithArea.class
+GameFileConfiguration\MusicConfiguration.class
 Characters\BattleActionModel.class
 View\StartGUI$4.class
 Map\ReadAreaFileModel.class
@@ -62,6 +66,7 @@ Items\ItemActionModel.class
 View\MainGame$3.class
 View\StartGUI$6.class
 View\MapForm.class
+View\MainGame$7.class
 Map\MapController.class
 Items\GateItem.class
 View\MainGame$5.class

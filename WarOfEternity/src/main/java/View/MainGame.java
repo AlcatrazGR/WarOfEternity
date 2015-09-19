@@ -6,6 +6,7 @@ import Characters.EnemiesController;
 import Characters.Player;
 import Characters.PlayerController;
 import Characters.TransactionController;
+import GameFileConfiguration.MusicConfiguration;
 import Items.Item;
 import Items.ItemController;
 import Map.Area;
@@ -57,12 +58,16 @@ public class MainGame extends javax.swing.JFrame {
     private Configuration configuration;
     private LiveSpeechRecognizer recognizer;
     
+    //Music configuration object.
+    private MusicConfiguration mcf;
+    //private boolean musicStatus;
+    
     public MainGame(String playerName, boolean newGameProcess, LoadGameData loadObj, String playerClass) {
         initComponents();
         this.projectFolder = System.getProperty("user.dir");
         
         //Configure the data for the voice recognition
-       // this.ConfigureVoiceRecognitionData();
+        this.ConfigureVoiceRecognitionData();
 
         if(newGameProcess)
             this.SettingDataForNewGame(playerName, playerClass);
@@ -77,6 +82,11 @@ public class MainGame extends javax.swing.JFrame {
 
         //Creating playerController object that with the parsing decissiion excecutes the action that the user wants.
         final PlayerController playerContr = new PlayerController("", "", "");
+        
+        mcf = new MusicConfiguration();
+        mcf.SetMusicStatus(true);
+        mcf.PlayOutDoorSoundFile();
+        
         
         //Event listener for the text field.
         jTextField1.addKeyListener(new KeyAdapter() {
@@ -228,6 +238,13 @@ public class MainGame extends javax.swing.JFrame {
         
         icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\recognitionIcon.png");
         jButton1.setIcon(icon);
+        
+        icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\question.png");
+        jButton2.setIcon(icon);
+        
+        icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
+        jButton3.setIcon(icon);
+        
     }
     
     //Method that sets the data of the inventory
@@ -308,14 +325,13 @@ public class MainGame extends javax.swing.JFrame {
         jLabel1.setIcon(icon);
         
         this.ic = loadObj.GetItemController();
-        
         this.tc = new TransactionController(mc.GetAreasList());
         this.tc.SetMerchantSectionDataControllingMethod();
-        
         this.ec = new EnemiesController(mc.GetAreasList());
         this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
         this.dyc.DockYardMainControllingMethod();
         ec.SetGameEnemiesData();
+        
         jProgressBar2.setValue(this.player.GetPlayerExperience());
         jProgressBar1.setValue(this.player.GetCharacterHealth());
         
@@ -355,6 +371,8 @@ public class MainGame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jProgressBar1 = new javax.swing.JProgressBar();
         jLabel6 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("War Of Eternity");
@@ -504,6 +522,18 @@ public class MainGame extends javax.swing.JFrame {
 
         jLabel6.setText("Health Bar :");
 
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -518,7 +548,12 @@ public class MainGame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton2))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -538,7 +573,7 @@ public class MainGame extends javax.swing.JFrame {
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel6)
                             .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -568,11 +603,16 @@ public class MainGame extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1)
+                        .addComponent(jButton3)))
                 .addGap(26, 26, 26))
         );
+
+        jButton2.getAccessibleContext().setAccessibleDescription("");
 
         pack();
         setLocationRelativeTo(null);
@@ -606,14 +646,45 @@ public class MainGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Start recognition process pruning previously cached data.
-        recognizer.startRecognition(true);
-        SpeechResult result = recognizer.getResult();
-        // Pause recognition process. It can be resumed then with startRecognition(false).
-        recognizer.stopRecognition();
+        
+        if(this.recognizer == null){
+            JOptionPane.showMessageDialog(this, "You must connect a microphone or a headset,"
+                    + " in order to enable the recognition process!", "Recognition Error!", 
+                    JOptionPane.ERROR_MESSAGE, null);
+        }
+        else{
+            // Start recognition process pruning previously cached data.
+            recognizer.startRecognition(true);
+            SpeechResult result = recognizer.getResult();
+            // Pause recognition process. It can be resumed then with startRecognition(false).
+            recognizer.stopRecognition();
 
-        jTextField1.setText(result.getHypothesis());
+            jTextField1.setText(result.getHypothesis());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    //Music button event.
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ImageIcon icon;
+        
+        if(this.mcf.GetMusicStatus()){
+            this.mcf.SetMusicStatus(false);
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\nosound.png");
+            jButton3.setIcon(icon);
+            this.mcf.StopSoundFile();
+        }
+        else{
+            this.mcf.SetMusicStatus(true);
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
+            jButton3.setIcon(icon);
+            this.mcf.PlayOutDoorSoundFile();
+        }
+                
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * Method that creates the player object for the specific player class
@@ -662,8 +733,13 @@ public class MainGame extends javax.swing.JFrame {
         try {
             this.recognizer = new LiveSpeechRecognizer(this.configuration);
         } catch (IOException ex) {
-            //Logger.getLogger(MainGame.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("You dont have a microphone.");
+            JOptionPane.showMessageDialog(this, "An error has occurred with your "
+                    + "microphone / headset.\nPlease check the connection of your"
+                    + "microphone / headset and try again.", "Input - Output Errpr!",
+                    JOptionPane.ERROR_MESSAGE, null);
+        }
+        catch(IllegalArgumentException ex){
+            this.recognizer = null;
         }
         
     }
@@ -700,6 +776,8 @@ public class MainGame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

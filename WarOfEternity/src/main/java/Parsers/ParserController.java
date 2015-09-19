@@ -81,7 +81,7 @@ public class ParserController {
                     parsingDecision = "item";
                 }
                 else if(result.equals("sail")){
-                    this.nounCommand = playerActionSplitted[1].trim();
+                    this.nounCommand = playerActionSplitted[0].trim();
                     parsingDecision = "sail";
                 }
                 else

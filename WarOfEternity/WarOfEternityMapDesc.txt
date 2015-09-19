@@ -60,7 +60,7 @@ A/A	Name				Image		Enemies		Main Description
 58	Oravor West Coast			ok		nope		The beauty of the oravor island is unmatched and its mysteries also. At the time of the great war this island was captured not only by the forces of Yeress but also from the necromancers, due its unique place with the rest of the world.
 59	Oravor East Coast			ok		nope		The wind makes the sea unweary and the moon is you guide on the coast. While walking towards the end of the coast you can see a fisher man with its boat counting the days catch.
 60	Journeys End Island			ok		nope		This small island is constantly day and night covert in a black cloud. Legend says that the necromancers at the end of the war made a watchtower in this island to practice their magic for summoning the beast from the seas that will win them the war. Now there are only ruins and carved mysteries in this place.
-61	Riorm Water Caves			ok				You entered the caves and surprisingly water is located in it. While observing the place you can recognize carving and symbols on the walls.
+61	Riorm Water Caves			ok		1		You entered the caves and surprisingly water is located in it. While observing the place you can recognize carving and symbols on the walls.
 62	Elderm Courtyard			ok		1		The central home of the water mages. Before they were vanished this was a place of higher knowledge and power. Statues that depict the order of edernium are everywhere.
 63	Elderm Arcane University		ok		1		You entered the abandoned university and start looking the area for clues. You find carvings and symbos on the walls that lead you into a room. At the end of a room you see a statue holding a glowing blue sphere. The bottom of the statue says "The key of the bottom less evil".
 64	Scorpions Den			ok		2		This abandoned route is now infested with huge scorpions of the desert. You start slowing your pace so that you wont be noticed by the beasts.
@@ -391,7 +391,7 @@ Spider Lord	@	Enemy encountered, Poison drips from the fangs of the spider while
 
 Brood Mother	@	Enemy encountered, The brood mother screams and calls its brood to attack you.				@	Daramish			@	17		@	17		@	80		@	43.6		@	14	@	spiderlord.jpg	@	60
 
-Azol The Damned	@	Enemy encountered, The lord of scholomance draws his sword and yells "There is no escape from hell, The order has lost!".	@	Scholomance Depths		@	45		@	55		@	150		@	687.8		@	68	@	azolthedamned.jpg	@	100
+Azol The Damned	@	Enemy encountered, The lord of scholomance draws his sword and yells "There is no escape from hell, The order has lost!".	@	Scholomance Depths		@	65		@	60		@	150		@	687.8		@	68	@	azolthedamned.jpg	@	100
 
 Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Anglor Bay			@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	70	
 Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Nimrod Beach		@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	70	
@@ -424,14 +424,17 @@ Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of
 
 Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.				@	Aldor Ascend		@	17		@	20		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
 Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.				@	Aldor Summit		@	17		@	20		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
-Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.				@	Eld'ny Peak		@	21		@	25		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.									@	Eld'ny Peak		@	21		@	25		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
 
-Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Village Of Scholomance	@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75	
-Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Torturing Chamber		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
-Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Tunnels Of Scream		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
-Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.			@	Hopes End Wall		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Village Of Scholomance	@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75	
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Torturing Chamber		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Tunnels Of Scream		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Hopes End Wall		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+
+Nessy		@	Enemy encountered, The huge dragon spawn attacks you with great ferocity to protect its terretory.								@	Riorm Water Caves		@	50		@	50		@	160		@	723.3		@	65	@	nessy.jpg		@	100
 
 
+Alzor The Destroyer	@	Enemy encountered, Alzor the lord of the sea depths, the one that turned the tide of the great war. The last battle between the forces of darkness and the order of edernium begins ... 	@	Jade Sea Depths		@	100		@	120		@	300		@	123.5		@	130	@	alzorthedestroyer.jpg	@	100
 
 
 

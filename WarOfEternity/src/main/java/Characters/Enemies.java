@@ -26,6 +26,8 @@ public class Enemies implements ICharacter, Serializable{
     private int characterHealth;
     private double charactersGold;
     
+    private int encounterPercent;
+    
      //Constructor with parametres.
     public Enemies(){
         this.characterName = "";
@@ -41,7 +43,7 @@ public class Enemies implements ICharacter, Serializable{
     
     //Constructor with parametres.
     public Enemies(String name, String description, Area encounterArea, int enemyDamage, 
-            int enemyArmor, int enemyHealth, double maxGoldCarrying, int exp, String enemyImage){
+            int enemyArmor, int enemyHealth, double maxGoldCarrying, int exp, String enemyImage, int encounterPercentage){
         
         this.characterName = name;
         this.enemyDescription = description;
@@ -124,6 +126,14 @@ public class Enemies implements ICharacter, Serializable{
     
     public String GetEnemyImage(){
         return this.image;
+    }
+    
+    public void SetEncounterPercentageRate(int rate){
+        this.encounterPercent = rate;
+    }
+    
+    public int GetEncounterPercentageRate(){
+        return this.encounterPercent;
     }
     
 }

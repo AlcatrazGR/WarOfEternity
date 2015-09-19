@@ -37,6 +37,8 @@ public class MapForm extends javax.swing.JFrame implements MouseListener{
         jLabel9.addMouseListener(this);
         jLabel10.addMouseListener(this);
         */
+
+        
     }
 
     @Override

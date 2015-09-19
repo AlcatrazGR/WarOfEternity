@@ -1,19 +1,132 @@
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	AmonSul			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg	
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Tharbad			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg	
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Moria Mines Entrance	@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg	
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Fornost			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Ettenmoors		@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Mount Gundabad		@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	Gundabad Barracks		@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
-Band Of Orcs	@	Encountered a Band Of Orcs. A band of orcs has realized your presence at the area and start charging towards your place.				@	CarnDum			@	12	@	11	@	47	@	42.8	@	9	@	orcs.jpg
-Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	Ettenmoors		@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
-Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	AmonSul			@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
-Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	Mount Gundabad		@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
-Worg Rider	@	Encountered Worg Rider. The rider is drawing his sword while his bloodthirsty worg is messuring you as a pray.					@	Tharbad			@	13	@	14	@	60	@	54.3	@	12	@	worgRider.jpg
-Mountain Troll	@	Encountered Mountain Troll. The huge monster is roaring at you while aggresivly hitting its huge tree brach for weapon.					@	Ettenmoors		@	20	@	10	@	105	@	95.5 	@	18	@	mountainTroll.jpg
-Mountain Troll	@	Encountered Mountain Troll. The huge monster is roaring at you while aggresivly hitting its huge tree brach for weapon.					@	Mount Gundabad		@	20	@	10	@	105	@	95.5 	@	18	@	mountainTroll.jpg
-Wraith Lord	@	Encountered Wraith Lord. A cold chill hits your spin and a feeling of dread while the wraith is charging onto you and suddenly makes a piercing deadly cry.	@	BarrowDawns-Highlands	@	16	@	7	@	95	@	67.8	@	15	@	wraithLord.jpg
-Wraith Lord	@	Encountered Wraith Lord. A cold chill hits your spin and a feeling of dread while the wraith is charging onto you and suddenly makes a piercing deadly cry.	@	BarrowDawns		@	16	@	7	@	95	@	67.8	@	15	@	wraithLord.jpg
-Wraith Lord	@	Encountered Wraith Lord. A cold chill hits your spin and a feeling of dread while the wraith is charging onto you and suddenly makes a piercing deadly cry.	@	AmonSul			@	16	@	7	@	95	@	67.8	@	15	@	wraithLord.jpg
-Wraith Summoner	@	Encountered Wraith Summoner. The withered dead corpse is setting its deadly eyes onto you and starts casting a spell that shakes the ground rocks.		@	BarrowDawns-Highlands	@	14	@	9	@	73	@	46.7	@	14	@	wraithSummoner.jpg
-Wraith Summoner	@	Encountered Wraith Summoner. The withered dead corpse is setting its deadly eyes onto you and starts casting a spell that shakes the ground rocks.		@	BarrowDawns		@	14	@	9	@	73	@	46.7	@	14	@	wraithSummoner.jpg
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.						@	Angabur Cemetery		@	15		@	12		@	55		@	49.8		@	11	@	skeletalwarriors.jpg	@	40
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.						@	Angabur Tombs		@	16		@	13		@	55		@	52.8		@	12	@	skeletalwarriors.jpg	@	50
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.						@	Akrabor Catacombs		@	20		@	17		@	75		@	78.3		@	18	@	skeletalwarriors.jpg	@	30
+Skeletal Warriors	@	Enemy encountered, While entering the area nearby dead corpses started to rise and the skeletons charged towards you.						@	Baramish Ruins		@	14		@	12		@	55		@	40.0		@	11	@	skeletalwarriors.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Quekalsul	Har Ruins		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Del'raku Oasis		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Akrabor Ruins		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Akrabor Domain		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Orm'ray Roads		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Omrr Oasis		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Aleeim Desert		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Ageolda Desert		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	40
+Nomad Rider	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Nomads Outpost		@	19		@	25		@	80		@	107.3		@	28	@	namadrider.jpg	@	60
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Quekalsul	Har Ruins		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Akrabor Domain		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Aleeim Desert		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Ageolda Desert		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.										@	Scorpions Den		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Mountain Golem	@	Enemy encountered, The rider whips the beast and charges towards you.										@	E'sayiss Roads		@	23		@	40		@	130		@	307.3		@	50	@	mountaingolem.jpg	@	40
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.										@	Worach Watch Tower		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.										@	Del'raku Oasis		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.										@	Orm'ray Roads		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.										@	Aleeim Desert		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Fire Lizard		@	Enemy encountered, The lizard breaths fire and mesures you as a pray.										@	Ageolda Desert		@	17		@	18		@	70		@	86.0		@	22	@	firelizard.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Akrabor Ruins		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60	
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Worach Watch Tower		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Del'raku Oasis		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Orm'ray Roads		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Omrr Oasis		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Nomads Outpost		@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	70
+Band Of Nomads	@	Enemy encountered, A band of nomads roaming the desert on their horses.										@	Caves Of The Scortching Sun	@	17		@	19		@	65		@	75.3		@	20	@	bandofnomads.jpg	@	60	
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Akrabor Ruins		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Akrabor Catacombs		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Elderm Courtyard		@	21		@	19		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	70
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Elderm Arcane University	@	21		@	19		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	70
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Scorpions Den		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	E'sayiss Roads		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Entrance Of Lost Souls	@	21		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60	
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Caves Of The Scortching Sun	@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60		
+Ald'Meri Mage	@	Enemy Encountered, The mage spots you and starts casting magic missiles towards you.									@	Eld'ny Peak		@	19		@	18		@	90		@	82.2		@	29	@	aldmerimage.jpg	@	60
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.									@	Dead Mire Swamp		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	40
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.									@	Quag Mire Swamp		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.									@	Drash Mire Swamp		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.									@	Azol' Eldar Jungle		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.									@	Azol' Angar Jungle		@	18		@	19		@	80		@	78.8		@	24	@	ettin.jpg		@	50
+Ettin		@	Enemy encountered, The ettin swings its tree weapon violently while battle shouting.									@	Forest of Sorrows		@	16		@	17		@	70		@	58.8		@	18	@	ettin.jpg		@	40
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Delta Rivers		@	16		@	15		@	70		@	56.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Aldor Ascend		@	16		@	16		@	80		@	66.3		@	22	@	graegarwarrior.jpg	@	60
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Aldor Summit		@	17		@	18		@	85		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Fortress Of The Mists		@	17		@	18		@	85		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Plain's Of Estild		@	18		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Suloild'sh Road's		@	18		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Passage To Ash'vor		@	19		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Grae'Gar Warrior	@	Enemy encountered, The grae'gar warrior draws its weapon and violently swings it while charges forward you.							@	Lake Of Enala		@	17		@	20		@	90		@	76.3		@	22	@	graegarwarrior.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.									@	Azol' Eldar Jungle		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.									@	Azol' Angar Jungle		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.									@	Masson Tunnels		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.									@	Forest of Sorrows		@	16		@	15		@	70		@	35.3		@	16	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.									@	Belverus Lake		@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Forest Imp		@	Enemy encountered, The imps casts orb magick the moment it realizes your pressence.									@	Elysium Mine's Entrance	@	17		@	16		@	70		@	55.3		@	18	@	forestimp.jpg	@	50
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Angabur Tombs		@	17		@	15		@	90		@	45.1		@	15	@	undeadlord.jpg	@	40
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Elysium Mine		@	19		@	17		@	90		@	75.1		@	20	@	undeadlord.jpg	@	50
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Hopes End Wall		@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	60
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Village Of Scholomance	@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	60
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Torturing Chamber		@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	40
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Tunnels Of Scream		@	22		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	40
+Undead Lord	@	Enemy encountered, Upon entering the area the undead lord draws hes weapon.									@	Akrabor Catacombs		@	19		@	20		@	100		@	85.1		@	22	@	undeadlord.jpg	@	50
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.								@	Quag Mire Swamp		@	17		@	16		@	80		@	65.3		@	18	@	swampworm.jpg	@	60
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.								@	Dead Mire Swamp		@	18		@	18		@	80		@	65.3		@	18	@	swampworm.jpg	@	40
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.								@	Drash Mire Swamp		@	17		@	16		@	80		@	65.3		@	18	@	swampworm.jpg	@	60
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.								@	Elysium Mine's Entrance	@	18		@	19		@	80		@	65.3		@	18	@	swampworm.jpg	@	60
+Swamp Worm	@	Enemy encountered, The worm suddenly surface from the bottom of the lake and attacks you.								@	Forest of Sorrows		@	16		@	14		@	80		@	65.3		@	15	@	swampworm.jpg	@	50
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.											@	Aldor Summit		@	18		@	18		@	100		@	56.6		@	20	@	lich.jpg		@	50
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.											@	Eld'ny Peak		@	19		@	18		@	100		@	56.6		@	20	@	lich.jpg		@	50
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.											@	Library Of Dark Arts		@	22		@	20		@	100		@	86.6		@	25	@	lich.jpg		@	60
+Lich		@	Enemy encountered, The lich casts harmful icy spells towards you.											@	Scholomance Citadel		@	22		@	20		@	100		@	86.6		@	25	@	lich.jpg		@	50
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.									@	Shamans Reatreat		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	60
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.									@	Azol' Angar Jungle		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	40
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.									@	Azol' Eldar Jungle		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	40
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.									@	Masson Tunnels		@	18		@	20		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	60
+Troll Warrior	@	Enemy encountered, The warrior makes a loud battle shout and charges towards you.									@	Smelter of Al' Hateck		@	20		@	22		@	80		@	72.2		@	18	@	trollwarrior.jpg	@	90
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.									@	Shamans Reatreat		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	70
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.									@	Azol' Angar Jungle		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	40
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.									@	Azol' Eldar Jungle		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	40
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.									@	Masson Tunnels		@	18		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	60
+Troll Shaman	@	Enemy encountered, The shaman starts throwing his daggers at you and screams in rage.									@	Smelter of Al' Hateck		@	21		@	16		@	100		@	72.2		@	18	@	trollshaman.jpg	@	90
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.									@	Passage To Ash'vor		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.									@	Lake Of Enala		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.									@	Dead Wing Passage		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.									@	Suloild'sh Road's		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Griffon		@	Enemy encountered, The griffon spots you and immediately dives in the air to attack you.									@	Plain's Of Estild		@	20		@	18		@	90		@	70.0		@	20	@	griffon.jpg		@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.									@	Belverus Lake		@	16		@	15		@	80		@	55.3		@	15	@	banshee.jpg	@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.									@	Baramish Ruins		@	16		@	15		@	80		@	55.3		@	15	@	banshee.jpg	@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.									@	Angabur Cemetery		@	16		@	15		@	80		@	55.3		@	15	@	banshee.jpg	@	60
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.									@	Elysium Mine		@	18		@	17		@	80		@	55.3		@	18	@	banshee.jpg	@	50
+Banshee		@	Enemy encountered, With a loud and scritching scream she charges towards you.									@	Oldash Maze		@	18		@	17		@	80		@	55.3		@	18	@	banshee.jpg	@	50
+Spider Lord	@	Enemy encountered, Poison drips from the fangs of the spider while it mesures you as its prey.								@	Daramish			@	16		@	16		@	70		@	43.6		@	14	@	spiderlord.jpg	@	60
+Spider Lord	@	Enemy encountered, Poison drips from the fangs of the spider while it mesures you as its prey.								@	Elysium Mine		@	18		@	19		@	70		@	63.6		@	14	@	spiderlord.jpg	@	60
+Brood Mother	@	Enemy encountered, The brood mother screams and calls its brood to attack you.									@	Daramish			@	17		@	17		@	80		@	43.6		@	14	@	spiderlord.jpg	@	60
+Azol The Damned	@	Enemy encountered, The lord of scholomance draws his sword and yells "There is no escape from hell, The order has lost!".						@	Scholomance Depths		@	65		@	60		@	150		@	687.8		@	68	@	azolthedamned.jpg	@	100
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.									@	Anglor Bay			@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	70	
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.									@	Nimrod Beach		@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	70	
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.									@	Delta Rivers		@	14		@	13		@	60		@	32.2		@	11	@	pirate.jpg		@	30	
+Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.									@	Lilen Coast			@	18		@	19		@	80		@	52.2		@	18	@	pirate.jpg		@	30	
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.										@	Lilen Coast			@	20		@	18		@	100		@	63.3		@	20	@	hydra.jpg		@	60
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.										@	Oravor Coast Road		@	24		@	22		@	100		@	93.3		@	25	@	hydra.jpg		@	70
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.										@	Nimrod Beach		@	15		@	15		@	100		@	43.3		@	14	@	hydra.jpg		@	40
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.										@	Anglor Bay			@	15		@	16		@	100		@	43.3		@	14	@	hydra.jpg		@	40
+Naga Warrior	@	Enemy encountered, The naga warrior picks its scyth and charges to you.										@	Lilen Coast			@	20		@	22		@	90		@	56.6		@	20	@	nagawarrior.jpg	@	60
+Naga Warrior	@	Enemy encountered, The naga warrior picks its scyth and charges to you.										@	Oravor Coast Road		@	23		@	22		@	90		@	56.6		@	20	@	nagawarrior.jpg	@	60
+Giant Armored Crab	@	Enemy encountered, The crab jumps out of the sea floor and grabs you with its big claws.									@	Lilen Coast			@	20		@	26		@	85		@	65.3		@	23	@	giantarmoredcrab.jpg	@	60	
+Giant Armored Crab	@	Enemy encountered, The crab jumps out of the sea floor and grabs you with its big claws.									@	Oravor Coast Road		@	23		@	30		@	95		@	85.3		@	28	@	giantarmoredcrab.jpg	@	60	
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Hopes End Wall		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Village Of Scholomance	@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Library Of Dark Arts		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Scholomance Citadel		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Torturing Chamber		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	70
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Entrance Of Lost Souls	@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	40
+Necromancer	@	Enemy encountered, Magical green fire is emitted from the necromancers body while he casts spells at you.							@	Tunnels Of Scream		@	27		@	34		@	100		@	82.2		@	38	@	necromancer.jpg	@	60
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.									@	Village Of Scholomance	@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80		
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.									@	Library Of Dark Arts		@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.									@	Scholomance Citadel		@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80
+Demon Reaper	@	Enemy encountered, The spawns from hell roam this land in need of souls to harvest.									@	Torturing Chamber		@	30		@	40		@	100		@	89.6		@	40	@	reaperdemon.jpg	@	80
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.									@	Aldor Ascend		@	17		@	20		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.									@	Aldor Summit		@	17		@	20		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+Giant Frost Spider	@	Enemy encountered, Shock waves are created while the spider's wings move rapidly.									@	Eld'ny Peak		@	21		@	25		@	70		@	56.6		@	17	@	giantfrostspider.jpg	@	60
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Village Of Scholomance	@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75	
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Torturing Chamber		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Tunnels Of Scream		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Executioner	@	Enemy encountered, The executioner cleaves his way from the dead corpes and charges towards you.								@	Hopes End Wall		@	26		@	35		@	95		@	78.8		@	36	@	executioner.jpg	@	75
+Nessy		@	Enemy encountered, The huge dragon spawn attacks you with great ferocity to protect its terretory.								@	Riorm Water Caves		@	50		@	50		@	160		@	723.3		@	65	@	nessy.jpg		@	100
+Alzor The Destroyer	@	Enemy encountered, Alzor the lord of the sea depths, the one that turned the tide of the great war. The last battle between the forces of darkness and the order of edernium begins ... 	@	Jade Sea Depths		@	100		@	120		@	300		@	123.5		@	130	@	alzorthedestroyer.jpg	@	100
