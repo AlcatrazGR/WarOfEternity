@@ -2,11 +2,10 @@ package Characters;
 
 import Items.Item;
 import Map.Area;
-import Map.AreaConnectionMaker;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 /**
  * Class EnemiesController is the controlling class (since the application 
@@ -15,122 +14,139 @@ import java.util.Random;
  * @author Triantaris Vasilis
  */
 public class EnemiesController implements Serializable{
-      // private boolean battleInProgress;
-    //private List<Enemies> enemiesList;
-    
-    
-    private final List<Area> areas;
 
-    public EnemiesController(List<Area> areas){
+    private final List<Area> areas;
+    private final List<Item> items;
+    private JSONArray jsonEnemiesArray;
+    private boolean battleState;
+    
+    private BattleActionModel bam;
+    
+    //Constructor
+    public EnemiesController(List<Area> areas, List<Item> listOfItems){
         
         this.areas = areas;
-    //     this.enemiesList = new ArrayList();  
-    //     this.battleInProgress = false;
+        this.items = listOfItems;
+        this.jsonEnemiesArray = new JSONArray();
+        this.battleState = false;
     }
     
+    /**
+     * Method that calls the methods which read the enemy data and implement them
+     * on JSONArray data type.
+     */
     public void SetEnemiesForGame(){
-        ReadEnemyDataModel redm = new ReadEnemyDataModel();
-        
-        
-    }
-    
-    
-    /**
-     * Sets the data for the enemies. Those are the list of all the game enemies
-     * and the encounter areas that the enemies can be found in.
-     */
-    public void SetGameEnemiesData(){
-        ReadEnemyDataModel redm = new ReadEnemyDataModel();
-        redm.SetEnemyAreaEncounterList(this.areas);
-        this.enemiesList = redm.SetEnemyDataToList();
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * Returns a random integer number from which it will be decided if 
-     * there will be a enemy encounter.
-     * @return Returns an integer number which specifies whether the player is going into battle.
-     */
-    public int GetRandomEncounterNumber(){
-        
-        Random randomNumb = new Random();
-        int numb = randomNumb.nextInt(100) + 1;
-        
-        return numb;
+        ReadEnemyDataModel redm = new ReadEnemyDataModel(this.areas);
+        redm.SetEnemiesFromData();
+        this.jsonEnemiesArray = redm.GetJSONEnemiesArray();
+
     }
     
     /**
-     * Checks whether the area that the user is about to travel has enemies to
-     * encounter.
+     * Control method that calls the method which renders a random integer number
+     * which is used in order to trigger or not a battle.
      * 
-     * @param player    The object of the player.
-     * @param playerCommand     The command given by the user.
-     * @param itemList  The list of all the game items.
-     * @return  Returns a boolean that defines whether the next area has enemies.
+     * @return Returns the random integer.
      */
-    public boolean EnemyEncounterAreaIntegrity(Player player, String playerCommand, List<Item> itemList){
-        boolean check = false;
-        String directionIsBlockedMessage;
+    public int GetEncounterNumber(){
+        int randomEncNum = this.bam.GetRandomEncounterNumber();
+        return randomEncNum;
+    }
+    
+    /**
+     * Method that checks the integrity of the battle commands. Basically it checks
+     * whether the player is in battle mode and can use item and if the player
+     * is in battle mode and try to re direct to another area.
+     * 
+     * @param parsingDecision The parsing decision of the command.
+     * @param verb The verb part of the command.
+     * @return Retuens a JSON object which contains the status of the check and the eligible message for it.
+     */
+    public JSONObject BattleIntegrityActionCheck(String parsingDecision, String verb){
         
-        //For every area conneciton, if in a connection the direction of the player exists and there isn't
-        //any doors / gates blocking the way then ...
-        for(AreaConnectionMaker acm :  player.GetAreaLocation().GetListOfAreaConnections()){
-          /*  directionIsBlockedMessage = player.DirectionToNextAreaIsBlockedByItem(itemList, acm, playerCommand);
-            if(acm.GetDirectionToOtherArea().equalsIgnoreCase(playerCommand) && (directionIsBlockedMessage.equals(""))){
-                
-                //If the area that the user is about to travel has enemies
-                for(Enemies eachGameEnemy : this.enemiesList){
-                    if(eachGameEnemy.GetAreaLocation().GetAreasName().equals(acm.GetNextArea().GetAreasName()))
-                        check = true;
-                }
-            }
-                  */
+        JSONObject jObj = new JSONObject();
+        String message = "";
+        boolean status = true;
+        
+        //if a player action is not battle or using a potion then cant excecute it while in battle
+        if(this.battleState){
+           if(!parsingDecision.equals("battle") && !verb.equals("use")){
+                message = "You can't do this action while in battle!";
+                status = false;
+           }
+        }
+
+        if(!this.battleState && parsingDecision.equals("battle")){
+            message = "There is no enemy to attack!";
+            status = false;
         }
         
-        return check;
+        jObj.put("message", message);
+        jObj.put("status", status);
+        
+        return jObj;
     }
     
-    public void SetBattleProgressState(boolean state){
-        this.battleInProgress = state;
+    /**
+     * Control method that calls the methods which triggers a battle. Thoose methods
+     * are the rendering of an integer number to trigger or not a battle, getting
+     * the list of enemies from the specific area and finding the eligible enemy 
+     * that the player will face.
+     * 
+     * @param player The object that holds the player data.
+     * @param noun The noun part of the command.
+     * @param parsingDecision The parsing decision of the command.
+     * 
+     * @return Returns a JSON object which holds the eligible enemy, and the action before the battle.
+     */
+    public JSONObject TriggerBattleOnAreaChangeController(Player player, String noun, String parsingDecision){
+        
+        this.bam = new BattleActionModel(this.jsonEnemiesArray);
+        int encounterPer = this.GetEncounterNumber();
+        JSONObject jObj = bam.TriggerBattleOnAreaChange(player, encounterPer, this.items, noun, parsingDecision, this.battleState);
+        
+        return jObj;
     }
     
-    public boolean GetBattleProgressState(){
-        return this.battleInProgress;
+    
+    public String BattleActionProcessController(Player player, Enemies eligibleEnemy, String actionBeforeBattle, List<Item> listOfItems){
+        
+        String resultMessage = this.bam.AttackEnemyProcess(eligibleEnemy, player);
+        
+        if(!resultMessage.equals("The enemy is dead!"))
+            resultMessage += "\n"+this.bam.AttackFromEnemyToPlayerProcess(eligibleEnemy, player);
+        else{
+            player.BattleExperienceEarned(eligibleEnemy);
+            this.SetBattleState(false); 
+            DirectionActionModel dam = new DirectionActionModel(actionBeforeBattle, listOfItems);
+            resultMessage += "\n"+dam.PlayerActionCommand(player);
+        }
+        
+        /*
+        
+        if(!resultMessage.equals("The enemy is dead!"))
+            resultMessage += "\n"+player.AttackFromEnemyToPlayerProcess(this.GetEnemyToBattle());
+        else{
+            player.BattleExperienceEarned(this.GetEnemyToBattle());
+            enemyController.SetBattleProgressState(false); 
+            resultMessage += "\n"+player.PlayerActionCommand(this.playerCommandBeforeBattle, itemList);
+        }
+        */
+        
+        return resultMessage;
     }
+    
+    public void SetBattleState(boolean state){
+        this.battleState = state;
+    }
+    
+    public boolean GetBattleState(){
+        return this.battleState;
+    }
+    
+    public JSONArray GetJSONEnemiesArray(){
+        return this.jsonEnemiesArray;
+    }
+    
 
-    public List<Enemies> GetGameEnemyList(){
-        return this.enemiesList;
-    }
-    
 }

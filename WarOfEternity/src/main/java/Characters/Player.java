@@ -446,6 +446,8 @@ public class Player implements ICharacter, Serializable {
      * @param areasList  The list of game areas. It is used to find all the enemies that dwell in the specific area.
      * @return Returns the specific enemy object that the player is going to battle.
      */
+    
+    /*
     public Enemies SetBattleData(EnemiesController enemyController, String playerCommand, List<Area> areasList){
         List<Enemies> enemiesInPlayerArea = new ArrayList();
         
@@ -464,6 +466,7 @@ public class Player implements ICharacter, Serializable {
 
         return enemiesInPlayerArea.get(numb);
     }
+    */
     
     /**
      * Method that handles the attack action from the player to the enemy.

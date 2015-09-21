@@ -114,10 +114,11 @@ public class MainGame extends javax.swing.JFrame {
                        //Sets the data of the enemies every time the user is making an action
                        //that is because whenever the player is attacking an enemy the enemies
                        //data are changing.
-                       ec.SetGameEnemiesData();
-                       List<Enemies> enemyList = ec.GetGameEnemyList();
+                 // ec.SetGameEnemiesData();
+                 // List<Enemies> enemyList = ec.GetGameEnemyList();
                        
-                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, ic.GetListOfItems(), ec, mc.GetAreasList(), enemyList, dyc.GetDockYardList(), tc.GetListOfMerchants());
+                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, 
+                               ic.GetListOfItems(), ec, mc.GetAreasList(), dyc.GetDockYardList(), tc.GetListOfMerchants());
         
                        //if the command that the user gave is invalid then ...
                        if(actionResult.equals("")){
@@ -167,17 +168,17 @@ public class MainGame extends javax.swing.JFrame {
         //Tries to load the image file. If its does not succeed then it load another image
         try{
             ImageIcon icon = null; 
-            if((!this.player.GetAreaLocation().GetAreaImage().equals("")) && (!this.ec.GetBattleProgressState()))
+            if((!this.player.GetAreaLocation().GetAreaImage().equals("")) && (!this.ec.GetBattleState()))
                 icon = new ImageIcon(this.projectFolder+"\\src\\main\\AreaImages\\"+ this.player.GetAreaLocation().GetAreaImage()); 
-            else if((this.player.GetAreaLocation().GetAreaImage().equals("")) && (!this.ec.GetBattleProgressState()))
+            else if((this.player.GetAreaLocation().GetAreaImage().equals("")) && (!this.ec.GetBattleState()))
                 icon = new ImageIcon(this.projectFolder+"\\src\\main\\AreaImages\\noImageAvailable.jpg"); 
-            else if (this.ec.GetBattleProgressState())
+            else if (this.ec.GetBattleState())
                 icon = new ImageIcon(this.projectFolder+"\\src\\main\\EnemyImages\\"+playerContr.GetEnemyToBattle().GetEnemyImage()); 
             
             jLabel1.setIcon(icon);
         }
         catch(Exception ex){
-            if(!this.ec.GetBattleProgressState()){
+            if(!this.ec.GetBattleState()){
                 ImageIcon icon = new ImageIcon(this.projectFolder+"\\src\\main\\AreaImages\\noImageAvailable.jpg"); 
                 jLabel1.setIcon(icon);
             }
@@ -301,15 +302,15 @@ public class MainGame extends javax.swing.JFrame {
 
         this.ic = new ItemController(mc.GetAreasList());
         this.ic.SetItemDataForGame();
-
-        
+ 
         this.tc = new TransactionController(mc.GetAreasList());
         this.tc.SetMerchantSectionDataControllingMethod();
         
-        this.ec = new EnemiesController(mc.GetAreasList());
         this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
         this.dyc.DockYardMainControllingMethod();
-        ec.SetGameEnemiesData();
+        
+        this.ec = new EnemiesController(mc.GetAreasList(), ic.GetListOfItems());
+        this.ec.SetEnemiesForGame();
     }
     
     //Method that loads the data for an existing game.
@@ -325,12 +326,15 @@ public class MainGame extends javax.swing.JFrame {
         jLabel1.setIcon(icon);
         
         this.ic = loadObj.GetItemController();
+        
         this.tc = new TransactionController(mc.GetAreasList());
         this.tc.SetMerchantSectionDataControllingMethod();
-        this.ec = new EnemiesController(mc.GetAreasList());
+
         this.dyc = new DockYardController(mc.GetAreasList(), ic.GetListOfItems());
         this.dyc.DockYardMainControllingMethod();
-        ec.SetGameEnemiesData();
+        
+        this.ec = new EnemiesController(mc.GetAreasList(), ic.GetListOfItems());
+        this.ec.SetEnemiesForGame();
         
         jProgressBar2.setValue(this.player.GetPlayerExperience());
         jProgressBar1.setValue(this.player.GetCharacterHealth());

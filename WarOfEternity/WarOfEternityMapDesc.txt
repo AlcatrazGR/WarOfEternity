@@ -399,7 +399,7 @@ Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the se
 Pirate		@	Enemy encountered, The pirate yells and draws his scimitar from the seeth and attacks you.				@	Lilen Coast			@	18		@	19		@	80		@	52.2		@	18	@	pirate.jpg		@	30	
 
 Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Lilen Coast			@	20		@	18		@	100		@	63.3		@	20	@	hydra.jpg		@	60
-Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Oravor Coast Road		@	24		@	22		@	100		@	93.3		@	25	@	hydra.jpg		@	70
+Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Oravor Coast Road		@	24		@	22		@	100		@	93.3		@	25	@	hydra.jpg		@	70 
 Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Nimrod Beach		@	15		@	15		@	100		@	43.3		@	14	@	hydra.jpg		@	40
 Hydra		@	Enemy encountered, The hydra's heads target you and messure you as a prey.					@	Anglor Bay			@	15		@	16		@	100		@	43.3		@	14	@	hydra.jpg		@	40
 
@@ -439,11 +439,9 @@ Alzor The Destroyer	@	Enemy encountered, Alzor the lord of the sea depths, the o
 
 
 
-
-
-
-
-
+Swamp Worm	@	Quag Mire Swamp	@	60
+Ettin		@	Quag Mire Swamp	@	50
+dasdsa		@	Quag Mire Swamp	@	30 
 
 The year is seven hundred and twenty two (722) when war started at the lands of Yeress, which later is know as the war of eternity.
 The kingdom of Aldor, the kingdom of Ash'vor, the kingdom of Tan'leri and the clan of the water mages all combined to face the 

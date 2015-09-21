@@ -4,6 +4,7 @@ import Items.Item;
 import Items.ItemController;
 import Map.Area;
 import java.util.List;
+import org.json.simple.JSONObject;
 
 /**
  * Class PlayeController is the controlling class for every player action command
@@ -35,40 +36,36 @@ public class PlayerController {
      * the parameters in this method are just send to the wright class / method
      * for the specific action command.
      * 
-     * @param player    The player object.
-     * @param itemList  The list of game items.
-     * @param enemyController   The object of the class EnemyController.
-     * @param areasList  The list of game areas.
-     * @param enemyList  The list of game enemies.
-     * @param docksList  The list of game dock yards.
+     * @param player The player object.
+     * @param itemList The list of game items.
+     * @param enemyController The object of the class EnemyController.
+     * @param areasList The list of game areas.
+     * @param docksList The list of game dock yards.
      * @param listOfMerchants The list of game merchants.
      * @return Returns a string message that describes the result of the action.
      */
     public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, 
-            EnemiesController enemyController, List<Area> areasList, List<Enemies> enemyList, 
-            List<DockYard> docksList, List<Merchant> listOfMerchants){
+            EnemiesController enemyController, List<Area> areasList, List<DockYard> docksList, 
+            List<Merchant> listOfMerchants){
         
         String resultMessage = "";
 
-        //if a player action is not battle or using a potion then cant excecute it while in battle
-        if(enemyController.GetBattleProgressState()){
-           if(!this.parsingDecision.equals("battle") && !this.verbPartOfCommand.equals("use"))
-                return "You can't do this action while in battle!";
-        }
-
-        if(!enemyController.GetBattleProgressState() && this.parsingDecision.equals("battle"))
-            return "There is no enemy to attack!";
+        //Calls the method which checks the integrity of the battle (the type of commands to be used).
+        JSONObject integrJSON = enemyController.BattleIntegrityActionCheck(this.parsingDecision, this.verbPartOfCommand);
+        if(!(boolean) integrJSON.get("status"))
+            return (String) integrJSON.get("message");
         
-        //if at the next area that the player wants to go has enemies and the random number is
-        //inside the scale for battle process...
-        int encounterChance = enemyController.GetRandomEncounterNumber();
-        if((encounterChance >= 60) && (enemyController.EnemyEncounterAreaIntegrity(player, this.nounPartOfCommand, itemList)) && (this.parsingDecision.equals("direction")) && (!enemyController.GetBattleProgressState())){
-                
-            this.enemyToCombat = player.SetBattleData(enemyController, this.nounPartOfCommand, areasList);
-            enemyController.SetBattleProgressState(true);
-            this.playerCommandBeforeBattle = this.nounPartOfCommand;
-            return this.enemyToCombat.GetEnemyDescription();
-        }    
+        
+        //Calls the method which triggers a battle on direction command.
+        JSONObject battleTrigJSON = enemyController.TriggerBattleOnAreaChangeController(player, this.nounPartOfCommand, this.parsingDecision);
+        if(battleTrigJSON != null && (boolean) battleTrigJSON.get("status")){
+            
+            enemyController.SetBattleState(true);
+            this.playerCommandBeforeBattle = (String) battleTrigJSON.get("actionbeforebattle");
+            Enemies eligibleEnemy = (Enemies) battleTrigJSON.get("enemy");
+            this.SetEnemyToBattle(eligibleEnemy);
+            return eligibleEnemy.GetEnemyDescription();
+        }
 
         //Switch-case that calls the right action method for the specific verb that the
         //user has typed.
@@ -91,6 +88,7 @@ public class PlayerController {
                 
             case "battle" :
                 
+                resultMessage = enemyController.BattleActionProcessController(player, this.GetEnemyToBattle(), this.playerCommandBeforeBattle, itemList);
                 
                 /*
                 resultMessage = player.AttackEnemyProcess(this.GetEnemyToBattle());

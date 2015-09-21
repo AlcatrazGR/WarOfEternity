@@ -138,8 +138,8 @@ public class ItemActionModel {
             i++;
         }
         
-        if(enemyController.GetBattleProgressState()){
-            BattleActionModel bam = new BattleActionModel();
+        if(enemyController.GetBattleState()){
+            BattleActionModel bam = new BattleActionModel(enemyController.GetJSONEnemiesArray());
             message += "\n"+bam.AttackFromEnemyToPlayerProcess(player, enemyToCombat);
         }
 

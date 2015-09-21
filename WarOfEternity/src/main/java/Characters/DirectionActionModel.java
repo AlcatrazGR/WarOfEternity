@@ -6,7 +6,8 @@ import Map.AreaConnectionMaker;
 import java.util.List;
 
 /**
- *
+ * Class that handles the the re direction from one area to another.
+ * 
  * @author Vasilhs Triantaris
  */
 public class DirectionActionModel {
@@ -14,6 +15,7 @@ public class DirectionActionModel {
     private final String nounPart;
     private final List<Item> listOfGameItems;
     
+    //Constructor
     public DirectionActionModel(String noun, List<Item> items){
         this.nounPart = noun;
         this.listOfGameItems = items;
