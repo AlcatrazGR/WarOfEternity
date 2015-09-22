@@ -122,17 +122,6 @@ public class EnemiesController implements Serializable{
             resultMessage += "\n"+dam.PlayerActionCommand(player);
         }
         
-        /*
-        
-        if(!resultMessage.equals("The enemy is dead!"))
-            resultMessage += "\n"+player.AttackFromEnemyToPlayerProcess(this.GetEnemyToBattle());
-        else{
-            player.BattleExperienceEarned(this.GetEnemyToBattle());
-            enemyController.SetBattleProgressState(false); 
-            resultMessage += "\n"+player.PlayerActionCommand(this.playerCommandBeforeBattle, itemList);
-        }
-        */
-        
         return resultMessage;
     }
     

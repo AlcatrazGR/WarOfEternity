@@ -87,19 +87,7 @@ public class PlayerController {
             break;
                 
             case "battle" :
-                
                 resultMessage = enemyController.BattleActionProcessController(player, this.GetEnemyToBattle(), this.playerCommandBeforeBattle, itemList);
-                
-                /*
-                resultMessage = player.AttackEnemyProcess(this.GetEnemyToBattle());
-                if(!resultMessage.equals("The enemy is dead!"))
-                    resultMessage += "\n"+player.AttackFromEnemyToPlayerProcess(this.GetEnemyToBattle());
-                else{
-                    player.BattleExperienceEarned(this.GetEnemyToBattle());
-                    enemyController.SetBattleProgressState(false); 
-                    resultMessage += "\n"+player.PlayerActionCommand(this.playerCommandBeforeBattle, itemList);
-                }
-                */
             break;
                 
             case "sail" :

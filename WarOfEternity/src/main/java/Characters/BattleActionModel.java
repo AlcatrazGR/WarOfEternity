@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Characters;
 
 import Items.Item;
@@ -27,7 +21,6 @@ public class BattleActionModel {
     
     //Constructor
     public BattleActionModel(JSONArray jsonArray){
-        
         this.jsonEnemiesArray = jsonArray;
     }
     
@@ -41,8 +34,6 @@ public class BattleActionModel {
         
         Random randomNumb = new Random();
         int numb = randomNumb.nextInt(100) + 1;
-        
-        System.out.println("Random Num : "+numb);
         
         return numb;
     }
@@ -90,11 +81,12 @@ public class BattleActionModel {
         
         Enemies eligibleEnemy = null;
         List<Enemies> enemiesOnPercent = new ArrayList();
+
         for(Enemies eachEnemyOnArea : enemiesOnArea){
-            
-            if(encPercentage <= eachEnemyOnArea.GetEncounterPercentageRate()){
+
+            if(encPercentage >= eachEnemyOnArea.GetEncounterPercentageRate()){
                 enemiesOnPercent.add(eachEnemyOnArea);
-            }
+            } 
         }
         
         if(enemiesOnPercent.size() > 1 && enemiesOnPercent != null){
@@ -123,7 +115,7 @@ public class BattleActionModel {
         
         JSONObject jObj = new JSONObject();
         boolean check = false;
-        String directionIsBlockedMessage = "";
+        String directionIsBlockedMessage;
         List<Enemies> enemiesOnArea = new ArrayList();
         
         //For every area conneciton, if in a connection the direction of the player exists and there isn't
@@ -131,17 +123,12 @@ public class BattleActionModel {
         for(AreaConnectionMaker acm :  player.GetAreaLocation().GetListOfAreaConnections()){
             
             directionIsBlockedMessage = this.DirectionToNextAreaIsBlockedByItem(itemList, player, noun);
-           
             if(acm.GetDirectionToOtherArea().equalsIgnoreCase(noun) && (directionIsBlockedMessage.equals(""))){
                 
                 enemiesOnArea = this.GetListOfEnemiesThatRoamTheNextArea(acm);
-                //check = true;  
             }
                 
         }  
-        
-        //jObj.put("status", check);
-        //jObj.put("enemiesonarea", enemiesOnArea);
         
         return enemiesOnArea;
     }
@@ -173,7 +160,9 @@ public class BattleActionModel {
     /**
      * This method checks whether the area that the user is in is blocked by a gate / door.
      * 
+     * @param itemList The list of game items.
      * @param player The object that holds all the player data.
+     * @param noun The noun part of command.
      * @return Returns a message if the next area that the user is trying to go is blocked by a door/gate. Else it returns an empty message.
      */
     public String DirectionToNextAreaIsBlockedByItem(List<Item> itemList, Player player, String noun){
@@ -194,15 +183,7 @@ public class BattleActionModel {
         
         return checkMessage;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /**
      * Method that handles the attack action from the player to the enemy.
      * 
@@ -241,84 +222,6 @@ public class BattleActionModel {
      * @return Returns a message from the attack made by the enemy to the user which displays the damage being done.
      */
     public String AttackFromEnemyToPlayerProcess(Enemies enemyToCombat, Player player){
-        String message;
-            
-        Random rand = new Random();
-        int randomDamage = rand.nextInt(enemyToCombat.GetCharacterDamage());
-        
-        //The damage reduction is calculated as : dr = armor(player) / (armor(player) + damage(enemy))
-        double damageReduction = player.GetCharacterArmor() / (player.GetCharacterArmor() + enemyToCombat.GetCharacterDamage());
-        int finalDamage = (int) (randomDamage - ((randomDamage * damageReduction)/2));
-        
-        player.SetCharacterHealth(player.GetCharacterHealth() - finalDamage);
-        message = enemyToCombat.GetCharacterName()+" damaged you for "+finalDamage+" damage!";
-        
-        if(player.GetCharacterHealth() <= 0)
-            message = "You died!";
-
-        return message;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * Method that handles the attack that the enemy does to the player.
-     * 
-     * @param enemyToCombat The enemy object that the user is battling.
-     * @return Returns a message from the attack made by the enemy to the user which displays the damage being done.
-     */
-    public String AttackFromEnemyToPlayerProcess(Player player, Enemies enemyToCombat){
         String message;
             
         Random rand = new Random();

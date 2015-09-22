@@ -54,6 +54,7 @@ public class Enemies implements ICharacter, Serializable{
         this.characterHealth = enemyHealth;
         this.charactersGold = maxGoldCarrying;  
         this.image = enemyImage;
+        this.encounterPercent = encounterPercentage;
     }
     
     public void SetEnemyExperience(int exp){

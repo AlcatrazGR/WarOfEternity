@@ -135,7 +135,7 @@ public final class ReadEnemyDataModel {
         for(int i = 0; i < dataOnLines.length; i++){
             if(dataOnLines[i].contains(eachArea.GetAreasName())){
                 
-                String[] lineFields = dataOnLines[i].split("@");
+                String[] lineFields = dataOnLines[i].split("@");  
                 enemyObj = new Enemies(lineFields[0].trim(), lineFields[1].trim(), eachArea, 
                     this.ConvertStringToInteger(lineFields[3].trim()), this.ConvertStringToInteger(lineFields[4].trim()),
                     this.ConvertStringToInteger(lineFields[5].trim()), this.ConvertStringToDouble(lineFields[6].trim()), 

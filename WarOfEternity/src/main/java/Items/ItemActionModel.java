@@ -140,7 +140,7 @@ public class ItemActionModel {
         
         if(enemyController.GetBattleState()){
             BattleActionModel bam = new BattleActionModel(enemyController.GetJSONEnemiesArray());
-            message += "\n"+bam.AttackFromEnemyToPlayerProcess(player, enemyToCombat);
+            message += "\n"+bam.AttackFromEnemyToPlayerProcess(enemyToCombat, player);
         }
 
         return message;

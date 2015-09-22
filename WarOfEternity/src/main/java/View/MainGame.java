@@ -114,8 +114,8 @@ public class MainGame extends javax.swing.JFrame {
                        //Sets the data of the enemies every time the user is making an action
                        //that is because whenever the player is attacking an enemy the enemies
                        //data are changing.
-                 // ec.SetGameEnemiesData();
-                 // List<Enemies> enemyList = ec.GetGameEnemyList();
+                        ec.SetEnemiesForGame();
+                       // List<Enemies> enemyList = ec.GetGameEnemyList();
                        
                        String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, 
                                ic.GetListOfItems(), ec, mc.GetAreasList(), dyc.GetDockYardList(), tc.GetListOfMerchants());
