@@ -22,36 +22,49 @@ public class MusicConfiguration {
     private String soundFilePath;
     private Clip clip;
     private boolean musicStatus;
+    private boolean changeMusic;
     
     //Constructor
     public MusicConfiguration(){
-        this.SetSoundFilePath();
     }
-    
-    //Method that sets the status of the music file.
+
     public void SetMusicStatus(boolean status){
         this.musicStatus = status;
     }
-    
-    //Method that returns the music file status.
+
     public boolean GetMusicStatus(){
         return this.musicStatus;
     }
     
+    public void SetChangeMusicStatus(boolean status){
+        this.changeMusic = status;
+    }
+
+    public boolean GetChangeMusicStatus(){
+        return this.changeMusic;
+    }
     
-    private void SetSoundFilePath(){
+    /**
+     * Method that sets the path of the audio file.
+     * 
+     * @param soundFileName The name of the audio file that will be attached to the static path.
+     */
+    public void SetSoundFilePath(String soundFileName){
     
         String projectDir = System.getProperty("user.dir");
         String filePath = "";
         
         try {
-            filePath = java.net.URLDecoder.decode(projectDir+"\\src\\main\\MusicAssets\\outdoor1.wav", "UTF-8");
+            filePath = java.net.URLDecoder.decode(projectDir+"\\src\\main\\MusicAssets\\"+soundFileName, "UTF-8");
         } catch (UnsupportedEncodingException ex) {   
         }
         this.soundFilePath = filePath.replace("%20", " ");    
     }
     
-    public void PlayOutDoorSoundFile(){
+    /**
+     * Method that plays the audio file.
+     */
+    public void PlaySoundFile(){
 
         try {
             // Open an audio input stream.
@@ -69,10 +82,14 @@ public class MusicConfiguration {
         
     }
     
-    public void StopSoundFile(){
-        this.clip.stop();
+    /**
+     * Method that stops the music tha is played and also clears the memory of
+     * the space that the file is allocating.
+     */
+    public void StopMusic(){
+        this.clip.close();
+        this.clip = null;
     }
-    
     
     
 }

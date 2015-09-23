@@ -265,7 +265,7 @@ Errors													State
 15	loipoun ta connection tou oravor west cost kai oravor east coast.							ok
 16	den mporei na epistrepsei apo journeys end island sto oravor east coast.						ok
 17	stis perioxes me doors/gates meta apo sail na se kovei ton dromo.							ok
-18	na diorthosw to process tou sink		
+18	na diorthosw to process tou sink										ok
 19	meta apo thn ulopoihsh twn merchant na efarmosw ta extra attribute points pou diavazwntai apo to text, sta attributes tou pexth.	ok
 
 

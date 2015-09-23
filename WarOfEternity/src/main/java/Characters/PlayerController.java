@@ -1,5 +1,6 @@
 package Characters;
 
+import GameFileConfiguration.MusicConfiguration;
 import Items.Item;
 import Items.ItemController;
 import Map.Area;
@@ -42,11 +43,12 @@ public class PlayerController {
      * @param areasList The list of game areas.
      * @param docksList The list of game dock yards.
      * @param listOfMerchants The list of game merchants.
+     * @param mcf The object that handles the background music.
      * @return Returns a string message that describes the result of the action.
      */
     public String PlayerMainControllingMethodForActionDecision(Player player, List<Item> itemList, 
             EnemiesController enemyController, List<Area> areasList, List<DockYard> docksList, 
-            List<Merchant> listOfMerchants){
+            List<Merchant> listOfMerchants, MusicConfiguration mcf){
         
         String resultMessage = "";
 
@@ -61,6 +63,7 @@ public class PlayerController {
         if(battleTrigJSON != null && (boolean) battleTrigJSON.get("status")){
             
             enemyController.SetBattleState(true);
+            mcf.SetChangeMusicStatus(true);
             this.playerCommandBeforeBattle = (String) battleTrigJSON.get("actionbeforebattle");
             Enemies eligibleEnemy = (Enemies) battleTrigJSON.get("enemy");
             this.SetEnemyToBattle(eligibleEnemy);
@@ -87,20 +90,19 @@ public class PlayerController {
             break;
                 
             case "battle" :
-                resultMessage = enemyController.BattleActionProcessController(player, this.GetEnemyToBattle(), this.playerCommandBeforeBattle, itemList);
+                resultMessage = enemyController.BattleActionProcessController(player, this.GetEnemyToBattle(), this.playerCommandBeforeBattle, itemList, mcf);
             break;
                 
             case "sail" :
                 DockYardController dyc = new DockYardController(areasList, itemList);
                 resultMessage = dyc.DockYardCommandActionProcess(player, docksList, this.nounPartOfCommand, this.verbPartOfCommand);
             break;
+
         }
 
         return resultMessage;
     }
 
-    
-    
     public Enemies GetEnemyToBattle(){
         return this.enemyToCombat;
     }
@@ -113,6 +115,10 @@ public class PlayerController {
         this.parsingDecision = decision;
     }
     
+    public String GetParsingDecision(){
+        return this.parsingDecision;
+    }
+    
     public void SetNounPartOfCommand(String noun){
         this.nounPartOfCommand = noun;
     }
@@ -120,4 +126,5 @@ public class PlayerController {
     public void SetVerbPartOfCommand(String verb){
         this.verbPartOfCommand = verb;
     }
+    
 }

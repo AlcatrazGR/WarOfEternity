@@ -1,7 +1,6 @@
 package View;
 
 import Characters.DockYardController;
-import Characters.Enemies;
 import Characters.EnemiesController;
 import Characters.Player;
 import Characters.PlayerController;
@@ -24,7 +23,6 @@ import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.List;
 import javax.swing.AbstractAction;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
@@ -45,14 +43,14 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class MainGame extends javax.swing.JFrame {
     
     //Data members
-    public Player player;
-    public String commandTyped; 
-    public MapController mc;    
-    public ItemController ic;
-    public TransactionController tc;
-    public EnemiesController ec;
-    public Area startingArea;
-    public DockYardController dyc;
+    private Player player;
+    private String commandTyped; 
+    private MapController mc;    
+    private ItemController ic;
+    private TransactionController tc;
+    private EnemiesController ec;
+    private Area startingArea;
+    private DockYardController dyc;
     
     private final String projectFolder;
     private Configuration configuration;
@@ -60,7 +58,6 @@ public class MainGame extends javax.swing.JFrame {
     
     //Music configuration object.
     private MusicConfiguration mcf;
-    //private boolean musicStatus;
     
     public MainGame(String playerName, boolean newGameProcess, LoadGameData loadObj, String playerClass) {
         initComponents();
@@ -83,10 +80,10 @@ public class MainGame extends javax.swing.JFrame {
         //Creating playerController object that with the parsing decissiion excecutes the action that the user wants.
         final PlayerController playerContr = new PlayerController("", "", "");
         
-        mcf = new MusicConfiguration();
+        this.mcf = new MusicConfiguration();
+        mcf.SetSoundFilePath("outdoor1.wav");  
         mcf.SetMusicStatus(true);
-        mcf.PlayOutDoorSoundFile();
-        
+        mcf.PlaySoundFile();
         
         //Event listener for the text field.
         jTextField1.addKeyListener(new KeyAdapter() {
@@ -105,39 +102,41 @@ public class MainGame extends javax.swing.JFrame {
                        
                        //Decide the parsing action from the verb of action command that the user typed
                        String parsingDecision = pc.ParserControllingMethodForActionDecision(jTextField1.getText());
+                       boolean basicCom = ConfigureMaintenanceCommands(jTextField1.getText().trim());
                        
-                       //Setting the action data for the player controller   
-                       playerContr.SetParsingDecision(parsingDecision);
-                       playerContr.SetNounPartOfCommand(pc.GetNounOnPlayerCommand());
-                       playerContr.SetVerbPartOfCommand(pc.GetVerbOnPlayerCommand());
+                       if(!basicCom){
+                            //Setting the action data for the player controller   
+                            playerContr.SetParsingDecision(parsingDecision);
+                            playerContr.SetNounPartOfCommand(pc.GetNounOnPlayerCommand());
+                            playerContr.SetVerbPartOfCommand(pc.GetVerbOnPlayerCommand());
         
-                       //Sets the data of the enemies every time the user is making an action
-                       //that is because whenever the player is attacking an enemy the enemies
-                       //data are changing.
-                        ec.SetEnemiesForGame();
-                       // List<Enemies> enemyList = ec.GetGameEnemyList();
+                            //Sets the data of the enemies every time the user is making an action
+                            //that is because whenever the player is attacking an enemy the enemies
+                            //data are changing.
+                            ec.SetEnemiesForGame();
                        
-                       String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, 
-                               ic.GetListOfItems(), ec, mc.GetAreasList(), dyc.GetDockYardList(), tc.GetListOfMerchants());
+                            String actionResult = playerContr.PlayerMainControllingMethodForActionDecision(player, 
+                               ic.GetListOfItems(), ec, mc.GetAreasList(), dyc.GetDockYardList(), tc.GetListOfMerchants(),
+                               mcf);
         
-                       //if the command that the user gave is invalid then ...
-                       if(actionResult.equals("")){
-                           textAreaContent += "\n\n"+parsingDecision;
-                           jTextArea1.setText(textAreaContent);
+                            //if the command that the user gave is invalid then ...
+                            if(actionResult.equals("")){
+                                textAreaContent += "\n\n"+parsingDecision;
+                                jTextArea1.setText(textAreaContent);
+                            }
+                            else{
+                                textAreaContent += "\n\n"+actionResult;
+                                jTextArea1.setText(textAreaContent);
+                            }               
+                          
                        }
-                       else{
-                           textAreaContent += "\n\n"+actionResult;
-                           jTextArea1.setText(textAreaContent);
-                       }
-  
-                       //Setting image to jLabel.
+                       
                        SetImageAfterPlayerActionCommand(playerContr);
-                     
+                       SetPlayerDataAfterActionCommandHadBeenExcecuted();
+                       SetMusicFileToBePlayedAfterCommand(playerContr);
+                       
                        //Clearing the text field after command submission
                        jTextField1.setText("");
-                      
-                       //calling the method tha will set the data of inventory
-                       SetPlayerDataAfterActionCommandHadBeenExcecuted();
                    }
                    
                    //When the UP arrok key is pressed then it repeats the previous command
@@ -164,6 +163,51 @@ public class MainGame extends javax.swing.JFrame {
         
     }
     
+    private void SetMusicFileToBePlayedAfterCommand(PlayerController playerContr){
+        
+        if(mcf.GetChangeMusicStatus() && ec.GetBattleState()){
+            mcf.StopMusic();
+            mcf.SetSoundFilePath("combat.wav");  
+            mcf.SetMusicStatus(true);
+            mcf.PlaySoundFile();
+        }
+        else if(mcf.GetChangeMusicStatus() && !ec.GetBattleState()){
+            mcf.StopMusic();
+            mcf.SetSoundFilePath("outdoor1.wav");  
+            mcf.SetMusicStatus(true);
+            mcf.SetChangeMusicStatus(false);
+            mcf.PlaySoundFile();
+        }
+      
+    }
+    
+    /**
+     * Method that configures the basic maintenace commands that cannot be 
+     * initilized via text files.
+     */
+    private boolean ConfigureMaintenanceCommands(String command){
+        
+        boolean status = false;
+        
+        switch(command){
+            
+            case "clear" :
+            case "clean" :
+                jTextArea1.setText("");
+                status = true;
+            break;
+            
+        }
+        
+        return status;
+    }
+    
+    /**
+     * Method that handles the changing of images on the form whenever a command
+     * has been implemented.
+     * 
+     * @param playerContr The object from the player controller class.
+     */
     private void SetImageAfterPlayerActionCommand(PlayerController playerContr){
         //Tries to load the image file. If its does not succeed then it load another image
         try{
@@ -185,7 +229,9 @@ public class MainGame extends javax.swing.JFrame {
         }
     }
 
-    //Method that sets the basic data for the component of the form.
+    /**
+     * Method that sets the basic data such as images on the form on form load.
+     */
     private void SetBasicComponentData(){       
         String itemsSelected = "";
         double weightSum;
@@ -248,7 +294,9 @@ public class MainGame extends javax.swing.JFrame {
         
     }
     
-    //Method that sets the data of the inventory
+    /**
+     * Method that sets the data of the inventory.
+     */
     private void SetPlayerDataAfterActionCommandHadBeenExcecuted(){
         String itemsSelected = "";
         double weightSum;
@@ -287,7 +335,9 @@ public class MainGame extends javax.swing.JFrame {
         }
     }
     
-    //Method that sets the data after new game has been made
+    /**
+     * Method that sets the data after new game has been made.
+     */
     private void SettingDataForNewGame(String playerName, String playerClass){
         this.mc = new MapController();
  
@@ -313,7 +363,9 @@ public class MainGame extends javax.swing.JFrame {
         this.ec.SetEnemiesForGame();
     }
     
-    //Method that loads the data for an existing game.
+    /**
+     * Method that loads the data for an existing game.
+     */
     private void SettingDataForExistingGame(LoadGameData loadObj){
         jTextArea1.setText("");
         
@@ -403,9 +455,13 @@ public class MainGame extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         jScrollPane3.setViewportView(jTextArea2);
 
+        jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
+
         jLabel3.setToolTipText("Player Weight");
 
         jLabel4.setToolTipText("Player Gold");
+
+        jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setPreferredSize(new java.awt.Dimension(205, 92));
@@ -414,16 +470,30 @@ public class MainGame extends javax.swing.JFrame {
 
         jLabel8.setToolTipText("Player Armor");
 
+        jLabel9.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
+
         jLabel11.setToolTipText("Areas Name");
+
+        jLabel12.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
+
+        jLabel14.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
 
         jLabel15.setText("jLabel15");
         jLabel15.setToolTipText("Strength Points");
 
+        jLabel16.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
+
         jLabel17.setText("jLabel17");
         jLabel17.setToolTipText("Agility Points");
 
+        jLabel18.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
+
         jLabel19.setText("jLabel19");
         jLabel19.setToolTipText("Intelligence Points");
+
+        jLabel20.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
 
         jToggleButton1.setText("Map");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -577,7 +647,7 @@ public class MainGame extends javax.swing.JFrame {
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel6)
                             .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -622,6 +692,7 @@ public class MainGame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    //Event on form close.
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         int confirmed = JOptionPane.showConfirmDialog(null, 
             "Are you sure you want to exit the game?\nAll your progress will be"
@@ -633,6 +704,7 @@ public class MainGame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowClosing
 
+    //Event method that is triggered whenever the "Map" toggle button is used.
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         MapForm mf = new MapForm(this.mc);
 
@@ -667,26 +739,74 @@ public class MainGame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //Help button
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        HelpForm hp = new HelpForm();
+        hp.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     //Music button event.
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ImageIcon icon;
         
+        //H mousiki pezei eisai se perioxh kai prepei na kleisei
+        //H mousiki den pezei eisai se perioxh kai prepei na anoiksei
+        //H mousiki pezei eisai se maxh kai prepei na kleisei
+        //H mousiki den pezei eisai se maxh kai prepei na anoiksei
+        
+        if(this.mcf.GetMusicStatus() && !ec.GetBattleState()){
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\nosound.png");
+            jButton3.setIcon(icon);
+            this.mcf.SetMusicStatus(false);
+            mcf.StopMusic();
+        }
+        else if(!this.mcf.GetMusicStatus() && !ec.GetBattleState()){
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
+            jButton3.setIcon(icon);
+            mcf.SetMusicStatus(true);
+            mcf.SetSoundFilePath("outdoor1.wav");  
+            mcf.PlaySoundFile();
+        }
+        else if(this.mcf.GetMusicStatus() && ec.GetBattleState()){
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\nosound.png");
+            jButton3.setIcon(icon);
+            this.mcf.SetMusicStatus(false);
+            mcf.StopMusic();
+        }
+        else if(!this.mcf.GetMusicStatus() && ec.GetBattleState()){
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
+            jButton3.setIcon(icon);
+            mcf.SetSoundFilePath("combat.wav");  
+            mcf.SetMusicStatus(true);
+            mcf.PlaySoundFile();
+        }
+        
+        
+        /*
         if(this.mcf.GetMusicStatus()){
             this.mcf.SetMusicStatus(false);
             icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\nosound.png");
             jButton3.setIcon(icon);
-            this.mcf.StopSoundFile();
+            mcf.StopMusic();
         }
-        else{
-            this.mcf.SetMusicStatus(true);
+        
+        if(!this.mcf.GetMusicStatus() && !ec.GetBattleState()){
             icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
             jButton3.setIcon(icon);
-            this.mcf.PlayOutDoorSoundFile();
+            mcf.SetSoundFilePath("outdoor1.wav");  
+            mcf.SetMusicStatus(true);
+            mcf.PlaySoundFile();
         }
+        
+        if(!this.mcf.GetMusicStatus() && ec.GetBattleState()){
+            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
+            jButton3.setIcon(icon);
+            mcf.SetSoundFilePath("combat.wav");  
+            mcf.SetMusicStatus(true);
+            mcf.PlaySoundFile();
+        }
+        */
+
                 
     }//GEN-LAST:event_jButton3ActionPerformed
 

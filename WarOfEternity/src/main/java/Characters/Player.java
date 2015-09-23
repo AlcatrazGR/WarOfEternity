@@ -460,6 +460,40 @@ public class Player implements ICharacter, Serializable {
         }
     }
    
+    private JSONObject GetAttributePointsFromEquippedItems(){
+        
+        JSONObject jObj = new JSONObject();
+        int strFromItems = 0;
+        int agiFromItems = 0;
+        int intelFromItems = 0;
+        
+        for(Item eachEquippedItem : this.equipedItems){
+            if(eachEquippedItem.GetItemType() == 3){
+                switch(eachEquippedItem.GetAttributeType()){
+                    
+                    case "str":
+                        strFromItems += eachEquippedItem.GetAttributeValue();
+                    break;
+                    
+                    case "agi":
+                        agiFromItems += eachEquippedItem.GetAttributeValue();
+                    break;
+                    
+                    case "int":
+                        intelFromItems += eachEquippedItem.GetAttributeValue();
+                    break;
+                    
+                }
+            }
+        }
+        
+        jObj.put("itemstr", strFromItems);
+        jObj.put("itemagi", agiFromItems);
+        jObj.put("itemint", intelFromItems);
+        
+        return jObj;
+    }
+    
     /**
      * Method that increase the level of the player by one and also increases
      * the armor status and damage status by 2 points.
@@ -467,6 +501,31 @@ public class Player implements ICharacter, Serializable {
     private void LevelUp(){
         this.SetPlayerLevel(this.GetPlayerLevel() + 1);
         this.SetCharacterArmor(this.GetCharacterArmor() + 2);
+        
+        JSONObject JSONBasicAttr = this.GetPlayerClassStartingStats();
+        JSONObject JSONItemAttr = GetAttributePointsFromEquippedItems();
+        
+        switch(this.playerClass){
+            
+            case "warrior":
+                this.SetCharacterStrenght(((int) JSONBasicAttr.get("strength")) + ((int) JSONItemAttr.get("itemstr")) + ((this.GetPlayerLevel() * 2) - 2));
+                this.SetCharacterAgility(((int) JSONBasicAttr.get("agility")) + ((int) JSONItemAttr.get("itemagi")) + (this.GetPlayerLevel() - 1));
+                this.SetCharacterInteligence(((int) JSONBasicAttr.get("intelligence")) + ((int) JSONItemAttr.get("itemint")) + (this.GetPlayerLevel() - 1));
+            break;
+                
+            case "rogue":
+                this.SetCharacterStrenght(((int) JSONBasicAttr.get("strength")) + ((int) JSONItemAttr.get("itemstr")) + (this.GetPlayerLevel() - 1));
+                this.SetCharacterAgility(((int) JSONBasicAttr.get("agility")) + ((int) JSONItemAttr.get("itemagi")) + ((this.GetPlayerLevel() * 2) - 2));
+                this.SetCharacterInteligence(((int) JSONBasicAttr.get("intelligence")) + ((int) JSONItemAttr.get("itemint")) + (this.GetPlayerLevel() - 1));
+            break;
+                
+            case "mage":
+                this.SetCharacterStrenght(((int) JSONBasicAttr.get("strength")) + ((int) JSONItemAttr.get("itemstr")) + (this.GetPlayerLevel() - 1));
+                this.SetCharacterAgility(((int) JSONBasicAttr.get("agility")) + ((int) JSONItemAttr.get("itemagi")) + (this.GetPlayerLevel() - 1));
+                this.SetCharacterInteligence(((int) JSONBasicAttr.get("intelligence")) + ((int) JSONItemAttr.get("itemint")) + ((this.GetPlayerLevel() * 2) - 2));
+            break;
+        }
+        
         this.CalculateGeneralPlayerDamage();
         
     }

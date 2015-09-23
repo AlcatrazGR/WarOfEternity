@@ -1,5 +1,6 @@
 package Characters;
 
+import GameFileConfiguration.MusicConfiguration;
 import Items.Item;
 import Map.Area;
 import java.io.Serializable;
@@ -109,15 +110,19 @@ public class EnemiesController implements Serializable{
     }
     
     
-    public String BattleActionProcessController(Player player, Enemies eligibleEnemy, String actionBeforeBattle, List<Item> listOfItems){
+    public String BattleActionProcessController(Player player, Enemies eligibleEnemy, 
+            String actionBeforeBattle, List<Item> listOfItems, MusicConfiguration mcf){
         
         String resultMessage = this.bam.AttackEnemyProcess(eligibleEnemy, player);
         
-        if(!resultMessage.equals("The enemy is dead!"))
+        if(!resultMessage.equals("The enemy is dead!")){
             resultMessage += "\n"+this.bam.AttackFromEnemyToPlayerProcess(eligibleEnemy, player);
+            mcf.SetChangeMusicStatus(false);
+        }
         else{
             player.BattleExperienceEarned(eligibleEnemy);
             this.SetBattleState(false); 
+            mcf.SetChangeMusicStatus(true);
             DirectionActionModel dam = new DirectionActionModel(actionBeforeBattle, listOfItems);
             resultMessage += "\n"+dam.PlayerActionCommand(player);
         }
