@@ -1,6 +1,7 @@
 package Items;
 
 import GameFileConfiguration.SaveFolderConfig;
+import GameFileConfiguration.TextFileProcessing;
 import Map.Area;
 import java.io.BufferedReader;
 import java.io.File;
@@ -22,9 +23,7 @@ public class ReadItemDataModel {
     
     private final List<Area> listOfAreas;
     private final List<Item> listOfGameItems;
-    
-    private String itemFilePath;
-    private String itemConnectionsFilePath;
+
     private StringBuffer itemBuffer;
     private StringBuffer itemConnectionsBuffer;
 
@@ -33,108 +32,15 @@ public class ReadItemDataModel {
         this.listOfAreas = areas;
         this.itemBuffer = null;
         this.itemConnectionsBuffer = null;
-        this.itemFilePath = "";
-        this.itemConnectionsFilePath = "";
         this.listOfGameItems = new ArrayList();
         
-        //Setting file data
-        this.SetItemFilePath();
-        this.SetItemConnectionsFilePath();
-        this.GetItemFileContent();
-        this.GetItemConnectionsFileContent();
+        String itemFilePath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\GameItems.txt");
+        String itemConnectionFilePath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\GameItemConnections.txt");
+        this.itemBuffer = TextFileProcessing.GetHelpInfoFileContent(itemFilePath);
+        this.itemConnectionsBuffer = TextFileProcessing.GetHelpInfoFileContent(itemConnectionFilePath);
+
     }
-    
-    /**
-     * Method that gets the GameItems file path and set it to the data member.
-     */
-    private void SetItemFilePath(){
-        String usersHome = System.getProperty("user.home");
-        String pathToItemsResource = "";
-        
-        try {
-            pathToItemsResource = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\GameItems.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        this.itemFilePath = pathToItemsResource.replace("%20", " ");
-    }
-    
-    /**
-     * Method that gets the GameItemConnections file path and set it to the data member.
-     */
-    private void SetItemConnectionsFilePath(){
-        String usersHome = System.getProperty("user.home");
-        String pathToItemConnections = "";
-        
-        try {
-            pathToItemConnections = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\GameItemConnections.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        this.itemConnectionsFilePath = pathToItemConnections.replace("%20", " ");
-        
-    }
-    
-    /**
-     * Method that gets the content of the text file and store it on a string buffer.
-     * 
-     * @return Returns a string buffer which represents the content of the item file.
-     */
-    private void GetItemFileContent(){
-        File file = new File(this.itemFilePath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        this.itemBuffer = stringBuffer;
-    }
-    
-    /**
-     * Method that gets the content of the text file and store it on a string buffer.
-     * 
-     * @return Returns a string buffer which represents the content of the item connections file.
-     */
-    private void GetItemConnectionsFileContent(){
-        File file = new File(this.itemConnectionsFilePath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        this.itemConnectionsBuffer = stringBuffer;
-    }
-    
+
     /**
      * Method that splits the string buffer to lines.
      * 

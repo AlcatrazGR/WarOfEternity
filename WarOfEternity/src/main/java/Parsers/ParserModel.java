@@ -1,6 +1,7 @@
 package Parsers;
 
 import GameFileConfiguration.SaveFolderConfig;
+import GameFileConfiguration.TextFileProcessing;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -20,18 +21,12 @@ import java.util.logging.Logger;
 public class ParserModel {
     
     //Data member of the class
-    private final List<String> directionParser;
-    private final List<String> itemParser;
-    private final List<String> transactionParser;
-    private final List<String> battleParser;
-    private final List<String> sailParser;
-    
-    private String directionParserPath;
-    private String itemParserPath;
-    private String transParsePath; 
-    private String battleParserPath;
-    private String sailParserPath;  
-    
+    private List<String> directionParser;
+    private List<String> itemParser;
+    private List<String> transactionParser;
+    private List<String> battleParser;
+    private List<String> sailParser;
+
     //Simple Constructor
     public ParserModel(){
         this.directionParser = new ArrayList();
@@ -40,256 +35,52 @@ public class ParserModel {
         this.battleParser = new ArrayList();
         this.sailParser = new ArrayList();
         
-        this.SetPathOfTheTextDirectionsParserFile();
-        this.SetPathOfTheTextItemParserFile();
-        this.SetPathOfTheTextTransactionParserFile();
-        this.SetPathOfTheTextBattleParserFile();
-        this.SetPathOfSailParserText();
-        
-        this.SetDirectionParserFromDAOContent();
-        this.SetItemParserFromDAOContent();
-        this.SetTransactionParserFromDAOContent();
-        this.SetBattleParserFromDAOContent();
-        this.SetSailParserFromDAOContent();
+        this.SetParserDataForTheGame();
     }
     
     /**
-     * Sets the path of the battle parser
+     * Method that handles the reading of all the parsers of the game.
      */
-    private void SetPathOfTheTextBattleParserFile(){
-        
-        String usersHome = System.getProperty("user.home");
-        
-        String pathToBattleParser = "";
-        try {
-            pathToBattleParser = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\BattleParser.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.battleParserPath = pathToBattleParser.replace("%20", " ");    
-    }
+    private void SetParserDataForTheGame(){
     
-    /**
-     * Sets the path of the item parser.
-     */
-    private void SetPathOfTheTextItemParserFile(){
+        //Processes the paths of all the parsers.
+        String directionParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\DirectionsVerbParser.txt");
+        String itemParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\ItemVerbParser.txt");
+        String transactionParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\TransactionVerbParser.txt");
+        String battleParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\BattleParser.txt");
+        String sailParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\SailParser.txt");    
        
-        String usersHome = System.getProperty("user.home");
+        //Processes the content of all the parsers.
+        StringBuffer directionBuffer = TextFileProcessing.GetHelpInfoFileContent(directionParserPath);
+        StringBuffer itemBuffer = TextFileProcessing.GetHelpInfoFileContent(itemParserPath);
+        StringBuffer transactionBuffer = TextFileProcessing.GetHelpInfoFileContent(transactionParserPath);
+        StringBuffer battleBuffer = TextFileProcessing.GetHelpInfoFileContent(battleParserPath);
+        StringBuffer sailBuffer = TextFileProcessing.GetHelpInfoFileContent(sailParserPath);
         
-        String pathToItemParser = "";
-        try {
-            pathToItemParser = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\ItemVerbParser.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.itemParserPath = pathToItemParser.replace("%20", " ");   
+        //Processes all the verbs in all the parsers.
+        this.directionParser = this.SplitStringBufferIntoLines(directionBuffer);
+        this.itemParser = this.SplitStringBufferIntoLines(itemBuffer);
+        this.transactionParser = this.SplitStringBufferIntoLines(transactionBuffer);
+        this.battleParser = this.SplitStringBufferIntoLines(battleBuffer);
+        this.sailParser = this.SplitStringBufferIntoLines(sailBuffer);
     }
 
     /**
-     * Sets the path of the directions parser to the 
-     * directionParserPath member.
+     * Method that splits each line of the parser into a single entity.
+     * 
+     * @param stringBuffer
+     * @return 
      */
-    private void SetPathOfTheTextDirectionsParserFile(){
-        
-        String usersHome = System.getProperty("user.home");
-        
-        String pathToDirectionParser = "";
-        try {
-            pathToDirectionParser = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\DirectionsVerbParser.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        this.directionParserPath = pathToDirectionParser.replace("%20", " ");
-    }
-    
-    /**
-     * Sets the path of the transaction parser.
-     */
-    private void SetPathOfTheTextTransactionParserFile(){
-
-        String usersHome = System.getProperty("user.home");
-        
-        String pathToTransactionParser = "";
-        try {
-            pathToTransactionParser = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\TransactionVerbParser.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        this.transParsePath = pathToTransactionParser.replace("%20", " ");
-    }
-    
-     /**
-     * Sets the path of the sail parser.
-     */
-    private void SetPathOfSailParserText(){
-        String usersHome = System.getProperty("user.home");
-        
-        String pathToTransactionParser = "";
-        try {
-            pathToTransactionParser = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\SailParser.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        this.sailParserPath = pathToTransactionParser.replace("%20", " ");
-    }
-
-    /**
-     * Reads the BattleParser file and add its content inside a list.
-     */
-    private void SetBattleParserFromDAOContent(){
-        File file = new File(this.battleParserPath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
+    private List<String> SplitStringBufferIntoLines(StringBuffer stringBuffer){
+        List<String> parserList = new ArrayList();
         
         String[] dataOnLines = stringBuffer.toString().split("\n");
         for (String dataOnLine : dataOnLines) {
-            this.battleParser.add(dataOnLine.trim());
+            parserList.add(dataOnLine.trim());
         }
         
+        return parserList;
     }
-    
-    /**
-     * Reads the directionParser file and add its content inside a list.
-     */
-    private void SetDirectionParserFromDAOContent(){
-        File file = new File(this.directionParserPath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        String[] dataOnLines = stringBuffer.toString().split("\n");
-        for (String dataOnLine : dataOnLines) {
-            this.directionParser.add(dataOnLine.trim());
-        }
-        
-    }
-    
-    /**
-     * Reads the Item Parser file and add its content inside a list.
-     */
-    private void SetItemParserFromDAOContent(){
-        File file = new File(this.itemParserPath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        String[] dataOnLines = stringBuffer.toString().split("\n");
-        for (String dataOnLine : dataOnLines) {
-            this.itemParser.add(dataOnLine.trim());
-        }
-    
-    }
-    
-    /**
-     * Sets the verbs of the transaction data access object to a string list.
-     */
-    private void SetTransactionParserFromDAOContent(){
-        File file = new File(this.transParsePath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        String[] dataOnLines = stringBuffer.toString().split("\n");
-        for (String dataOnLine : dataOnLines) {
-            this.transactionParser.add(dataOnLine.trim());
-        }
-    
-    }
-    
-     /**
-     * Sets the verbs of the sail data access object to a string list.
-     */
-    private void SetSailParserFromDAOContent(){
-        File file = new File(this.sailParserPath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        String[] dataOnLines = stringBuffer.toString().split("\n");
-        for (String dataOnLine : dataOnLines) {
-            this.sailParser.add(dataOnLine.trim());
-        }
-    }
-    
 
     /**
      * Split the command of the player.

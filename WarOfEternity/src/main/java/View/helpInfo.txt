@@ -1,0 +1,103 @@
+Commands 
+
+     This game is a text-based game, that means that each action can be triggered with an appropriate command. Many of the game commands are formed as : verb - noun,
+where the verb part is the command of the action and the noun part is the action itself. With the verb part of the command the game can decide which action to take 
+and thus makeing it easier tointeract with the player. The commands that the player can give are divided into sections those are : the direction commands, 
+the battle commands, the sail commands, the transaction commands and the item commands.
+
+Direction Commands
+
+     With the direction commands the player can roam the world of the game and discover all its places. The verbs that can be used in this section are : go, travel, move, 
+ride and journey while the noun's that can be used are north, south, east, west, north-east, north-west, south-east and south-west. So a direction commands can be
+like :
+               > go north
+               > travel south-east
+The game also supports the use of only the noun part on direction commands, so you can also use : north, south, north-east etc. to travel to the appropriate area.
+
+Battle Commands
+
+     With the battle commands the player can engage into battle with enemy that he will encounter throughout the game. The verbs that can be use in this section are :
+battle, attack, charge, hit, strike, beat and raid while the noun part of the command can be the name of the enemy or just the word "enemy". So a battle command
+can be like : 
+               > attack enemy
+               > hit spider lord
+You can also use only the verb in this situation.
+
+Sail Commands
+
+     With the sail commands the player can travel from an area to another through a ship. There are multiple dock's in the area that the player can travel with providing
+thats he has the appropriate amount of gold to do so. The verbs that can be used in this section are :  sail, ship, cruise and sink while the noun part of the command
+can be the name of the destination area. So a sail command can be like : 
+               > sail to Oravor East Coast
+               > ship to Oravor East Coast
+
+Transaction Command
+
+     With the transaction commands the player can engage into conversation with certain non player characters (NPC's) in order to buy / sell items, heal his wounds
+with the help of the local healer and talk with people to get you to an area via ship. The commands that can be use in this section are : buy, sell, talk, purchase, bargain.
+So a transaction command can be like : 
+               > talk to healer 
+               > buy <item>
+               > sell <item>
+               > talk to merchant
+In order to start a transaction with the local merchant you must first use the command : talk to merchant in order initialize his merchantise. The various NPC's of
+the game are located only inside city, castles, towns and villages.
+
+Item Commands
+
+     With the item commands the player can handle the various items that can either find or buy inside the game. The verbs that can be used in this section are : 
+pick, take, grab, search, snatch, use, open, equip. With the verbs pick, take, grab and snatch the player can be items that are layimg  around the area that he are in.
+With the search verb the player can search the area that he is in to find items that are laying  around. With the use <item> command the player can use various items
+such as potion, keys and other staff on the game. Lastly with the equip verb command the player can equip items to himself and thus changeing his primary attributes.
+
+<break>
+
+Voice Recognition 
+
+     This game supports voice recognition to input the commands that the player wants to excecute. In order to use the voice recognition you need to either have
+a headset pluged in your computer or a microphone. By pressing the button on the bottom right of the game form with the microphone icon the recognition 
+process starts and at this moment a green or red light (depenting on the device) must open, at that point you need to speack loud clear the command you want 
+to enter. If by pressing the recognition button a message like "You must connect a microphone or a headset, in order to enable the recognition process!"  then
+that means that the connection of your microphone / headset is problematic and you need to check it.
+
+<break>
+
+Non Player Charachter's 
+
+     As said above the npc's are located in various locations through out the world of the game. There are three type of npc's throughout the game, those are 
+the merchants which sell and buy items, healers with which you replenish your lost health and sailors / captains to travel you to areas that are reachable only
+with ships. By using the command talk to merchant you start a transaction with him and his goods are displayed to your command history section. By using
+the command talk to sailor / captain you get as the result the name of the area that the ship captain can take you to and the amount of gold required to make
+the trip.
+
+<break>
+
+Experience Mechanism 
+
+     After a successful battle inside the game the player gain's a certain amount of experience from the defeated enemy. After a certain amount of experience
+earned the player levels up and thus upgradeing his skills. The skills that are upgraded are depended on the class of the player (whether the player is a warrior,
+or a rogue, or a mage). After a level up the player earns 2 points into armor, 2 points on the primary attibute (if the player is a warrior the his primary attribute
+is strength) and 1 point on the secondary attribute skills.
+
+<break>
+ 
+Attribute Mechanism 
+
+     The attributes (strenght, agility, intelligence) are the basic skills of the player from which the player's damage is calculated. The player can invest into this 
+attributes by either leveling up or by equipping items. The attributes gainned by the levels are static and cannot by changed while the attributes gainned by 
+the items can be changed by changing you gear.
+
+<break>
+
+Game Map 
+
+     By pressing the "Map" button on the right of the game form a new static window will appear on the top left of the screen. This window will show the map 
+of the game and every location (game area) as a pin point. By hovering the mouse arrow on certain areas of the map a full description of the continent will 
+appear. Also on the map there are yellow dashed lines which represent the direction the player must take in order to travel from one area to another.
+
+<break>
+
+Music 
+
+     The background music of the game is played the moment the game form is fully loaded. You can turn on / off the music by simple click the sound button
+(the button with the sound icon). There are two types of sound files that are played in this game the sounds of the areas and the sounds of battle.

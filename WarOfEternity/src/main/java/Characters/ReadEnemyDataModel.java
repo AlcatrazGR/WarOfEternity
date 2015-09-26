@@ -1,16 +1,9 @@
 package Characters;
 
-import GameFileConfiguration.SaveFolderConfig;
+import GameFileConfiguration.TextFileProcessing;
 import Map.Area;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -23,67 +16,20 @@ import org.json.simple.JSONObject;
  */
 public final class ReadEnemyDataModel {
 
-    //
-    //StringBuffer enemiesFileBuffer;
-    
     private JSONArray jsonEnemiesArray;
     private final List<Area> gameAreas;
     
     public ReadEnemyDataModel(List<Area> areas){
         this.jsonEnemiesArray = new JSONArray();
         this.gameAreas = areas;
-        
-        
-        /*
-        this.encounterArea = new ArrayList();
-        this.enemiesFileBuffer = null;  
-        
-        String filePath = this.SetEnemyFilePath();
-        this.GetEnemyFileContent(filePath);
-        */
     }
-    
-    
-    private String GetEnemyFilePath(){
-        
-        String usersHome = System.getProperty("user.home");
-        String pathToEnemiesResource = "";
-        
-        try {
-            pathToEnemiesResource = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\GameEnemies.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(SaveFolderConfig.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        pathToEnemiesResource = pathToEnemiesResource.replace("%20", " ");
-        
-        return pathToEnemiesResource;
-    }
-    
-    private StringBuffer GetEnemiesFileContent(){
-        
-        File file = new File(this.GetEnemyFilePath());
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        return stringBuffer;
-    }
-    
+
+    /**
+     * Method that splits the string buffer into lines.
+     * 
+     * @param strBuf The string buffer that will be splitted.
+     * @return Returns an array of string each string is a line fron the text file.
+     */
     private String[] SplitStringBufferDataToLines(StringBuffer strBuf){
     
         String[] dataOnLines = strBuf.toString().split("\n");
@@ -125,7 +71,14 @@ public final class ReadEnemyDataModel {
         return doubleData;
     }
     
-   
+    /**
+     * Method that creates json object that hold the name of the area and the 
+     * appropriate enemies that roam it.
+     * 
+     * @param eachArea Each area on the loop.
+     * @param dataOnLines Array of string, each string is a line from the enemy file.
+     * @return Returns a JSON object which holds the enemy data of the area.
+     */
     private JSONObject SetGroupOfEnemiesOnSpecificArea(Area eachArea, String[] dataOnLines){
         
         JSONObject jObj = new JSONObject();
@@ -152,10 +105,17 @@ public final class ReadEnemyDataModel {
         return jObj;
     }
     
+    /**
+     * Method that handles the reading and the initializing of the enemies for 
+     * the game.
+     */
     public void SetEnemiesFromData(){
         
         Enemies enemyObj;
-        String[] dataOnLines = SplitStringBufferDataToLines(this.GetEnemiesFileContent());
+        String enemyFilePath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\GameEnemies.txt");
+        StringBuffer enemyBuffer = TextFileProcessing.GetHelpInfoFileContent(enemyFilePath);
+        
+        String[] dataOnLines = SplitStringBufferDataToLines(enemyBuffer);
 
         for(Area eachArea : this.gameAreas){
             
@@ -164,65 +124,9 @@ public final class ReadEnemyDataModel {
         }
     }
     
+    //Returns the JSON enemy array.
     public JSONArray GetJSONEnemiesArray(){
         return this.jsonEnemiesArray;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-
-    /**
-     * Method that sets the enemy data of the file into a list.
-     * 
-     * @return Returns the list of enemies after initializing it.
-     */
-    /*
-    public List<Enemies> SetEnemyDataToList(){
-        List<Enemies> enemyList = new ArrayList();
-        String[] dataOnLines = SplitTextDataOnLines();
-
-        try{
-            for(int i=0; i<dataOnLines.length; i++){
-                String[] dataIndex = dataOnLines[i].split("@");
-                
-                Enemies enemyObj = new Enemies(dataIndex[0].trim(), dataIndex[1].trim(), this.encounterArea.get(i), 
-                        this.ConvertStringToIntegerDataType(dataIndex[3].trim()), this.ConvertStringToIntegerDataType(dataIndex[4].trim()),
-                        this.ConvertStringToIntegerDataType(dataIndex[5].trim()), this.ConvertStringToDouble(dataIndex[6].trim()), 
-                        this.ConvertStringToIntegerDataType(dataIndex[7].trim()) ,dataIndex[8].trim());
-                
-                enemyList.add(enemyObj);
-            }
-        }
-        catch(Exception ex){
-        }
-        
-        return enemyList;
-    }
-    */
-    
-    /**
-     * Sets the list of encounter areas.
-     * 
-     * @param areas The list of game areas.
-     */
-    /*
-    public void SetEnemyAreaEncounterList(List<Area> areas){
-        String[] dataOnLines = SplitTextDataOnLines(); 
-        
-        for (String dataOnLine : dataOnLines) {
-            String[] lineIndex = dataOnLine.split("@");
-            for(Area eachGameArea : areas){
-                if(lineIndex[2].trim().equals(eachGameArea.GetAreasName()))
-                    this.AddAreaIntoTheEncounterAreaList(eachGameArea);
-            }
-        }
-    }
-    */
-    
-    
+ 
 }

@@ -780,34 +780,7 @@ public class MainGame extends javax.swing.JFrame {
             mcf.SetMusicStatus(true);
             mcf.PlaySoundFile();
         }
-        
-        
-        /*
-        if(this.mcf.GetMusicStatus()){
-            this.mcf.SetMusicStatus(false);
-            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\nosound.png");
-            jButton3.setIcon(icon);
-            mcf.StopMusic();
-        }
-        
-        if(!this.mcf.GetMusicStatus() && !ec.GetBattleState()){
-            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
-            jButton3.setIcon(icon);
-            mcf.SetSoundFilePath("outdoor1.wav");  
-            mcf.SetMusicStatus(true);
-            mcf.PlaySoundFile();
-        }
-        
-        if(!this.mcf.GetMusicStatus() && ec.GetBattleState()){
-            icon = new ImageIcon(this.projectFolder+"\\src\\main\\java\\ApplicationImages\\sound.png");
-            jButton3.setIcon(icon);
-            mcf.SetSoundFilePath("combat.wav");  
-            mcf.SetMusicStatus(true);
-            mcf.PlaySoundFile();
-        }
-        */
-
-                
+      
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

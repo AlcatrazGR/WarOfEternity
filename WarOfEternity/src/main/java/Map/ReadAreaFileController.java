@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Class that controls the reading of the area file text.
  * 
- * @author Thomas Liakos
+ * @author Triantaris Vasilis
  */
 public class ReadAreaFileController {
     
@@ -27,23 +27,16 @@ public class ReadAreaFileController {
         List<Area> areaList = new ArrayList();
         
         ReadAreaFileModel rafm = new ReadAreaFileModel();
-        boolean filePathCheck = rafm.SetFilePath();
-        
-        //If the path of the file is correct and nothing went wrong
-        if(filePathCheck){
-            this.strBufData = rafm.GetAreaFileConent();
-            String[] dataOnLines = rafm.SplitStringBufferDataToLines(this.strBufData);
-     
-            boolean setListCheck = rafm.SetAreaList(dataOnLines);
 
-            //If the processes of makeing the area objects and adding them on the 
-            //list.
-            if(setListCheck)
-                areaList = rafm.GetAreaList();
-            
-        }
-  
+        String[] dataOnLines = rafm.SplitStringBufferDataToLines();
+        boolean setListCheck = rafm.SetAreaList(dataOnLines);
+        
+        //If the processes of makeing the area objects and adding them on the list.
+        if(setListCheck)
+            areaList = rafm.GetAreaList();
+
         return areaList;
     }
+    
     
 }

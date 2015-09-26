@@ -1,6 +1,7 @@
 
 package Characters;
 
+import GameFileConfiguration.TextFileProcessing;
 import Map.Area;
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,7 +21,6 @@ public class ReadDockYardConnections {
     
     private List<DockYard> listOfDocks;
     private StringBuffer docksFileBuffer;
-    private String filePath;
     
     private List<String> startingDocksList;
     private List<String> destinationDocksList;
@@ -35,53 +35,11 @@ public class ReadDockYardConnections {
         this.destinationDocksList = new ArrayList();
         this.shipFeeList = new ArrayList();
         
-        this.SetDockFilePath();
-        this.GetDockYardConnectionsFileContent();
+        String dockYardFilePath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\DockYardConnections.txt");
+        this.docksFileBuffer = TextFileProcessing.GetHelpInfoFileContent(dockYardFilePath);
+        
     }
-    
-    /**
-     * Sets the path to the dockyard connection file.
-     */
-    private void SetDockFilePath(){
-        
-        String usersHome = System.getProperty("user.home");
-        
-        try {
-            this.filePath = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\DockYardConnections.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(ReadEnemyDataModel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.filePath = this.filePath.replace("%20", " ");
-    }
-    
-    /**
-     * Reads the content of the text file and puts it into a string buffer.
-     */
-    private void GetDockYardConnectionsFileContent(){
-        
-        File file = new File(this.filePath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        this.docksFileBuffer = stringBuffer;
-    }
-    
+ 
     /**
      * Method that splits the string buffer into lines. Each line represents a
      * row into the table.

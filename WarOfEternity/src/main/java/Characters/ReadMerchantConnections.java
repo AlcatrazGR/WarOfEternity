@@ -1,5 +1,6 @@
 package Characters;
 
+import GameFileConfiguration.TextFileProcessing;
 import Map.Area;
 import java.io.BufferedReader;
 import java.io.File;
@@ -17,65 +18,22 @@ import java.util.logging.Logger;
  */
 public class ReadMerchantConnections {
     
-    private String filePath;
     private StringBuffer merchantFileBuffer;
     
     private List<String> stringListOfMerchantArea;
     private List<String> stringListOfMerchantName;
-            
+         
+    //Constructor
     public ReadMerchantConnections(){
-        this.filePath = "";
         this.merchantFileBuffer = null;
         this.stringListOfMerchantArea = new ArrayList();
         this.stringListOfMerchantName = new ArrayList();
         
-        this.SetDockFilePath();
-        this.GetMerchantConnectionsFileContent();
+        String merchantFilePath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\MerchantConnections.txt");
+        this.merchantFileBuffer = TextFileProcessing.GetHelpInfoFileContent(merchantFilePath);
     }
     
-    /**
-     * Sets the path to the merchant connection file.
-     */
-    private void SetDockFilePath(){
-        
-        String usersHome = System.getProperty("user.home");
-        
-        try {
-            this.filePath = java.net.URLDecoder.decode(usersHome+"\\WarOfEternity\\DataAccessObjects\\MerchantConnections.txt", "UTF-8");
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(ReadEnemyDataModel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.filePath = this.filePath.replace("%20", " ");
-    }
-    
-    /**
-     * Reads the content of the text file and puts it into a string buffer.
-     */
-    private void GetMerchantConnectionsFileContent(){
-        
-        File file = new File(this.filePath);
-        StringBuffer stringBuffer = null;
-        
-        try{
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            stringBuffer = new StringBuffer();
-            String line;
-            
-            //Read all the lines of the txt file and append them on string buffer variable.
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
-                stringBuffer.append("\n");
-            }
-            fileReader.close();
-  
-        }
-        catch(IOException ex){
-        }
-        
-        this.merchantFileBuffer = stringBuffer;
-    }
-    
+   
     /**
      * Method that splits the string buffer into lines. Each line represents a
      * row into the table.

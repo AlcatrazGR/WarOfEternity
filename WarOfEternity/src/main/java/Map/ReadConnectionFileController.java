@@ -13,7 +13,7 @@ import java.util.List;
 public class ReadConnectionFileController {
     
     //Class data members.
-    StringBuffer strBufData;
+    
     List<Area> areasList;
     
     List<Area> currentArea;
@@ -23,8 +23,6 @@ public class ReadConnectionFileController {
     //Constructor with parametre the list of areas.
     public ReadConnectionFileController(List<Area> areas){
         this.areasList = areas;
-                
-        this.strBufData = null;
         this.currentArea = new ArrayList();
         this.nextArea = new ArrayList();
         this.directions = new ArrayList();
@@ -38,18 +36,12 @@ public class ReadConnectionFileController {
     public void ReadConnectionFileControllingMethod(){
        
         ReadAreaConnectionFileModel rcfm = new ReadAreaConnectionFileModel(this.areasList);
-        boolean filePathCheck = rcfm.SetFilePath();
         
-        //If the path of the file is correct and nothing went wrong then...
-        if(filePathCheck){
-            
-            this.strBufData = rcfm.ReadAreaConnectionFile();
-            String[] dataOnLines = rcfm.SplitStringBufferToLines(this.strBufData);
-            this.currentArea = rcfm.GetListOfCurrentAreas(dataOnLines);
-            this.nextArea = rcfm.GetListOfNextAreas(dataOnLines);
-            this.directions = rcfm.GetAreasDirections(dataOnLines);
-        }
-            
+        String[] dataOnLines = rcfm.SplitStringBufferToLines();
+        this.currentArea = rcfm.GetListOfCurrentAreas(dataOnLines);
+        this.nextArea = rcfm.GetListOfNextAreas(dataOnLines);
+        this.directions = rcfm.GetAreasDirections(dataOnLines);
+        
     }
     
 }
