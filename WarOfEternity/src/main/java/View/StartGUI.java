@@ -69,9 +69,8 @@ public class StartGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("War Of Eternity : Options");
-        setMaximumSize(new java.awt.Dimension(400, 400));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(400, 400));
-        setPreferredSize(new java.awt.Dimension(400, 400));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -129,6 +128,9 @@ public class StartGUI extends javax.swing.JFrame {
 
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 270, 260));
+
+        setSize(new java.awt.Dimension(400, 400));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     //Method for "Exit Game" button

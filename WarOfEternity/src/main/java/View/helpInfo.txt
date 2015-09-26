@@ -92,8 +92,8 @@ the items can be changed by changing you gear.
 Game Map 
 
      By pressing the "Map" button on the right of the game form a new static window will appear on the top left of the screen. This window will show the map 
-of the game and every location (game area) as a pin point. By hovering the mouse arrow on certain areas of the map a full description of the continent will 
-appear. Also on the map there are yellow dashed lines which represent the direction the player must take in order to travel from one area to another.
+of the game and every location (game area) as a pin point. Also on the map there are yellow dashed lines which represent the direction the player must take 
+in order to travel from one area to another.
 
 <break>
 

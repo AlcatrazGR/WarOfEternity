@@ -60,6 +60,9 @@ public class BattleActionModel {
         
         if(eligibleEnemy != null && parseDecision.equals("direction") && (!battleState)){
             status = true;  
+              System.out.println("Enemy Name : "+eligibleEnemy.GetCharacterName()+
+                "\nEnemy Encounter Percentage : "+eligibleEnemy.GetEncounterPercentageRate()+
+                "\n----------------------------------------------");
         }
         
         jObj.put("status", status);
@@ -83,8 +86,13 @@ public class BattleActionModel {
         List<Enemies> enemiesOnPercent = new ArrayList();
 
         for(Enemies eachEnemyOnArea : enemiesOnArea){
-
-            if(encPercentage >= eachEnemyOnArea.GetEncounterPercentageRate()){
+            System.out.println("Enemy On Area Name : "+eligibleEnemy.GetCharacterName()+
+                "\nEnemy On Area Encounter Percentage : "+eligibleEnemy.GetEncounterPercentageRate()+
+                "\n----------------------------------------------");
+            if(eachEnemyOnArea.GetEncounterPercentageRate() == 100){
+                enemiesOnPercent.add(eachEnemyOnArea);
+            }
+            else if(encPercentage >= eachEnemyOnArea.GetEncounterPercentageRate()){
                 enemiesOnPercent.add(eachEnemyOnArea);
             } 
         }

@@ -329,6 +329,7 @@ public class MainGame extends javax.swing.JFrame {
         
         if(player.GetCharacterHealth() <= 0){
             JOptionPane.showConfirmDialog(this, "You Died!, Game Over!", "You Died!", JOptionPane.OK_OPTION);
+            this.mcf.StopMusic();
             StartGUI sgui = new StartGUI(false, null, null, null, null, null);
             sgui.setVisible(true);
             this.setVisible(false);
@@ -619,7 +620,7 @@ public class MainGame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
                             .addComponent(jScrollPane1))
-                        .addGap(18, 18, 18)
+                        .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
