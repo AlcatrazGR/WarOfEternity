@@ -12,6 +12,7 @@ Characters\ReadEnemyDataModel.class
 Characters\DockYardActionModel.class
 Interfaces\ICharacter.class
 Characters\DirectionActionModel.class
+GameFileConfiguration\HelpFormInfoConfig.class
 View\MainGame$4.class
 Map\ReadAreaConnectionFileModel.class
 Characters\ReadDockYardConnections.class
@@ -57,6 +58,7 @@ View\StartGUI$2.class
 Items\ReadItemDataModel.class
 View\NewGameForm$7.class
 Map\ReadAreaFileController.class
+GameFileConfiguration\TextFileProcessing.class
 Characters\MerchantActionModel.class
 Characters\TransactionController.class
 Items\ItemConnectionWithArea.class

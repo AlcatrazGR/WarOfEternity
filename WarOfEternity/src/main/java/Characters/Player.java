@@ -273,8 +273,6 @@ public class Player implements ICharacter, Serializable {
         int equippedItemDam = this.CalculatePlayersDamageFromEquippedItems();  
         int damage;
         
-        System.out.println("Item Damage : "+equippedItemDam);
-        
         switch(this.GetChatacterClass()){
             
             case "warrior":

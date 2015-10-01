@@ -43,7 +43,7 @@ public class ItemController implements Serializable{
     }
     
     /**
-     * Method that controlles the reading of all the item and item connecitons
+     * Method that controls the reading of all the item and item connections
      * files.
      */
     public void SetItemDataForGame(){

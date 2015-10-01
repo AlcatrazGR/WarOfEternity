@@ -1,16 +1,8 @@
 package Parsers;
 
-import GameFileConfiguration.SaveFolderConfig;
 import GameFileConfiguration.TextFileProcessing;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Class that deals with the reading of the parsers and adding their 
@@ -26,6 +18,7 @@ public class ParserModel {
     private List<String> transactionParser;
     private List<String> battleParser;
     private List<String> sailParser;
+    private List<String> inspectParser;
 
     //Simple Constructor
     public ParserModel(){
@@ -34,6 +27,7 @@ public class ParserModel {
         this.transactionParser = new ArrayList();
         this.battleParser = new ArrayList();
         this.sailParser = new ArrayList();
+        this.inspectParser = new ArrayList();
         
         this.SetParserDataForTheGame();
     }
@@ -48,7 +42,8 @@ public class ParserModel {
         String itemParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\ItemVerbParser.txt");
         String transactionParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\TransactionVerbParser.txt");
         String battleParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\BattleParser.txt");
-        String sailParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\SailParser.txt");    
+        String sailParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\SailParser.txt"); 
+        String inspectParserPath = TextFileProcessing.GetTextFilePathFromUserHome("\\WarOfEternity\\DataAccessObjects\\InspectParser.txt");
        
         //Processes the content of all the parsers.
         StringBuffer directionBuffer = TextFileProcessing.GetHelpInfoFileContent(directionParserPath);
@@ -56,6 +51,7 @@ public class ParserModel {
         StringBuffer transactionBuffer = TextFileProcessing.GetHelpInfoFileContent(transactionParserPath);
         StringBuffer battleBuffer = TextFileProcessing.GetHelpInfoFileContent(battleParserPath);
         StringBuffer sailBuffer = TextFileProcessing.GetHelpInfoFileContent(sailParserPath);
+        StringBuffer inspectBuffer = TextFileProcessing.GetHelpInfoFileContent(inspectParserPath);
         
         //Processes all the verbs in all the parsers.
         this.directionParser = this.SplitStringBufferIntoLines(directionBuffer);
@@ -63,6 +59,7 @@ public class ParserModel {
         this.transactionParser = this.SplitStringBufferIntoLines(transactionBuffer);
         this.battleParser = this.SplitStringBufferIntoLines(battleBuffer);
         this.sailParser = this.SplitStringBufferIntoLines(sailBuffer);
+        this.inspectParser = this.SplitStringBufferIntoLines(inspectBuffer);
     }
 
     /**
@@ -116,5 +113,10 @@ public class ParserModel {
     //Returns the list of the verbs of the sail parser text file.
     public List<String> GetListOfSailParser(){
         return this.sailParser;
+    }
+    
+    //Returns the parser of the inspect text file.
+    public List<String> GetListOfInspectParser(){
+        return this.inspectParser;
     }
 }

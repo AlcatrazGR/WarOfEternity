@@ -24,7 +24,7 @@ public class Area implements Serializable{
         this.areaName = "";
         this.areaDescription = "";
         this.areaImage = "";
-        this.areaConnections = new ArrayList<AreaConnectionMaker>();
+        this.areaConnections = new ArrayList();
     }
     
     //Constructor with parametres
@@ -32,7 +32,7 @@ public class Area implements Serializable{
         this.areaName = title;
         this.areaDescription = description;
         this.areaImage = image;
-        this.areaConnections = new ArrayList<AreaConnectionMaker>();
+        this.areaConnections = new ArrayList();
     }
     
     //Adds a object connection the the list of area connections

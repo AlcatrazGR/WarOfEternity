@@ -40,7 +40,6 @@ public class EnemiesController implements Serializable{
         ReadEnemyDataModel redm = new ReadEnemyDataModel(this.areas);
         redm.SetEnemiesFromData();
         this.jsonEnemiesArray = redm.GetJSONEnemiesArray();
-
     }
     
     /**
@@ -61,7 +60,7 @@ public class EnemiesController implements Serializable{
      * 
      * @param parsingDecision The parsing decision of the command.
      * @param verb The verb part of the command.
-     * @return Retuens a JSON object which contains the status of the check and the eligible message for it.
+     * @return Returns a JSON object which contains the status of the check and the eligible message for it.
      */
     public JSONObject BattleIntegrityActionCheck(String parsingDecision, String verb){
         
@@ -123,8 +122,15 @@ public class EnemiesController implements Serializable{
             player.BattleExperienceEarned(eligibleEnemy);
             this.SetBattleState(false); 
             mcf.SetChangeMusicStatus(true);
-            DirectionActionModel dam = new DirectionActionModel(actionBeforeBattle, listOfItems);
-            resultMessage += "\n"+dam.PlayerActionCommand(player);
+            
+            if(eligibleEnemy.GetCharacterName().equals("Alzor The Destroyer") && actionBeforeBattle.equals("sink")){
+                player.SetAreaLocation(eligibleEnemy.GetAreaLocation());
+                resultMessage += "\n"+eligibleEnemy.GetAreaLocation().GetAreaDescription();
+            } 
+            else{
+                DirectionActionModel dam = new DirectionActionModel(actionBeforeBattle, listOfItems);
+                resultMessage += "\n"+dam.PlayerActionCommand(player);
+            }
         }
         
         return resultMessage;

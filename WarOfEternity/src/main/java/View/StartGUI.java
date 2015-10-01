@@ -35,8 +35,9 @@ public class StartGUI extends javax.swing.JFrame {
         initComponents();
 
         String projectFold = System.getProperty("user.dir");
-        ImageIcon icon = new ImageIcon(projectFold+"\\src\\main\\java\\ApplicationImages\\bgImg.png"); 
-        jLabel1.setIcon(icon);
+
+        ImageIcon icon = new ImageIcon(projectFold+"\\src\\main\\java\\ApplicationImages\\startbanner.png"); 
+        jLabel2.setIcon(icon);
         
         MainFolderConfig mfc = new MainFolderConfig();
         SaveFolderConfig sfc = new SaveFolderConfig();
@@ -65,7 +66,7 @@ public class StartGUI extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("War Of Eternity : Options");
@@ -86,7 +87,7 @@ public class StartGUI extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 250, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 250, 40));
 
         jButton2.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 24)); // NOI18N
         jButton2.setText("Load Game");
@@ -95,7 +96,7 @@ public class StartGUI extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 250, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 250, 40));
 
         jButton3.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 24)); // NOI18N
         jButton3.setText("Save Game");
@@ -105,7 +106,7 @@ public class StartGUI extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 250, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 250, 40));
 
         jButton4.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 24)); // NOI18N
         jButton4.setText("Resume Game");
@@ -115,7 +116,7 @@ public class StartGUI extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 250, 40));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 250, 40));
 
         jButton5.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 24)); // NOI18N
         jButton5.setText("Exit Game");
@@ -124,12 +125,10 @@ public class StartGUI extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 250, 40));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 250, 40));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 360, 80));
 
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 270, 260));
-
-        setSize(new java.awt.Dimension(400, 400));
+        setSize(new java.awt.Dimension(400, 429));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -242,6 +241,6 @@ public class StartGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

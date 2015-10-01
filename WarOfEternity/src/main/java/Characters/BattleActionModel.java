@@ -55,14 +55,18 @@ public class BattleActionModel {
 
         JSONObject jObj = new JSONObject();
         boolean status = false;
-        List<Enemies> enemiesOnArea = this.EnemyEncounterAreaIntegrity(player, noun, items);
-        Enemies eligibleEnemy = this.GetRandomEnemyFromListOfEnemiesOnArea(enemiesOnArea, encPercentage);
+        List<Enemies> enemiesOnArea;
+        Enemies eligibleEnemy = null;
         
-        if(eligibleEnemy != null && parseDecision.equals("direction") && (!battleState)){
+        if(noun.equals("sink") && player.GetAreaLocation().GetAreasName().equals("The Great Jade Sea"))
+            eligibleEnemy = this.GetLastBossForFightProcess();
+        else{
+            enemiesOnArea = this.EnemyEncounterAreaIntegrity(player, noun, items);
+            eligibleEnemy = this.GetRandomEnemyFromListOfEnemiesOnArea(enemiesOnArea, encPercentage);
+        }
+        
+        if(eligibleEnemy != null && (parseDecision.equals("direction") || parseDecision.equals("sail")) && (!battleState)){
             status = true;  
-              System.out.println("Enemy Name : "+eligibleEnemy.GetCharacterName()+
-                "\nEnemy Encounter Percentage : "+eligibleEnemy.GetEncounterPercentageRate()+
-                "\n----------------------------------------------");
         }
         
         jObj.put("status", status);
@@ -74,7 +78,30 @@ public class BattleActionModel {
     }
     
     /**
-     * Method that finds an enemy to combat from tha list of area enemies.
+     * Method that finds the last boss object in case the action command was sink
+     * and the player is located on the appropriate area that the enemy roams.
+     * 
+     * @return Returns the last boss object.
+     */
+    private Enemies GetLastBossForFightProcess(){
+        
+        Enemies lastBoss = null;
+        
+        for(int i = 0; i < this.jsonEnemiesArray.size(); i++){
+            JSONObject jObj = (JSONObject) this.jsonEnemiesArray.get(i);
+            String enemyArea = (String) jObj.get("areaname");
+            
+            if(enemyArea.equals("Jade Sea Depths")){
+                List<Enemies> enemyListOnArea = (List<Enemies>) jObj.get("enemiesonarea");
+                lastBoss = enemyListOnArea.get(0);
+            }
+        }
+        
+        return lastBoss;
+    }
+    
+    /**
+     * Method that finds an enemy to combat from the list of area enemies.
      * 
      * @param enemiesOnArea The list of enemies on the specific area.
      * @param encPercentage The random integer encounter number.
@@ -86,9 +113,6 @@ public class BattleActionModel {
         List<Enemies> enemiesOnPercent = new ArrayList();
 
         for(Enemies eachEnemyOnArea : enemiesOnArea){
-            System.out.println("Enemy On Area Name : "+eligibleEnemy.GetCharacterName()+
-                "\nEnemy On Area Encounter Percentage : "+eligibleEnemy.GetEncounterPercentageRate()+
-                "\n----------------------------------------------");
             if(eachEnemyOnArea.GetEncounterPercentageRate() == 100){
                 enemiesOnPercent.add(eachEnemyOnArea);
             }
@@ -110,7 +134,7 @@ public class BattleActionModel {
     }
     
     /**
-     * Method that checks the integrity for the encounter area. Baiscaly what it
+     * Method that checks the integrity for the encounter area. Basically what it
      * does is to checks whether the next area that the player wants to go is 
      * blocked in order to start a battle.
      * 
@@ -136,7 +160,7 @@ public class BattleActionModel {
                 enemiesOnArea = this.GetListOfEnemiesThatRoamTheNextArea(acm);
             }
                 
-        }  
+        } 
         
         return enemiesOnArea;
     }

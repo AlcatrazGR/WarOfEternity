@@ -17,6 +17,7 @@ public class ParserController {
     List<String> transactionVerbParser;
     List<String> battleVerbParser;
     List<String> sailVerbParser;
+    List<String> inspectVerbParser;
     
     String nounCommand;
     String verbCommand; 
@@ -30,6 +31,7 @@ public class ParserController {
         this.transactionVerbParser = new ArrayList();
         this.battleVerbParser = new ArrayList();
         this.sailVerbParser = new ArrayList();
+        this.inspectVerbParser = new ArrayList();
         
         pm = new ParserModel();
         
@@ -41,6 +43,7 @@ public class ParserController {
         this.transactionVerbParser = pm.GetListOfTransactionParser();
         this.battleVerbParser = pm.GetListOfBattleParser();
         this.sailVerbParser = pm.GetListOfSailParser();
+        this.inspectVerbParser = pm.GetListOfInspectParser();
     }
     
     /**

@@ -22,7 +22,7 @@ public class LoadGameForm extends javax.swing.JFrame {
         initComponents();
         
         String projectFold = System.getProperty("user.dir");
-        ImageIcon icon = new ImageIcon(projectFold+"\\src\\main\\java\\ApplicationImages\\bgImg.png"); 
+        ImageIcon icon = new ImageIcon(projectFold+"\\src\\main\\java\\ApplicationImages\\swordShield.png"); 
         jLabel1.setIcon(icon);
         
         this.SetListModel();
@@ -43,7 +43,6 @@ public class LoadGameForm extends javax.swing.JFrame {
         setTitle("War Of Eternity : Load - Delete Game");
         setLocationByPlatform(true);
         setMaximumSize(null);
-        setPreferredSize(null);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -54,7 +53,7 @@ public class LoadGameForm extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jList1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 198, 322));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 370));
 
         jButton1.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 17)); // NOI18N
         jButton1.setText("Load Game File");
@@ -63,7 +62,7 @@ public class LoadGameForm extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 19, 220, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 220, 30));
 
         jButton2.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 17)); // NOI18N
         jButton2.setText("Delete Game File");
@@ -72,7 +71,7 @@ public class LoadGameForm extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 67, 220, 30));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 220, 30));
 
         jButton3.setFont(new java.awt.Font("Adobe Garamond Pro", 0, 17)); // NOI18N
         jButton3.setText("Cancel");
@@ -81,8 +80,8 @@ public class LoadGameForm extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 115, 220, 30));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 240, 280));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 220, 30));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 200, 300));
 
         setSize(new java.awt.Dimension(486, 399));
         setLocationRelativeTo(null);

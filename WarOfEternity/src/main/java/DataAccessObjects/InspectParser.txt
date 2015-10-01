@@ -1,0 +1,5 @@
+inspect
+examine
+read
+study
+check

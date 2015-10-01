@@ -134,7 +134,7 @@ public class MainGame extends javax.swing.JFrame {
                        SetImageAfterPlayerActionCommand(playerContr);
                        SetPlayerDataAfterActionCommandHadBeenExcecuted();
                        SetMusicFileToBePlayedAfterCommand(playerContr);
-                       
+                       SetEndingWindowWhenBossIsDead();
                        //Clearing the text field after command submission
                        jTextField1.setText("");
                    }
@@ -330,6 +330,7 @@ public class MainGame extends javax.swing.JFrame {
         if(player.GetCharacterHealth() <= 0){
             JOptionPane.showConfirmDialog(this, "You Died!, Game Over!", "You Died!", JOptionPane.OK_OPTION);
             this.mcf.StopMusic();
+            this.recognizer = null;
             StartGUI sgui = new StartGUI(false, null, null, null, null, null);
             sgui.setVisible(true);
             this.setVisible(false);
@@ -833,13 +834,32 @@ public class MainGame extends javax.swing.JFrame {
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(this, "An error has occurred with your "
                     + "microphone / headset.\nPlease check the connection of your"
-                    + "microphone / headset and try again.", "Input - Output Errpr!",
+                    + "microphone / headset and try again.", "Input - Output Error!",
                     JOptionPane.ERROR_MESSAGE, null);
-        }
-        catch(IllegalArgumentException ex){
             this.recognizer = null;
         }
+        catch(IllegalStateException ex){
+            //this.recognizer = null;
+        }
         
+    }
+    
+    private void SetEndingWindowWhenBossIsDead(){
+        
+        if(player.GetAreaLocation().GetAreasName().equals("Jade Sea Depths") && !ec.GetBattleState()){
+            JOptionPane.showMessageDialog(this, 
+                  "And that was the story of the guardian, sent by the order of \n"
+                + "edernium. The one that sacrificed his life for the people of \n"
+                + "Yeress and brought an end to the unending war that savaged \n"
+                + "the land.\n\n"
+                + "Not all stories have their happy ending, and that ones is not \n"
+                + "finished yet ...\n", "The End", JOptionPane.OK_OPTION);
+            this.mcf.StopMusic();
+            this.recognizer = null;
+            StartGUI sgui = new StartGUI(false, null, null, null, null, null);
+            sgui.setVisible(true);
+            this.setVisible(false);
+        }
     }
  
     public static void main(String args[]) {
