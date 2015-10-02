@@ -1,29 +1,29 @@
-Tomb Door		@	A wooden door leading into the catacombs.										@	 4 	@	10000	@	0	@	0.0		@	north
-Branch Gate		@	Big gate with branches and logs covering it with a small hole in the midde. 							@	 4 	@	10000	@	0	@	0.0		@	south
-Witch Barrier		@	A magical brown barrier, when trying touching it pushes you back.								@	 4 	@	10000	@	0	@	0.0		@	north
-Frozen Skull Gate		@	A huge frozen gate with a skull carved on it. The gate cannot be opend with bare hands.						@	 4 	@	10000	@	0	@	0.0		@	south-west
-Red Stone Gate		@	Heavy gate made with red sand stone. There is a carved symbol on its center.							@	 4 	@	10000	@	0	@	0.0		@	north-east
-Water Ward Barrier		@	Magical water barrier. There are lots of corpses at close to it, so you decide not to touch it.						@	 4 	@	10000	@	0	@	0.0		@	north-west	
-Dark Fissure		@	A dark energy is emiting from this barrier. You can also hear screams coming from it and see bones floating.				@	 4 	@	10000	@	0	@	0.0		@	south
-Scholomance Wall		@	The great wall that guards the domain of scholomance. There is a hole to insert levers.						@	 4 	@	10000	@	0	@	0.0		@	north
-Ship Wreck		@	Many ships laying destroyed on the bottom of the ocean.									@	 4 	@	10000	@	0	@	0.0		@	The Great Jade Sea
-Jade Beam			@	A weird jade beam at the middle of the ocean. It seems that it originates from the depths. Inside the beam there is disturbance in the waters.	@	 4 	@	10000	@	0	@	0.0		@	sink	
-Scholomance Gate		@	A huge black iron gate, preventing any intruders into the scholomance citadel.							@	 4 	@	10000	@	0	@	0.0		@	north
-Wooden Key		@	A small wooden key. It seems old and withered.									@	 2	@	0.1	@	0	@	0.0
-Mossy Key			@	A meddium sized mossy key with branches and leafs at its top.								@	2	@	0.1	@	0	@	0.0
-Wooden Talisman		@	A simple wooden carved talisman a jem in its middle, that produces brown energy.						@	2	@	0.2	@	0	@	0.0
-Glacier Teeth		@	A glacier object shaped as a teeth.											@	2	@	0.4	@	0	@	0.0
-Golden Beetle		@	A small golden beetle statue.											@	2	@	0.3	@	0	@	0.0
-Dispel Scroll		@	Dispeling scroll, it can dispel magic attacks, wards and fields.								@	2	@	0.1	@	0	@	0.0
-Banish Evil			@	A small rune stone. It can banish any evil entity of harmfull spell.								@	2	@	0.2	@	0	@	0.0
-Black Iron Lever		@	A heavy lever made out of iron and coated in black color.									@	2	@	0.5	@	0	@	0.0
-Summon Ship		@	A very old spell scroll that summons a single ship from the ocean.								@	2	@	0.1	@	0	@	0.0
-Jade Orb			@	Orb that emittes jade colored light. It looks fragile.									@	2	@	0.3	@	0	@	0.0
-Iron Skull			@	A heavy iron skull coated in black dye. It has a bell ring in its mouth. 								@	2	@	0.5	@	0	@	0.0
+Tomb Door		@	A wooden door leading into the catacombs.											@	 4 	@	10000	@	0	@	0.0		@	north
+Branch Gate		@	Big gate with branches and logs covering it with a small hole in the midde. 								@	 4 	@	10000	@	0	@	0.0		@	south
+Witch Barrier		@	A magical brown barrier, when trying touching it pushes you back.									@	 4 	@	10000	@	0	@	0.0		@	north
+Frozen Skull Gate		@	A huge frozen gate with a skull carved on it. The gate cannot be opend with bare hands.							@	 4 	@	10000	@	0	@	0.0		@	south-west
+Red Stone Gate		@	Heavy gate made with red sand stone. There is a carved symbol on its center.								@	 4 	@	10000	@	0	@	0.0		@	north-east
+Water Ward Barrier		@	Magical water barrier. There are lots of corpses at close to it, so you decide not to touch it.							@	 4 	@	10000	@	0	@	0.0		@	north-west	
+Dark Fissure		@	A dark energy is emiting from this barrier. You can also hear screams coming from it and see bones floating.						@	 4 	@	10000	@	0	@	0.0		@	south
+Scholomance Wall		@	The great wall that guards the domain of scholomance. There is a hole to insert levers.							@	 4 	@	10000	@	0	@	0.0		@	north
+Ship Wreck			@	Many ships laying destroyed on the bottom of the ocean.										@	 4 	@	10000	@	0	@	0.0		@	The Great Jade Sea
+Jade Beam			@	A weird jade beam at the middle of the ocean. It seems that it originates from the depths. Inside the beam there is disturbance in the waters.			@	 4 	@	10000	@	0	@	0.0		@	sink	
+Scholomance Gate		@	A huge black iron gate, preventing any intruders into the scholomance citadel.								@	 4 	@	10000	@	0	@	0.0		@	north
+Wooden Key		@	A small wooden key. It seems old and withered.											@	 2	@	0.1	@	0	@	0.0
+Mossy Key			@	A meddium sized mossy key with branches and leafs at its top.									@	 2	@	0.1	@	0	@	0.0
+Wooden Talisman		@	A simple wooden carved talisman a jem in its middle, that produces brown energy.								@	 2	@	0.2	@	0	@	0.0
+Glacier Teeth		@	A glacier object shaped as a teeth.												@	 2	@	0.4	@	0	@	0.0
+Golden Beetle		@	A small golden beetle statue.												@	 2	@	0.3	@	0	@	0.0
+Dispel Scroll		@	Dispeling scroll, it can dispel magic attacks, wards and fields.									@	 2	@	0.1	@	0	@	0.0
+Banish Evil			@	A small rune stone. It can banish any evil entity of harmfull spell.									@	 2	@	0.2	@	0	@	0.0
+Black Iron Lever		@	A heavy lever made out of iron and coated in black color.										@	 2	@	0.5	@	0	@	0.0
+Summon Ship		@	A very old spell scroll that summons a single ship from the ocean.									@	 2	@	0.1	@	0	@	0.0
+Jade Orb			@	Orb that emittes jade colored light. It looks fragile.										@	 2	@	0.3	@	0	@	0.0
+Iron Skull			@	A heavy iron skull coated in black dye. It has a bell ring in its mouth. 									@	 2	@	0.5	@	0	@	0.0
 Copper Sword		@	Medium sized sword made out of copper.											@	 3	@	4	@	7	@	str		@	1		@	Plains Of Hope	@	175.8
-Falling Star		@	A one-handed mace with spines on its top.											@	 3	@	6	@	8	@	str		@	2		@	Plains Of Hope	@	205.4
+Falling Star			@	A one-handed mace with spines on its top.											@	 3	@	6	@	8	@	str		@	2		@	Plains Of Hope	@	205.4
 Double Katana		@	A heavy double bladed katana sword.											@	 3	@	11	@	11	@	str		@	3		@	Plains Of Hope	@	469.7
-Bowie Knifes		@	Small sharpened thrawable knifes.											@	 3	@	2	@	3	@	agi		@	2		@	Plains Of Hope	@	47.4
+Bowie Knifes		@	Small sharpened thrawable knifes.												@	 3	@	2	@	3	@	agi		@	2		@	Plains Of Hope	@	47.4
 Wooden Bow		@	Simple wooden bow.													@ 	 3	@	3	@	5	@	agi		@	3		@	Plains Of Hope	@	107.4
 Main-Gauche		@	A very sharpened small dagger.												@ 	 3	@	2	@	5	@	agi		@	4		@	Plains Of Hope	@	237.4
 Light Staff			@	Simple staff carved out off oak wood.											@ 	 3	@	4	@	5	@	int		@	4		@	Plains Of Hope	@	257.4
@@ -32,9 +32,9 @@ Acacia Wand		@	Light acacia wand.													@ 	 3	@	2	@	7	@	int		@	5		@	Angabu
 Poisoned Tark Cudgel		@	A stout stick that serves as a club.												@ 	 3	@	7	@	8	@	str		@	3		@	Angabur Village	@	221.2
 Iron Crossbow		@	Heavy crossbow has the potential to fire multiple arrows at the same time.								@ 	 3	@	6	@	7	@	agi		@	3		@	Angabur Village	@	198.6
 Double Bladed Long Bow	@	Sturdy long bow with sharpened blades on its sides.										@ 	 3	@	6	@	8	@	agi		@	4		@	Aldor Reign Castle	@	210.6
-Poisoned Poingmar		@	Dagger filled with venomus poison.											@ 	 3	@	4	@	7	@	agi		@	5		@	Aldor Reign Castle	@	233.2
+Poisoned Poingmar		@	Dagger filled with venomus poison.												@ 	 3	@	4	@	7	@	agi		@	5		@	Aldor Reign Castle	@	233.2
 Helberd			@	Long pole axe with double blades on the end of the pole.										@ 	 3	@	9	@	9	@	str		@	4		@	Aldor Reign Castle	@	273.2
-Death Stick		@	Iron Staff coated in black color. On its top a magical fire burns endlessly.								@ 	 3	@	8	@	9	@	int		@	6		@	Aldor Reign Castle	@	283.2
+Death Stick			@	Iron Staff coated in black color. On its top a magical fire burns endlessly.								@ 	 3	@	8	@	9	@	int		@	6		@	Aldor Reign Castle	@	283.2
 Orcish War Hammer		@	A two handed heavy hammer that deals a great amount of damage									@	 3	@	19	@	15	@	str		@	5		@	Tan'leri City	@	675.8
 Ancient Nomad Bow		@	A weapon used by the nomads ancestors. It is covered with bones.									@	 3	@	5	@	10	@	agi		@	6		@	Tan'leri City	@	535.9
 Skyforge Steel Great Sword	@	Two handed steel great sword smithed in skyforge of Tan'leri city.									@	 3	@	15	@	12	@	str		@	5		@	Tan'leri City	@	492.0
@@ -42,26 +42,32 @@ Dawnguard Stave		@	Magical stave with embeded red crystals from the desert.					
 Staff Of The Dread		@	Iron staff coated in black color there is a iron skull on it's top that emittes green fire. This weapon was used by the necromancers as their primary weapon choice.	@	 3	@	14	@	25	@	int		@	11		@	Ash'vor		@	874.7
 Nightgale Bow		@	Unique bow from the time of the great war.											@	 3	@	11	@	21	@	agi		@	9		@	Ash'vor		@	704.0
 Wuuthrad			@	Two handed battle axe. Legend says that it was wielded by Yngol a great general in the great war.						@	 3	@	22	@	22	@	str		@	9		@	Ash'vor		@	780.0
-Leather Vest		@	Hand made leather vest.											@	 5	@	4	@	9	@	Plains Of Hope	@	115.5
-Silk Robes			@	Robes made with white silk.											@	 5	@	2	@	7	@	Plains Of Hope	@	68.0
-Tarted Mail		@	Mail vest, not the best craftmanship.										@	 5	@	9	@	12	@	Plains Of Hope	@	132.8
-Elven Heavy Armor		@	Heavy iron chect armor coated in gold color.										@	 5	@	14	@	15	@	Angabur Village	@	192.8
-Shrouded Vest		@	Black leather vest. Perfect for sneaking.										@	 5	@	5	@	11	@	Angabur Village	@	152.0
-Linen Robes		@	Simple robes made of linen material. 										@	 5	@	3	@	9	@	Angabur Village	@	130.0
-Mail Cuirass		@	A mail chest piece, provides good protection against weapons and missiles							@	 5	@	12	@	19	@	Aldor Reign Castle	@	195.5
-Imperials Vest		@	Vest with the aldor riegn's banners tailored on its back.									@	 5	@	8	@	14	@	Aldor Reign Castle	@	153.2
-Robes Of The Sage		@	Robes that grand its wearer magical abilities.										@	 5	@	4	@	12	@	Aldor Reign Castle	@	143.0
-Ebony Armor		@	Heavy black chest armor piece made out of ebony steel.									@	 5	@	22	@	25	@	Tan'leri City	@	378.9
-Falmer Leather Armor		@	Chest piece from the order of the falmers.										@	 5	@	14	@	17	@	Tan'leri City	@	295.5
-Robes Of The Night		@	Black robes with a hood covering your face.										@	 5	@	6	@	15	@	Tan'leri City	@	225.3
-Daedra Plate Armor		@	Heavy plate armor with thorns on the shoulder top and emittes a weird red aura.							@	 5	@	32	@	32	@	Ash'vor		@	589.3
-Vest Of The Pale Emperor	@	Black leathered vest. This type of armor piece wa used by the rangers of ashvor during the great war.					@	 5	@	19	@	24	@	Ash'vor		@	425.3
-Robes Of The Necromancers	@	Black robes with magical green fire surrounding it. Skulls and chains are embeded into the armor piece.					@	 5	@	10	@	23	@	Ash'vor		@	398.0
-Wooden Shield		@	Wooden shield made with oak wood.										@	 6	@	5	@	4	@	Plains Of Hope	@	80.0
-Iron Tower Shield		@	A heavy tower shield.												@	 6	@	7	@	7	@	Angabur Village	@	110.0
-Nilthuanir			@	Iron tower shield, made by the elves of rivendell									@	 6	@	9	@	10	@	Aldor Reign Castle	@	150.0
-Ebony Tower Shield		@	Ebony tower shield its sturdy and durable.										@	 6	@	13	@	15	@	Tan'leri City	@	290.0
-Skull Shield		@	Steel sheild with a skull carved on its center.										@	 6	@	15	@	19	@	Ash'vor		@	340.0
-Medium Healing Potion	@	A bundle of medium healing potions.										@	 1	@	0.3	@	8	@	69.5		@	40			
-Minor Healing Potion		@	A bundle of minor healing potions. Each one heals a small portion of wounds							@	 1	@	0.2	@	8	@	50.5		@	25
-Heavy Healing Potion		@	A bundle of heavy healing potions. 										@	 1	@	0.4	@	8	@	170.0		@	80
+Leather Vest		@	Hand made leather vest.												@	 5	@	4	@	9	@	Plains Of Hope	@	115.5
+Silk Robes			@	Robes made with white silk.												@	 5	@	2	@	7	@	Plains Of Hope	@	68.0
+Tarted Mail		@	Mail vest, not the best craftmanship.											@	 5	@	9	@	12	@	Plains Of Hope	@	132.8
+Elven Heavy Armor		@	Heavy iron chect armor coated in gold color.											@	 5	@	14	@	15	@	Angabur Village	@	192.8
+Shrouded Vest		@	Black leather vest. Perfect for sneaking.											@	 5	@	5	@	11	@	Angabur Village	@	152.0
+Linen Robes		@	Simple robes made of linen material. 											@	 5	@	3	@	9	@	Angabur Village	@	130.0
+Mail Cuirass		@	A mail chest piece, provides good protection against weapons and missiles								@	 5	@	12	@	19	@	Aldor Reign Castle	@	195.5
+Imperials Vest		@	Vest with the aldor riegn's banners tailored on its back.										@	 5	@	8	@	14	@	Aldor Reign Castle	@	153.2
+Robes Of The Sage		@	Robes that grand its wearer magical abilities.											@	 5	@	4	@	12	@	Aldor Reign Castle	@	143.0
+Ebony Armor		@	Heavy black chest armor piece made out of ebony steel.										@	 5	@	22	@	25	@	Tan'leri City	@	378.9
+Falmer Leather Armor		@	Chest piece from the order of the falmers.											@	 5	@	14	@	17	@	Tan'leri City	@	295.5
+Robes Of The Night		@	Black robes with a hood covering your face.											@	 5	@	6	@	15	@	Tan'leri City	@	225.3
+Daedra Plate Armor		@	Heavy plate armor with thorns on the shoulder top and emittes a weird red aura.								@	 5	@	32	@	32	@	Ash'vor		@	589.3
+Vest Of The Pale Emperor	@	Black leathered vest. This type of armor piece wa used by the rangers of ashvor during the great war.						@	 5	@	19	@	24	@	Ash'vor		@	425.3
+Robes Of The Necromancers	@	Black robes with magical green fire surrounding it. Skulls and chains are embeded into the armor piece.						@	 5	@	10	@	23	@	Ash'vor		@	398.0
+Wooden Shield		@	Wooden shield made with oak wood.											@	 6	@	5	@	4	@	Plains Of Hope	@	80.0
+Iron Tower Shield		@	A heavy tower shield.													@	 6	@	7	@	7	@	Angabur Village	@	110.0
+Nilthuanir			@	Iron tower shield, made by the elves of rivendell											@	 6	@	9	@	10	@	Aldor Reign Castle	@	150.0
+Ebony Tower Shield		@	Ebony tower shield its sturdy and durable.											@	 6	@	13	@	15	@	Tan'leri City	@	290.0
+Skull Shield		@	Steel sheild with a skull carved on its center.											@	 6	@	15	@	19	@	Ash'vor		@	340.0
+Medium Healing Potion	@	A bundle of medium healing potions.											@	 1	@	0.3	@	8	@	69.5		@	40			
+Minor Healing Potion		@	A bundle of minor healing potions. Each one heals a small portion of wounds								@	 1	@	0.2	@	8	@	50.5		@	25
+Heavy Healing Potion		@	A bundle of heavy healing potions. 												@	 1	@	0.4	@	8	@	170.0		@	80
+Mossy Stone Tablet		@	The order's purpose is the preservation of peace and balance and to bring light where darkness exists ...						@	7	@	35	@	Shamans Reatreat
+Red Stone Tablet		@	Servant's of the order of edernium are the water mages. Through their prayers they contact with the other side ...					@	7	@	35	@	Quekalsul Har Ruins
+Stone Tablet		@	Whenever it was necessary the order send their emissaries to bring balance into the realm of men. Those emissaries where called guardians ...			@	7	@	35	@	Elderm Courtyard
+Magical Tablet		@	And then the gurdian came and drove the beast back into the depths ... 									@	7	@	35	@	Elderm Arcane University
+Withered Tablet		@	Where the path of the guardian end's so the last battle of light and darkness begins ...							@	7	@	35	@	Scholomance Depths
+Broken Tablet		@	From here starts the path only a guardian can follow ...										@	7	@	35	@	Journeys End Island

@@ -87,6 +87,10 @@ public class ParserController {
                     this.nounCommand = playerActionSplitted[0].trim();
                     parsingDecision = "sail";
                 }
+                else if(result.equals("inspect")){
+                    this.nounCommand = playerActionSplitted[0].trim();
+                    parsingDecision = "inspect";
+                }
                 else
                     parsingDecision = "Unclear command given!";
             }
@@ -146,10 +150,19 @@ public class ParserController {
             }
         }
         
-        //Passing all the battle verbs to decide the parsing decision
+        //Passing all the sail verbs to decide the parsing decision
         for(String eachSailVerb : this.sailVerbParser){
             if(eachSailVerb.trim().equalsIgnoreCase(playerActionSplitted[0])){
                 parsingDecision = "sail";
+                this.nounCommand = this.CreateNounWithMoreThanOneWords(playerActionSplitted);
+                this.verbCommand = playerActionSplitted[0].trim();
+            }
+        }
+        
+        //Passing all the inspect verbs to decide the parsing decision
+        for(String eachInspectVerb : this.inspectVerbParser){
+            if(eachInspectVerb.trim().equalsIgnoreCase(playerActionSplitted[0])){
+                parsingDecision = "inspect";
                 this.nounCommand = this.CreateNounWithMoreThanOneWords(playerActionSplitted);
                 this.verbCommand = playerActionSplitted[0].trim();
             }

@@ -51,7 +51,7 @@ public class ItemController implements Serializable{
         ReadItemDataModel ridm = new ReadItemDataModel(this.listOfAreas);
         ridm.SetItemDataList();
         this.listOfItems = ridm.GetListOfGameItems();
-        
+   
         ridm.SetItemConnectionMainMethod();
     }
     

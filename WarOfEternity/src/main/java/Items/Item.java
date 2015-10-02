@@ -31,6 +31,7 @@ public class Item extends GateItem implements IItem, Serializable {
      * 4 --> Doors / Gates
      * 5 --> Armor
      * 6 --> Shields
+     * 7 --> Tablets
      */
     
     private Area itemArea;
@@ -118,34 +119,22 @@ public class Item extends GateItem implements IItem, Serializable {
         this.itemHealingPower = 0;
     }
     
+    //Constructor that sets items type 7 (tablets)
+    public Item(String name, String descr, int type, double weight, Area area){
+        this.itemName = name;
+        this.itemDescription = descr;
+        this.itemType = type;
+        this.itemWeight = weight;
+        this.itemArea = area;
+        
+        this.itemValue = 0;
+        this.itemCost = 0.0;
+        itemConnectionsList = new ArrayList();
+        this.attributeType = "";
+        this.attributeValue = 0;
+        this.itemHealingPower = 0;
+    }
    
-    
-    /*
-    //Constructor with parametres for simple item connection
-    public Item(String name, String descr, int type, double weight, int value, String atribute, int atrValue, Area merchArea, double cost){
-        this.itemName = name;
-        this.itemDescription = descr;
-        this.itemType = type;
-        this.itemWeight = weight;
-        this.itemValue = value;
-        this.itemCost = cost;
-        this.itemHealingPower = 0;
-        itemConnectionsList = new ArrayList();
-    }
-    
-    //COnstructor with parametres for setting gate / door object attributes.
-    public Item(String name, String descr, int type, double weight, int value, double cost, String blockDir){
-        this.itemName = name;
-        this.itemDescription = descr;
-        this.itemType = type;
-        this.itemWeight = weight;
-        this.itemValue = value;
-        this.blockingDirection = blockDir;
-        this.itemCost = cost;
-        this.itemHealingPower = 0;
-        itemConnectionsList = new ArrayList();
-    }
-    */
     
     public List<ItemConnectionWithArea> GetItemConnectionsWithArea(){
         return this.itemConnectionsList;

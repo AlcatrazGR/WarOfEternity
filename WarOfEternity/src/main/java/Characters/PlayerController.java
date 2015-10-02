@@ -3,6 +3,7 @@ package Characters;
 import GameFileConfiguration.MusicConfiguration;
 import Items.Item;
 import Items.ItemController;
+import Items.TabletItemsController;
 import Map.Area;
 import java.util.List;
 import org.json.simple.JSONObject;
@@ -96,6 +97,11 @@ public class PlayerController {
             case "sail" :
                 DockYardController dyc = new DockYardController(areasList, itemList);
                 resultMessage = dyc.DockYardCommandActionProcess(player, docksList, this.nounPartOfCommand, this.verbPartOfCommand);
+            break;
+                
+            case "inspect" :
+                TabletItemsController tbc = new TabletItemsController(this.verbPartOfCommand, this.nounPartOfCommand, itemList);
+                resultMessage = tbc.TabletInspectActionCommand(player);
             break;
 
         }

@@ -283,6 +283,11 @@ public class ItemActionModel {
             }
         }
         
+        TableItemActionModel tiam = new TableItemActionModel(this.verbPartOfCommand, this.nounPartOfCommand, this.listOfItems);
+        Item eligibleTablet = tiam.GetEligibleItemFromArea(player);
+        if(eligibleTablet != null)
+                message += "--> A "+eligibleTablet.GetItemName();
+        
         if(message.equals(""))
             message = "Nothing found while searching!";
         else

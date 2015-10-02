@@ -1,17 +1,9 @@
 package Items;
 
-import GameFileConfiguration.SaveFolderConfig;
 import GameFileConfiguration.TextFileProcessing;
 import Map.Area;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Class that contains methods and data members to handle the reading 
@@ -149,10 +141,18 @@ public class ReadItemDataModel {
                     this.AddItemIntoTheItemList(itemObj);
                 break;
                     
+                //Case the item is stone tablet.
+                case "7" :
+                    itemObj = new Item(dataIndex[0].trim(), dataIndex[1].trim(),
+                        this.ConvertStringToInteger(dataIndex[2].trim()), this.ConvertStringToDouble(dataIndex[3].trim()),
+                        this.GetEligibleAreaForItem(dataIndex[4].trim()));
+                    this.AddItemIntoTheItemList(itemObj);
+                break;
+                    
             }
+            
             itemObj = null;
         }
-  
     }
     
     /**
