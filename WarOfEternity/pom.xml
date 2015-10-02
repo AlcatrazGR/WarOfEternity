@@ -32,18 +32,32 @@
         </configuration>
       </plugin>
 
-       <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-jar-plugin</artifactId>
-      <configuration>
-        <archive>
-          <manifestEntries>
-            <SplashScreen-Image>spashscreen.gif</SplashScreen-Image>
-          </manifestEntries>
-        </archive>
-      </configuration>
-    </plugin>
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-jar-plugin</artifactId>
+         <configuration>
+            <archive>
+               <manifestEntries>
+                  <SplashScreen-Image>spashscreen.gif</SplashScreen-Image>
+               </manifestEntries>
+            </archive>
+         </configuration>
+      </plugin>
       
+      <plugin>
+         <artifactId>maven-assembly-plugin</artifactId>
+         <configuration>
+            <archive>
+               <manifest>
+                  <mainClass>View.StartGUI</mainClass>
+               </manifest>
+            </archive>
+            <descriptorRefs>
+               <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>    
+         </configuration> 
+      </plugin>
+   
       
     </plugins>
   </build>

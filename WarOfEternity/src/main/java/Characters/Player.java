@@ -40,7 +40,7 @@ public class Player implements ICharacter, Serializable {
     public Player(){
         this.currentAreaLocation = null;
         this.characterName = "";
-        this.charactersGold = 50000.0;
+        this.charactersGold = 650.0;
         this.characterHealth = 100;
          
         this.damage = 10;
@@ -58,7 +58,7 @@ public class Player implements ICharacter, Serializable {
     public Player(Area location, int playerHealth, String playerName, int exp, String plClass, int str, int intel, int agil){
         this.currentAreaLocation = location;
         this.characterName = playerName;
-        this.charactersGold = 50000.0;
+        this.charactersGold = 650.0;
         this.characterHealth = playerHealth;
         this.playerClass = plClass;
         

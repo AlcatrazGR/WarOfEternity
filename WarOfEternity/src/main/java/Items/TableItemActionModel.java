@@ -7,7 +7,8 @@ import java.util.List;
 import org.json.simple.JSONObject;
 
 /**
- *
+ * Class model that implements the inspect action command on the game.
+ * 
  * @author Vasilis Triantarhs
  */
 public class TableItemActionModel {

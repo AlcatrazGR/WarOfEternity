@@ -25,6 +25,7 @@ Parsers\ParserController.class
 View\NewGameForm$3.class
 Interfaces\IItem.class
 View\LoadGameForm$1.class
+Items\TabletItemsController.class
 Characters\CaptainActionModel.class
 Serialization\SaveGameData.class
 Characters\DoctorActionModel.class
@@ -43,6 +44,7 @@ Items\ItemController.class
 View\StartGUI$7.class
 View\MainGame.class
 Parsers\ParserModel.class
+Items\TableItemActionModel.class
 Characters\PlayerController.class
 View\MainGame$8.class
 View\LoadGameForm$5.class

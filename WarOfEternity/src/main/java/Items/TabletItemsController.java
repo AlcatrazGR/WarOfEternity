@@ -6,7 +6,8 @@ import java.util.List;
 import org.json.simple.JSONObject;
 
 /**
- *
+ * Class that handles the inspect action commands of the game. 
+ * 
  * @author Vasilis Triantaris
  */
 public class TabletItemsController {
@@ -23,10 +24,15 @@ public class TabletItemsController {
         this.nounPart = noun;
     }
     
-    
+    /**
+     * Main control method of the inspect commands.
+     * 
+     * @param player The object of the player.
+     * @return Returns a string that represents the result of the process.
+     */
     public String TabletInspectActionCommand(Player player){
         
-        String message = "";
+        String message;
         TableItemActionModel tiam = new TableItemActionModel(this.verbPart, this.nounPart, this.listOfItems);
         
         JSONObject integrityJSON = tiam.GetStoneTabletOnAreaIfExists(player);
